@@ -1,0 +1,80 @@
+@use '../../../../public/assets/styles';
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    color: white;
+    line-height: 1;
+}
+
+.input-wrapper {
+    @include styles.flex-center(column);
+    gap: 1.2px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+}
+
+.invalid-txt {
+    @include styles.invalid-txt;
+    visibility: hidden;
+}
+
+input:not(input[type='checkbox']),
+textarea {
+    @include styles.input-field;
+    width: 100%;
+    font-family: Poppins;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid styles.$primary1;
+    }
+
+    &:invalid {
+        border: 1px solid styles.$error;
+    }
+}
+
+.privacy-policy {
+    color: white;
+
+    input[type='checkbox'] {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 3px solid styles.$primary1;
+        background: transparent;
+        accent-color: styles.$primary1;
+        cursor: pointer;
+    }
+
+    .txt-highlight {
+        color: styles.$primary2;
+    }
+}
+
+.submit {
+    font-size: 1.5rem;
+    color: white;
+    padding: 15px 30px;
+    background-color: styles.$primary1;
+    border-radius: 10px;
+
+    &[disabled] {
+        background-color: styles.$disabled;
+    }
+}
