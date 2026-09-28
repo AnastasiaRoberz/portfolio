@@ -1,0 +1,41 @@
+<div class="skills-wrapper">
+    @for (skill of skills; track skill) {
+        <div class="skill">
+            <img src="assets/icons/icon-{{ skill | lowercase }}.svg" alt="" />
+            <p class="skill-name">{{ skill }}</p>
+        </div>
+    }
+    <div class="skill learning">
+        <div class="speach-bubble">
+            <p>I have a special interest in learning</p>
+            <div class="tech-wrapper">
+                <div class="tech-item">
+                    <img src="assets/icons/logo-react.svg" alt="" />
+                    <strong>React</strong>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/logo-vuejs.svg" alt="" />
+                    <strong>Vue.js</strong>
+                </div>
+            </div>
+        </div>
+        <svg class="icon-learning"><use href="assets/icons/icons.svg#icon-learning"></use></svg>
+        <p class="skill-name">Continually learning</p>
+    </div>
+</div>
+
+<div class="skills-text">
+    <h2>Skills</h2>
+    <p>
+        Highlight your experience of working on different projects using different front-end
+        technologies (such as HTML, CSS, JavaScript, etc.) and emphasise your openness to learning
+        and adapting to new technologies. Mention the importance of continuing education to keep up
+        with the rapid changes in web development.
+    </p>
+    <div class="another-skill">
+        <h3>Looking for <span class="text-highlight">another skill</span>?</h3>
+        <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
+    </div>
+
+    <button>Get in touch</button>
+</div>
