@@ -1,0 +1,22 @@
+<div class="about-content">
+    <h2>About me</h2>
+    <p>
+        Hey there, I'm Anastasia! <br />
+        {{ aboutMe }}
+        <br /><br />
+        Let's connect and create something amazing together!
+    </p>
+
+    <ul>
+        @for (item of aboutList; track item.iconId) {
+            <li>
+                <svg class="about-icon">
+                    <use [attr.href]="'/assets/icons/icons.svg#' + item.iconId"></use>
+                </svg>
+                <p>{{ item.text }}</p>
+            </li>
+        }
+    </ul>
+</div>
+
+<img class="photo" src="assets/pngs/hero-character-photo.png" alt="" />
