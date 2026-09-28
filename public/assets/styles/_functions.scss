@@ -1,0 +1,4 @@
+@function get-font-size($size) {
+    $base-font-size: 16px;
+    @return $size * 1rem / $base-font-size;
+}
