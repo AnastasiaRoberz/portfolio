@@ -1,0 +1,69 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    @include styles.flex-center(column);
+    width: 100%;
+    gap: 32px;
+    padding: styles.$padding-main;
+}
+
+h2 {
+    align-self: flex-start;
+
+    &::before {
+        content: '';
+        background-color: styles.$primary2;
+        width: 100vw;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc(100% + 32px);
+    }
+}
+
+.projects-wrapper {
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 560px;
+    width: 601px;
+}
+
+.project-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.knowledge {
+    font-size: 1.5rem;
+    color: styles.$primary1;
+}
+
+.project-btns {
+    display: flex;
+    align-items: center;
+    gap: 86px;
+    margin-top: 20px;
+}
+
+.btn-test {
+    @include styles.btn-primary;
+    background-color: styles.$primary2;
+}
+
+.btn-git {
+    @include styles.btn-primary;
+    background-color: transparent;
+    border: 1px solid styles.$primary1;
+}
