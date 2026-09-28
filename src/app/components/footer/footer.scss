@@ -1,0 +1,35 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    width: 100%;
+    max-width: 1440px;
+    height: 291px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: styles.$background;
+    color: white;
+    border-top: 4px solid styles.$primary1;
+}
+
+.social-icon-wrapper {
+    display: flex;
+    gap: 42px;
+    height: 40px;
+
+    a {
+        @include styles.flex-center;
+        width: 40px;
+        height: auto;
+    }
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+
+    &:hover {
+        width: 40px;
+        height: auto;
+    }
+}
