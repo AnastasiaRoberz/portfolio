@@ -1,0 +1,86 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: styles.$background;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: styles.$padding-main;
+}
+
+.menu {
+    display: flex;
+    gap: 100px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: white;
+        position: relative;
+
+        &.active {
+            color: styles.$primary1;
+
+            &::after {
+                @include styles.txt-underline;
+                background-color: styles.$primary2;
+            }
+        }
+
+        &:hover {
+            color: styles.$primary1;
+        }
+    }
+}
+
+.language {
+    display: flex;
+    gap: 14px;
+
+    .btn-language {
+        @include styles.btn-secondary;
+        padding: 4px 8px;
+        font-size: 1.125rem;
+
+        &:hover {
+            border: 1px solid transparent;
+            background-color: styles.$primary2;
+        }
+
+        &:active {
+            border: 1px solid transparent;
+            background-color: white;
+            color: styles.$primary2;
+            font-weight: 600;
+        }
+
+        &.active {
+            background-color: styles.$primary1;
+            font-weight: 700;
+        }
+    }
+}
