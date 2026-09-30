@@ -3,14 +3,20 @@
 
     <div class="menu">
         <nav>
-            <a href="">About me</a>
-            <a href="">Skills</a>
-            <a href="">Portfolio</a>
+            <button type="button" (click)="scrollTo('about')">
+                {{ 'header.about' | translate }}
+            </button>
+            <button type="button" (click)="scrollTo('skills')">
+                {{ 'header.skills' | translate }}
+            </button>
+            <button type="button" (click)="scrollTo('projects')">
+                {{ 'header.portfolio' | translate }}
+            </button>
         </nav>
 
         <div class="language">
-            <button class="btn-language">DE</button>
-            <button class="btn-language active">EN</button>
+            <button class="btn-language" (click)="useLanguage('de')">DE</button>
+            <button class="btn-language active" (click)="useLanguage('en')">EN</button>
         </div>
     </div>
 </div>

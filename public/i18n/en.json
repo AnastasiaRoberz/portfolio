@@ -1,0 +1,13 @@
+{
+    "header": {
+        "about": "About",
+        "skills": "Skills",
+        "portfolio": "Portfolio"
+    },
+
+    "hero": {
+        "job-title": "Frontend Developer",
+        "btn-talk": "Let's Talk",
+        "scroll": "Scroll down"
+    }
+}
