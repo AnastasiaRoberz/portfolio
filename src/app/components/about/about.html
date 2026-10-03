@@ -2,7 +2,7 @@
     <h2>{{ 'about.title' | translate }}</h2>
     <p>
         {{ 'about.hey-there' | translate }} <br />
-        {{ aboutMe | translate }}
+        {{ 'about.about-me' | translate }}
         <br /><br />
         {{ 'about.lets-connect' | translate }}
     </p>
@@ -13,7 +13,7 @@
                 <svg class="about-icon">
                     <use [attr.href]="'/assets/icons/icons.svg#' + item.iconId"></use>
                 </svg>
-                <p>{{ item.text }}</p>
+                <p>{{ item.text | translate }}</p>
             </li>
         }
     </ul>

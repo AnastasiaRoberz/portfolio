@@ -14,7 +14,13 @@
     "about": {
         "title": "About",
         "hey-there": "Hey there, I'm Anastasia!",
-        "lets-connect": "Let's connect and create something amazing together!"
+        "about-me": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+        "lets-connect": "Let's connect and create something amazing together!",
+        "list": {
+            "location": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
+            "learning": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
+            "problem-solving": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration."
+        }
     },
 
     "skills": {
@@ -23,14 +29,31 @@
 
     "portfolio": {
         "title": "Portfolio",
-        "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
+        "description": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "projects": {
+            "pollo-loco": "Jump, run and throw game based on object-orientated approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            "pokedex": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+        }
     },
 
-    "references": {},
+    "references": {
+        "schuster": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+        "eichinger": "Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
+        "nuber": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+    },
 
     "contact": {
         "title": "Contact",
         "subtitle": "Got a problem to solve?",
+        "why-contact": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+        "contact-me": "Need a Frontend developer? <strong>Contact me!</strong>",
+        "privacy-policy": {
+            "prefix": "I've read the",
+            "link": "privacy policy",
+            "suffix": "and agree to the processing of my data as outlined."
+        },
+        "button": "Send message",
 
         "fields": {
             "name": "Your name",
@@ -48,5 +71,50 @@
         }
     },
 
-    "footer": {}
+    "footer": {
+        "legal-notice": "Legal Notice"
+    },
+
+    "privacy-policy": {
+        "first": {
+            "title": "Subtitle",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+        },
+        "second": {
+            "title": "Subtitle",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+        }
+    },
+
+    "legal-notice": {
+        "title": "Legal Notice",
+        "imprint": "Imprint",
+        "mail": "Exploring the Board",
+        "terms": {
+            "title": "Acceptance of terms",
+            "text": "By accessing and using <span>Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice."
+        },
+        "ownership": {
+            "title": "Scope and ownership of the product",
+            "text": "<span>Portfolio</span> has been developed as part of a student group project in a web development bootcamp at the <span>Developer Akademie GmbH</span>. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. <br /> <br /> The design of <span>Portfolio</span> is owned by the <span>Developer Akademie GmbH</span>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited."
+        },
+        "rights": {
+            "title": "Proprietary rights",
+            "text": "Aside from the design owned by <span>Developer Akademie GmbH</span>, we, the listed students, retain all proprietary rights in <span>Portfolio</span>Portfolio, including any associated copyrighted material, trademarks, and other proprietary information."
+        },
+        "use": {
+            "title": "Use of the product",
+            "text": "<span>Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <span>Portfolio</span> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <span>Portfolio</span>."
+        },
+        "disclaimer": {
+            "title": "Disclaimer of warranties and limitation of liability",
+            "text": "<span>Portfolio</span> is provided 'as is' without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the <span>Developer Akademie</span>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss ofprofits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <span>Portfolio</span>."
+        },
+        "indemnity": {
+            "title": "Indemnity",
+            "text": "You agree to indemnify, defend and hold harmless us, the listed students, the <span>Developer Akademie</span>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span>Portfolio</span> and/or your breach of this Legal Notice."
+        },
+        "contact-me": "For any questions or notices, please contact me at anastasia.roberz@gmx.de.",
+        "date": "Date: July 26, 2025"
+    }
 }

@@ -3,11 +3,8 @@
 <div class="contact-content">
     <div class="contact-txt">
         <h3>{{ 'contact.subtitle' | translate }}</h3>
-        <p>
-            Encourage people to contact you and describe what role you are interested in. Show that
-            you will add value to their projects through your work.
-        </p>
-        <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+        <p>{{ 'contact.why-contact' | translate }}</p>
+        <p [innerHTML]="'contact.contact-me' | translate"></p>
     </div>
 
     <form class="input-wrapper" autocomplete="off" [formGroup]="msgForm" (ngSubmit)="onSubmit()">
@@ -72,9 +69,11 @@
                     }
                 </label>
                 <p class="privacy-policy">
-                    I've read the
-                    <a class="txt-highlight" routerLink="/privacy-policy">privacy policy</a> and
-                    agree to the processing of my data as outlined.
+                    {{ 'contact.privacy-policy.prefix' | translate }}
+                    <a class="txt-highlight" routerLink="/privacy-policy">{{
+                        'contact.privacy-policy.link' | translate
+                    }}</a>
+                    {{ 'contact.privacy-policy.suffix' | translate }}
                 </p>
                 <app-error-handling
                     [control]="msgForm.get('privacy')"
@@ -84,7 +83,7 @@
         </div>
 
         <button class="btn-primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">
-            Send message :)
+            {{ 'contact.button' | translate }} :)
         </button>
 
         @if (statusMessage) {

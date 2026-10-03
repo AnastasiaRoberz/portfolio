@@ -9,21 +9,18 @@ import { TranslatePipe } from '@ngx-translate/core';
     templateUrl: './about.html',
 })
 export class About {
-    aboutMe =
-        'Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?';
-
     aboutList: AboutItem[] = [
         {
             iconId: 'icon-location',
-            text: 'Where are you located? Are you open to different ways of working, such as working remotely or even relocating?',
+            text: 'about.list.location',
         },
         {
             iconId: 'icon-bulb',
-            text: 'Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?',
+            text: 'about.list.learning',
         },
         {
             iconId: 'icon-puzzle',
-            text: 'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration.',
+            text: 'about.list.problem-solving',
         },
     ];
 }

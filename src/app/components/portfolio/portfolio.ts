@@ -13,23 +13,20 @@ export class Portfolio {
         {
             name: 'El Pollo Loco',
             technologies: ['JavaScript', 'HTML', 'CSS'],
-            description:
-                'Jump, run and throw game based on object-orientated approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+            description: 'portfolio.projects.pollo-loco',
             imgSrc: 'pollo-loco.png',
             urlGit: 'https://github.com/AnastasiaRoberz/el-pollo-loco',
         },
         {
             name: 'Join',
             technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-            description:
-                'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+            description: 'portfolio.projects.join',
             imgSrc: 'join.png',
         },
         {
             name: 'Pokédex',
             technologies: ['JavaScript', 'HTML', 'CSS', 'API'],
-            description:
-                'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+            description: 'portfolio.projects.pokedex',
             imgSrc: 'pokedex.png',
             urlGit: 'https://github.com/AnastasiaRoberz/pokedex',
         },
