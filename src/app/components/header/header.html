@@ -1,10 +1,21 @@
-<div class="header-content">
-    <p class="logo">Anastasia</p>
+<header class="header-content">
+    <a class="logo" routerLink="/">Anastasia</a>
 
     <div class="menu">
         <nav>
-            <button type="button" (click)="scrollTo('about')">
-                {{ 'header.about' | translate }}
+            <a class="nav-link" href="#about">{{ 'header.about' | translate }}</a>
+            <a class="nav-link" href="#skills">{{ 'header.skills' | translate }}</a>
+            <a class="nav-link" href="#portfolio">{{ 'header.portfolio' | translate }}</a>
+        </nav>
+
+        <div class="language-switch">
+            <button
+                type="button"
+                class="btn-language"
+                (click)="useLanguage('de')"
+                [class.active]="currentLanguage === 'de'"
+            >
+                DE
             </button>
             <button type="button" (click)="scrollTo('skills')">
                 {{ 'header.skills' | translate }}
@@ -12,11 +23,6 @@
             <button type="button" (click)="scrollTo('projects')">
                 {{ 'header.portfolio' | translate }}
             </button>
-        </nav>
-
-        <div class="language">
-            <button class="btn-language" (click)="useLanguage('de')">DE</button>
-            <button class="btn-language active" (click)="useLanguage('en')">EN</button>
         </div>
     </div>
-</div>
+</header>
