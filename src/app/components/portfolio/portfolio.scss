@@ -2,39 +2,45 @@
 
 :host {
     @include styles.flex-center(column);
-    width: 100%;
+    @include styles.content-boundary;
+    align-items: flex-start;
     gap: 32px;
-    padding: styles.$padding-main;
+    z-index: 3;
 }
 
 h2 {
-    align-self: flex-start;
+    @include styles.line-left(styles.$primary2);
+}
 
-    &::before {
-        content: '';
-        background-color: styles.$primary2;
-        width: 100vw;
-        height: 4px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: calc(100% + 32px);
-    }
+.description {
+    width: 45%;
 }
 
 .projects-wrapper {
+    @include styles.flex-center(column);
     width: 100%;
+    gap: 80px;
 }
 
 .project {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 35px;
+
+    &.reversed {
+        flex-direction: row-reverse;
+
+        .project-infos {
+            align-items: flex-end;
+            text-align: right;
+        }
+    }
 }
 
 img {
-    height: 560px;
-    width: 601px;
+    width: 620px;
+    height: 339px;
 }
 
 .project-infos {
@@ -45,7 +51,7 @@ img {
     gap: 15px;
 }
 
-.knowledge {
+.technologies {
     font-size: 1.5rem;
     color: styles.$primary1;
 }
@@ -57,13 +63,8 @@ img {
     margin-top: 20px;
 }
 
-.btn-test {
-    @include styles.btn-primary;
-    background-color: styles.$primary2;
-}
-
-.btn-git {
-    @include styles.btn-primary;
-    background-color: transparent;
-    border: 1px solid styles.$primary1;
+.blue-shadow {
+    position: absolute;
+    top: -150px;
+    right: -150px;
 }

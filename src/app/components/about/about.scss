@@ -2,10 +2,9 @@
 
 :host {
     @include styles.flex-center;
+    @include styles.content-boundary;
+    align-items: flex-start;
     gap: 166px;
-    width: 100%;
-    max-width: 1440px;
-    padding: styles.$padding-main;
 }
 
 .about-content {
@@ -29,6 +28,7 @@ li {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
+    cursor: pointer;
 
     &:hover {
         .about-icon {
@@ -43,10 +43,39 @@ li {
     min-width: 48px;
     height: 48px;
     padding: 8px 0;
-    stroke-width: 1px;
 }
 
-.photo {
-    width: 593px;
-    height: auto;
+.photo-wrapper {
+    position: relative;
+
+    .photo {
+        width: 593px;
+        height: 647px;
+        z-index: 3;
+    }
+
+    .bg {
+        width: 1440px;
+        height: auto;
+        position: absolute;
+        bottom: -112%;
+        right: 0;
+        z-index: 3;
+    }
+
+    .photo-green {
+        width: 431px;
+        height: auto;
+        position: absolute;
+        top: 12%;
+        right: -6%;
+    }
+
+    .photo-purple {
+        width: 400px;
+        height: 558px;
+        position: absolute;
+        top: 15%;
+        left: -10%;
+    }
 }

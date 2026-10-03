@@ -1,15 +1,12 @@
 @use '../../../../public/assets/styles';
 
 :host {
+    @include styles.content-boundary;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    height: calc(100dvh - 110px);
-    padding: styles.$padding-main;
-    margin-top: 110px;
+    // height: calc(100dvh - styles.$header-height);
 }
 
 .hero-content {
@@ -21,13 +18,14 @@
 .hero-title {
     @include styles.flex-center;
     gap: 35px;
+    position: relative;
 
     .vertical {
-        font-size: 5.6rem;
-        color: white;
+        font-size: 5.625rem;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
-        line-height: 1;
+        line-height: 0.75;
+        z-index: 3;
     }
 
     .name-wrapper {
@@ -35,29 +33,32 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 6px;
-    }
-
-    .name {
-        font-size: 8rem;
-        color: white;
-        font-weight: 700;
-        line-height: 100%;
-        text-align: right;
+        gap: 12px;
+        z-index: 3;
     }
 
     .job-title {
         font-size: 4rem;
         color: styles.$primary2;
         text-transform: uppercase;
-        line-height: 100%;
+        line-height: 0.75;
     }
-}
 
-button {
-    @include styles.btn-primary;
-    border: none;
-    background-color: styles.$primary1;
+    .purple-shadow {
+        width: 835px;
+        height: auto;
+        position: absolute;
+        top: -55%;
+        left: -65%;
+    }
+
+    .blue-shadow {
+        width: 865.5px;
+        height: auto;
+        position: absolute;
+        top: -105%;
+        right: -90%;
+    }
 }
 
 .hero-footer {
@@ -70,30 +71,10 @@ button {
 
 .social-section {
     @include styles.flex-center;
+    @include styles.line-left(styles.$primary1);
     gap: 42px;
     margin-left: 42px;
     position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: calc(100% + 42px);
-        height: 4px;
-        width: 100vw;
-        background-color: styles.$primary1;
-    }
-
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        padding: 5px;
-
-        &:hover {
-            padding: 0;
-        }
-    }
 }
 
 .scroll {
@@ -105,9 +86,4 @@ button {
         width: 24px;
         height: 24px;
     }
-}
-
-hr {
-    width: 100px;
-    border: 4px solid styles.$primary1;
 }
