@@ -9,7 +9,7 @@
             <div class="project-infos">
                 <p class="highlight">{{ project.name }}</p>
                 <p class="technologies">{{ project.technologies.join(' | ') }}</p>
-                <p>{{ project.description }}</p>
+                <p>{{ project.description | translate }}</p>
                 <div class="project-btns">
                     <a class="btn btn-primary" target="_blank" href="{{ project.urlTest }}"
                         >Live Test</a

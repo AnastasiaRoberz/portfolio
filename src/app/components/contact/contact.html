@@ -3,8 +3,8 @@
 <div class="contact-content">
     <div class="contact-txt">
         <h3>{{ 'contact.subtitle' | translate }}</h3>
-        <p>{{ 'contact.why-contact' | translate }}</p>
-        <p [innerHTML]="'contact.contact-me' | translate"></p>
+        <p>{{ 'contact.description' | translate }}</p>
+        <p [innerHTML]="'contact.prompt' | translate"></p>
     </div>
 
     <form class="input-wrapper" autocomplete="off" [formGroup]="msgForm" (ngSubmit)="onSubmit()">

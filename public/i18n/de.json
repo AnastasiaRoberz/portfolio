@@ -1,1 +1,134 @@
+{
+    "header": {
+        "about": "Über mich",
+        "skills": "Skills",
+        "portfolio": "Portfolio"
+    },
 
+    "hero": {
+        "job-title": "Frontend Developer",
+        "btn-talk": "Lass uns reden",
+        "scroll": "Nach unten scrollen"
+    },
+
+    "about": {
+        "title": "Über mich",
+        "greeting": "Hi, ich bin Anastasia!",
+        "text": "Für mich ist Webentwicklung der ideale Schnittpunkt aus logischer Architektur und sichtbarem Mehrwert. Mein technischer Hintergrund treibt mich an, nicht nur funktionierenden, sondern durchdachten, wartbaren und modularen Code zu schreiben – vom sauberen Backend bis zum intuitiven UI-Design. Inspiration schöpfe ich aus der ständigen Weiterentwicklung moderner Technologien und dem Anspruch, komplexe Workflows in greifbare, performante Webanwendungen zu verwandeln.",
+        "cta": "Lass uns vernetzen und gemeinsam etwas Großartiges bauen!",
+        "list": {
+            "location": "Ansässig im Raum Stuttgart. Ich arbeite bevorzugt remote oder hybrid, bringe verlässliche Selbstorganisation mit und schätze gezielten Austausch vor Ort.",
+            "learning": "Webtechnologien entwickeln sich rasant – genau das reizt mich. Ich arbeite mich zügig in moderne Frameworks und Tools ein, hinterfrage Zusammenhänge im Detail und baue mein Wissen kontinuierlich und strukturiert aus.",
+            "problem-solving": "Probleme gehe ich methodisch und mit Ausdauer an: erst die Ursache verstehen, dann eine saubere, wartbare Architektur wählen. Dabei verbinde ich analytische Präzision mit einem Blick für nutzerfreundliches, durchdachtes UI-Design."
+        }
+    },
+
+    "skills": {
+        "title": "Skills",
+        "description": "In meinen Projekten habe ich praxisnah mit modernem HTML, CSS/SCSS und JavaScript gearbeitet und skalierbare Webanwendungen mit Frameworks wie Angular realisiert. Für mich hört Entwicklung nie bei den Basics auf: Angesichts der rasanten Entwicklung im Web bilde ich mich gezielt weiter, setze auf saubere Architektur und lerne laufend neue Werkzeuge und Best Practices dazu.",
+        "subheading": {
+            "text": "Auf der Suche nach einem ",
+            "highlight": "anderen Skill?"
+        },
+        "subtext": "Technologien entwickeln sich stetig weiter – und ich mich mit ihnen. Wenn dein Tech-Stack eine bestimmte Technologie oder ein neues Framework erfordert, arbeite ich mich motiviert und fundiert darin ein."
+    },
+
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "Entdecke hier eine Auswahl meiner Arbeiten – probiere die Projekte direkt aus, um meine Fähigkeiten in Aktion zu sehen.",
+        "projects": {
+            "pollo-loco": "Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Flaschen zu sammeln, um gegen das verrückte Huhn zu kämpfen.",
+            "join": "Vom Kanban-System inspirierter Task-Manager. Erstelle und organisiere Aufgaben per Drag-and-Drop und weise ihnen Teammitglieder sowie Kategorien zu.",
+            "pokedex": "Eine auf der PokéAPI basierende Web-App, die Pokémon-Daten übersichtlich abruft, strukturiert und katalogisiert."
+        }
+    },
+
+    "references": {
+        "schuster": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne seinen Einsatz wären wir nicht so weit gekommen.",
+        "eichinger": "Michi war ein erstklassiger Teamkollege bei der DA. Sein großes Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben maßgeblich zu unserem Erfolg beigetragen.",
+        "nuber": "Die Zusammenarbeit mit Michael war eine echte Bereicherung. Er versteht es, Teammitglieder zu Höchstleistungen zu motivieren, liefert wertvolle Impulse beim Brainstorming und hatte für persönliche Belange stets ein offenes Ohr – gepaart mit großartigem Humor."
+    },
+
+    "contact": {
+        "title": "Kontakt",
+        "subtitle": "Du suchst nach einer Lösung?",
+        "description": "Ich unterstütze dich dabei, Ideen in saubere, performante und nutzerfreundliche Webanwendungen zu verwandeln. Egal ob du Verstärkung für dein Frontend-Team suchst oder Unterstützung bei der Umsetzung moderner Webprojekte brauchst – lass uns unverbindlich austauschen.",
+        "prompt": "Du suchst eine Frontend-Entwicklerin? <span>Schreib mir!</span>",
+        "privacy-policy": {
+            "prefix": "Ich habe die",
+            "link": "Datenschutzerklärung",
+            "suffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+        },
+        "button": "Nachricht senden",
+
+        "fields": {
+            "name": "Dein Name",
+            "mail": "Deine E-Mail",
+            "msg": "Deine Nachricht",
+            "privacy": ""
+        },
+
+        "error-msg": {
+            "required": "{{ field }} ist ein Pflichtfeld.",
+            "min-length": "{{ field }} muss mindestens {{ min }} Zeichen lang sein.",
+            "mail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+            "msg": "Deine Nachricht darf nicht leer sein.",
+            "privacy": "Bitte bestätige die Datenschutzerklärung."
+        }
+    },
+
+    "footer": {
+        "legal-notice": "Rechtliche Hinweise"
+    },
+
+    "privacy-policy": {
+        "title": "Datenschutzerklärung",
+        "responsible": {
+            "title": "Verantwortliche Stelle",
+            "text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:"
+        },
+        "hosting": {
+            "title": "Bereitstellung der Website (Hosting)",
+            "text": "Beim Aufrufen dieser Website erfasst der Webserver automatisch technische Informationen (z. B. IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs). Diese Daten sind technisch erforderlich, um die Website stabil und sicher auszuliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO."
+        },
+        "contact": {
+            "title": "Kontaktformular",
+            "text": "Wenn du mir über das Kontaktformular eine Nachricht sendest, werden deine Angaben aus dem Formular (Name, E-Mail-Adresse, Nachrichteninhalt) zur Bearbeitung der Anfrage und für mögliche Anschlussfragen verarbeitet. Die Verarbeitung erfolgt auf Grundlage deiner Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Die Daten werden vertraulich behandelt und gelöscht, sobald der Zweck der Speicherung entfällt, sofern keine gesetzlichen Aufbewahrungsfristen bestehen."
+        },
+        "rights": {
+            "title": "Deine Rechte",
+            "text": "Du hast jederzeit das Recht auf unentgeltliche Auskunft über deine gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung. Ebenso hast du das Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Du kannst eine erteilte Einwilligung zur Datenverarbeitung jederzeit mit Wirkung für die Zukunft per E-Mail widerrufen."
+        }
+    },
+
+    "legal-notice": {
+        "title": "Rechtliche Hinweise",
+        "imprint": "Impressum",
+        "terms": {
+            "title": "Zustimmung zu den Nutzungsbedingungen",
+            "text": "Mit dem Zugriff auf und der Nutzung von <span>Portfolio</span> (Produkt) erklärst du dich mit den folgenden Bedingungen sowie allen Richtlinien oder Änderungen einverstanden, die von Zeit zu Zeit veröffentlicht werden. Wir, die aufgeführten Studierenden, behalten uns das Recht vor, diese Bedingungen jederzeit und ohne gesonderte Vorankündigung anzupassen."
+        },
+        "ownership": {
+            "title": "Umfang und Urheberschaft des Produkts",
+            "text": "<span>Portfolio</span> entstand als Studierenden-Gruppenprojekt im Rahmen eines Web-Development-Bootcamps an der <span>Developer Akademie GmbH</span>. Das Projekt dient ausschließlich Bildungszwecken und ist nicht für eine dauerhafte private oder kommerzielle Nutzung ausgelegt. Eine ständige Verfügbarkeit, Zuverlässigkeit, Fehlerfreiheit oder eine bestimmte Qualität des Produkts können daher nicht gewährleistet werden. <br /> <br /> Das Design von <span>Portfolio</span> ist Eigentum der <span>Developer Akademie GmbH</span>. Die unerlaubte Nutzung, Vervielfältigung, Bearbeitung, Verbreitung oder Nachbildung des Designs ist strikt untersagt."
+        },
+        "rights": {
+            "title": "Schutz- und Urheberrechte",
+            "text": "Mit Ausnahme des Designs der <span>Developer Akademie GmbH</span> liegen alle Urheber- und Leistungsschutzrechte an <span>Portfolio</span>, einschließlich aller zugehörigen Inhalte, Marken und sonstigen geschützten Materialien, bei uns, den aufgeführten Studierenden."
+        },
+        "use": {
+            "title": "Zulässige Nutzung",
+            "text": "<span>Portfolio</span> darf ausschließlich zu rechtmäßigen Zwecken und unter Einhaltung aller geltenden Gesetze und Vorschriften verwendet werden. Eine Nutzung für rechtswidrige Handlungen oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Du trägst die alleinige Verantwortung für deine Interaktionen mit anderen Nutzern von <span>Portfolio</span>."
+        },
+        "disclaimer": {
+            "title": "Haftungsausschluss und Gewährleistung",
+            "text": "<span>Portfolio</span> wird im vorliegenden Zustand ('as is') ohne Gewährleistung jeglicher Art bereitgestellt – weder ausdrücklich noch stillschweigend. Dies umfasst insbesondere die Gewährleistung für Marktfähigkeit, Eignung für einen bestimmten Zweck oder die Nichtverletzung von Rechten Dritter. Weder wir, die aufgeführten Studierenden, noch die <span>Developer Akademie</span> haften für direkte, indirekte, beiläufig entstandene, konkrete oder Folgeschäden (wie etwa entgangenen Gewinn, Verlust von Daten, Nutzungsausfall oder immaterielle Schäden), die sich aus oder im Zusammenhang mit der Nutzung oder Funktionsweise von <span>Portfolio</span> ergeben – selbst dann nicht, wenn auf die Möglichkeit solcher Schäden hingewiesen wurde."
+        },
+        "indemnity": {
+            "title": "Freistellung von Ansprüchen",
+            "text": "Du erklärst dich damit einverstanden, uns, die aufgeführten Studierenden, sowie die <span>Developer Akademie</span> und verbundene Partner von sämtlichen Forderungen, Ansprüchen, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Rechtsverfolgungskosten) freizustellen und schadlos zu halten, die aus deiner Nutzung von <span>Portfolio</span> oder einer Verletzung dieser Bestimmungen resultieren."
+        },
+        "contact-me": "Bei Fragen oder Anmerkungen wende dich bitte an: anastasia.roberz@gmx.de.",
+        "date": "Stand: 26. Juli 2025"
+    }
+}

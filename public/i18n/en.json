@@ -13,9 +13,9 @@
 
     "about": {
         "title": "About",
-        "hey-there": "Hey there, I'm Anastasia!",
-        "about-me": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-        "lets-connect": "Let's connect and create something amazing together!",
+        "greeting": "Hey there, I'm Anastasia!",
+        "text": "For me, web development is the perfect intersection of logical architecture and tangible user value. With a strong IT background, my focus goes beyond just making things work: I build clean, modular, and maintainable applications—from reliable backend logic to responsive, intuitive UI design. My drive comes from solving complex technical challenges and turning robust ideas into performant digital solutions.",
+        "cta": "Let's connect and create something amazing together!",
         "list": {
             "location": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
             "learning": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
@@ -24,7 +24,13 @@
     },
 
     "skills": {
-        "title": "Skills"
+        "title": "Skills",
+        "description": "Through various projects, I have gained hands-on experience building dynamic web applications with modern HTML, CSS/SCSS, and JavaScript, leveraging frameworks like Angular. Given how quickly web development evolves, I continuously expand my skill set—focusing on clean, scalable code and keeping up with modern standards and best practices.",
+        "subheading": {
+            "text": "Looking for ",
+            "highlight": "another skill?"
+        },
+        "subtext": "Technologies never stand still, and neither do I. If your stack requires a specific tool or a new framework, I am always enthusiastic and quick to dive in and master it."
     },
 
     "portfolio": {
@@ -46,8 +52,8 @@
     "contact": {
         "title": "Contact",
         "subtitle": "Got a problem to solve?",
-        "why-contact": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
-        "contact-me": "Need a Frontend developer? <strong>Contact me!</strong>",
+        "description": "I help turn ideas into clean, performant, and intuitive web applications. Whether you're looking to strengthen your frontend team or need a reliable developer to bring your digital project to life—let's connect and discuss how I can contribute.",
+        "prompt": "Need a Frontend developer? <span>Contact me!</span>",
         "privacy-policy": {
             "prefix": "I've read the",
             "link": "privacy policy",
@@ -76,20 +82,28 @@
     },
 
     "privacy-policy": {
-        "first": {
-            "title": "Subtitle",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+        "title": "Privacy Policy",
+        "responsible": {
+            "title": "Controller",
+            "text": "The controller responsible for data processing on this website is:"
         },
-        "second": {
-            "title": "Subtitle",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+        "hosting": {
+            "title": "Web Hosting",
+            "text": "When you visit this website, the hosting server automatically collects technical connection data (e.g. IP address, browser type, operating system, timestamp of access). This information is technically necessary to reliably and securely display the website. The legal basis is Art. 6(1)(f) GDPR."
+        },
+        "contact": {
+            "title": "Contact Form",
+            "text": "When you send a message via the contact form, the submitted details (name, email address, message text) are stored and processed solely to answer your inquiry. This processing is based on your consent pursuant to Art. 6(1)(a) GDPR. Your data is treated confidentially and deleted once your inquiry has been resolved, unless statutory retention requirements apply."
+        },
+        "rights": {
+            "title": "Your Rights",
+            "text": "You have the right to request free information regarding your stored personal data, its origin, recipients, and purpose of processing at any time. You also have the right to rectification, restriction of processing, or deletion of this data, as well as the right to revoke your consent at any time with future effect via email."
         }
     },
 
     "legal-notice": {
         "title": "Legal Notice",
         "imprint": "Imprint",
-        "mail": "Exploring the Board",
         "terms": {
             "title": "Acceptance of terms",
             "text": "By accessing and using <span>Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice."
@@ -100,7 +114,7 @@
         },
         "rights": {
             "title": "Proprietary rights",
-            "text": "Aside from the design owned by <span>Developer Akademie GmbH</span>, we, the listed students, retain all proprietary rights in <span>Portfolio</span>Portfolio, including any associated copyrighted material, trademarks, and other proprietary information."
+            "text": "Aside from the design owned by <span>Developer Akademie GmbH</span>, we, the listed students, retain all proprietary rights in <span>Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information."
         },
         "use": {
             "title": "Use of the product",
