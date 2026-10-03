@@ -10,10 +10,20 @@
         <p>Need a Frontend developer? <strong>Contact me!</strong></p>
     </div>
 
-    <form class="input-wrapper">
+    <form class="input-wrapper" autocomplete="off" [formGroup]="msgForm" (ngSubmit)="onSubmit()">
         <div class="input">
-            <input type="text" name="input-name" id="input-name" placeholder="Your name" required />
-            <span class="invalid-txt">Your name is required</span>
+            <input
+                type="text"
+                name="input-name"
+                id="input-name"
+                placeholder="Your name"
+                formControlName="name"
+                autocomplete="off"
+            />
+            <app-error-handling
+                [control]="msgForm.get('name')"
+                fieldKey="contact.fields.name"
+            ></app-error-handling>
         </div>
 
         <div class="input">
@@ -22,28 +32,55 @@
                 name="input-mail"
                 id="input-mail"
                 placeholder="Your e-mail"
-                required
+                formControlName="mail"
+                autocomplete="off"
             />
-            <span class="invalid-txt">Your email is required</span>
+            <app-error-handling
+                [control]="msgForm.get('mail')"
+                fieldKey="contact.fields.mail"
+            ></app-error-handling>
         </div>
 
         <div class="message">
-            <textarea
-                name="txta-message"
-                id="txta-message"
-                placeholder="Your message"
-                required
-            ></textarea>
-            <p class="privacy-policy">
-                <input
-                    type="checkbox"
-                    name="checkbox-privacy-policy"
-                    id="checkbox-privacy-policy"
-                />
+            <div class="input">
+                <textarea
+                    name="txta-message"
+                    id="txta-message"
+                    placeholder="Your message"
+                    autocomplete="off"
+                    formControlName="message"
+                ></textarea>
+                <app-error-handling
+                    [control]="msgForm.get('message')"
+                    fieldKey="contact.fields.msg"
+                ></app-error-handling>
+            </div>
 
-                I've read the <span class="txt-highlight">privacy policy</span> and agree to the
-                processing of my data as outlined.
-            </p>
+            <div class="check-privacy-policy">
+                <label class="lbl-checkbox">
+                    <input
+                        type="checkbox"
+                        name="checkbox-privacy-policy"
+                        id="checkbox-privacy-policy"
+                        formControlName="privacy"
+                    />
+
+                    @if (privacy?.valid) {
+                        <svg class="icon-checked">
+                            <use href="/assets/icons/icons.svg#icon-checked"></use>
+                        </svg>
+                    }
+                </label>
+                <p class="privacy-policy">
+                    I've read the
+                    <a class="txt-highlight" routerLink="/privacy-policy">privacy policy</a> and
+                    agree to the processing of my data as outlined.
+                </p>
+                <app-error-handling
+                    [control]="msgForm.get('privacy')"
+                    fieldKey="contact.fields.privacy"
+                ></app-error-handling>
+            </div>
         </div>
 
         <button class="submit" disabled type="submit">Send message :)</button>
