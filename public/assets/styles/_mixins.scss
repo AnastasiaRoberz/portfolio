@@ -1,10 +1,16 @@
-@use './variables' as variables;
+@use './variables';
 
 @mixin flex-center($direction: row) {
     display: flex;
     flex-direction: $direction;
     justify-content: center;
     align-items: center;
+}
+
+@mixin content-boundary {
+    width: 100%;
+    max-width: 1440px;
+    padding: variables.$padding-main;
 }
 
 @mixin input-field {
@@ -24,48 +30,6 @@
     font-size: 0.875rem;
 }
 
-@mixin button {
-    font-size: 1.5rem;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: none;
-}
-
-@mixin btn-primary {
-    @include button();
-    background-color: variables.$primary1;
-    margin: 5px 10px;
-
-    &:hover {
-        background-color: variables.$primary2;
-        padding: 20px 40px;
-        margin: 0;
-    }
-
-    &:active {
-        background-color: white;
-        color: black;
-    }
-}
-
-@mixin btn-secondary {
-    @include button();
-    background-color: transparent;
-    border: 1px solid variables.$primary1;
-
-    &:hover {
-        background-color: variables.$primary1;
-        border: none;
-    }
-
-    &:active {
-        background-color: white;
-        border: none;
-        color: variables.$primary2;
-    }
-}
-
 @mixin txt-underline {
     content: '';
     position: absolute;
@@ -73,4 +37,31 @@
     bottom: -4px;
     width: 55.5px;
     height: 3px;
+    background-color: variables.$primary1;
+}
+
+@mixin line-left($color) {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc(100% + 32px);
+        height: 4px;
+        width: 100vw;
+        background-color: $color;
+    }
+}
+
+@mixin line-right($color) {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 32px);
+        height: 4px;
+        width: 100vw;
+        background-color: $color;
+    }
 }
