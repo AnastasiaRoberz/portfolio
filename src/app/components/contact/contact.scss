@@ -10,7 +10,7 @@
 }
 
 h2 {
-    @include styles.line-right(styles.$primary1);
+    @include styles.line('right', styles.$primary1);
 }
 
 .contact-content {
@@ -29,7 +29,7 @@ h2 {
 }
 
 h3 {
-    @include styles.line-left(styles.$secondary);
+    @include styles.line('left', styles.$secondary);
 }
 
 .input-wrapper {

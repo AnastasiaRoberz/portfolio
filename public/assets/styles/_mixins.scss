@@ -40,28 +40,22 @@
     background-color: variables.$primary1;
 }
 
-@mixin line-left($color) {
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: calc(100% + 32px);
-        height: 4px;
-        width: 100vw;
-        background-color: $color;
-    }
-}
+@mixin line($direction, $color, $offset: 32px) {
+    $pseudo: if($direction == 'left', 'before', 'after');
 
-@mixin line-right($color) {
-    &::after {
+    &::#{$pseudo} {
         content: '';
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: calc(100% + 32px);
         height: 4px;
-        width: 100vw;
+        width: 200vw;
         background-color: $color;
+
+        @if ($direction == 'left') {
+            right: calc(100% + $offset);
+        } @else {
+            left: calc(100% + $offset);
+        }
     }
 }

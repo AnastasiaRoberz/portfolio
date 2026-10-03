@@ -71,7 +71,7 @@
 
 .social-section {
     @include styles.flex-center;
-    @include styles.line-left(styles.$primary1);
+    @include styles.line('left', styles.$primary1);
     gap: 42px;
     margin-left: 42px;
     position: relative;

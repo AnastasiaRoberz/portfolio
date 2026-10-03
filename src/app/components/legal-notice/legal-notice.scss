@@ -15,24 +15,25 @@
 }
 
 h2 {
-    font-size: 3.8rem;
-    font-weight: 700;
-    color: styles.$primary1;
-    align-self: center;
+    @include styles.line('right', styles.$primary2);
     margin-bottom: 24px;
-    padding: 0 25px;
-    background-color: styles.$background;
     position: relative;
+    display: inline-block;
+    align-self: center;
+    line-height: 0.75;
 
-    &::before {
-        content: '';
-        height: 4px;
-        width: 100vw;
-        background-color: styles.$primary2;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    .title {
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: styles.$primary1;
+        padding: 0 25px;
+        background-color: styles.$background;
+        z-index: 2;
+    }
+
+    &::after {
         left: -130px;
+        transform: translateY(200%);
     }
 }
 
