@@ -83,6 +83,18 @@
             </div>
         </div>
 
-        <button class="submit" disabled type="submit">Send message :)</button>
+        <button class="btn-primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">
+            Send message :)
+        </button>
+
+        @if (statusMessage) {
+            <p>{{ statusMessage }}</p>
+        }
     </form>
 </div>
+
+<img class="shadow" src="/assets/pngs/shadows/purple-shadow.png" alt="" />
+
+<svg class="icon-arrow-up">
+    <use href="/assets/icons/icons.svg#icon-arrow-up"></use>
+</svg>
