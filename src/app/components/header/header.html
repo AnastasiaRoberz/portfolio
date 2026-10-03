@@ -17,11 +17,13 @@
             >
                 DE
             </button>
-            <button type="button" (click)="scrollTo('skills')">
-                {{ 'header.skills' | translate }}
-            </button>
-            <button type="button" (click)="scrollTo('projects')">
-                {{ 'header.portfolio' | translate }}
+            <button
+                type="button"
+                class="btn-language"
+                (click)="useLanguage('en')"
+                [class.active]="currentLanguage === 'en'"
+            >
+                EN
             </button>
         </div>
     </div>
