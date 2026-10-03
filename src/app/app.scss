@@ -7,4 +7,6 @@
     align-items: center;
     background-color: styles.$background;
     min-height: 100dvh;
+    overflow-x: clip;
+    overflow: hidden;
 }

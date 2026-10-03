@@ -1,25 +1,35 @@
-@use '../public/assets/styles/' as styles;
+@use '../public/assets/styles';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: styles.$header-height;
+    position: relative;
 }
 
-body {
+// --- FONTS ---
+html,
+a,
+button {
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 16px;
-    line-height: 120%;
-    color: white;
-    overflow-x: hidden;
+    color: styles.$white;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: right;
 }
 
 h2 {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1;
-    position: relative;
 }
 
 h3 {
@@ -28,7 +38,78 @@ h3 {
     line-height: 1;
 }
 
+.highlight {
+    color: styles.$primary2;
+    font-size: 2rem;
+    font-weight: 700;
+}
+// -------------
+
+// --- GENERAL STYLING ---
 a {
     cursor: pointer;
     text-decoration: none;
+}
+
+// -----------------------
+
+// --- BUTTON STYLING ---
+button,
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: styles.$primary1;
+    margin: 5px 10px;
+
+    &:hover {
+        background-color: styles.$primary2;
+        padding: 20px 40px;
+        margin: 0;
+    }
+
+    &:active {
+        background-color: styles.$white;
+        color: black;
+        padding: 15px 30px;
+        margin: 5px 10px;
+    }
+
+    &:disabled {
+        background-color: styles.$disabled;
+        cursor: auto;
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid styles.$primary1;
+
+    &:hover {
+        background-color: styles.$primary1;
+        border: none;
+    }
+
+    &:active {
+        background-color: styles.$white;
+        border: none;
+        color: styles.$primary2;
+    }
+}
+// ----------------------
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+
+    &:hover {
+        padding: 0;
+    }
 }
