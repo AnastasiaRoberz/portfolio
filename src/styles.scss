@@ -56,12 +56,19 @@ a {
 // --- BUTTON STYLING ---
 button,
 .btn {
+    @include styles.flex-center;
     border: none;
     background: none;
     cursor: pointer;
     font-size: 1.5rem;
     padding: 15px 30px;
     border-radius: 10px;
+
+    &:disabled {
+        visibility: hidden;
+        pointer-events: none;
+        cursor: default;
+    }
 }
 
 .btn-primary {
@@ -83,7 +90,9 @@ button,
 
     &:disabled {
         background-color: styles.$disabled;
-        cursor: auto;
+        pointer-events: none;
+        cursor: default;
+        visibility: visible;
     }
 }
 

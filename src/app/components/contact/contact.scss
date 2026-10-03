@@ -138,6 +138,12 @@ input[type='checkbox'] {
     height: 39px;
     align-self: flex-end;
     margin-top: 10px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        color: styles.$primary1;
+    }
 }
 
 .shadow {

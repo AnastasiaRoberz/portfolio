@@ -14,12 +14,10 @@
 </div>
 
 <div class="ref-controls">
-    <button class="btn-arrow" (click)="prev()">
-        @if (currentId > 0) {
-            <svg class="arrow-btn">
-                <use href="/assets/icons/icons.svg#icon-arrow-back"></use>
-            </svg>
-        }
+    <button class="btn-arrow" (click)="prev()" [disabled]="currentId == 0">
+        <svg class="arrow-btn">
+            <use href="/assets/icons/icons.svg#icon-arrow-back"></use>
+        </svg>
     </button>
 
     <div class="dots-wrapper">
@@ -32,12 +30,10 @@
         }
     </div>
 
-    <button class="btn-arrow" (click)="next()">
-        @if (currentId < references.length - 1) {
-            <svg class="arrow-btn">
-                <use href="/assets/icons/icons.svg#icon-arrow-forward"></use>
-            </svg>
-        }
+    <button class="btn-arrow" (click)="next()" [disabled]="currentId == references.length - 1">
+        <svg class="arrow-btn">
+            <use href="/assets/icons/icons.svg#icon-arrow-forward"></use>
+        </svg>
     </button>
 </div>
 
