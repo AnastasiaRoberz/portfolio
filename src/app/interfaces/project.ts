@@ -1,6 +1,6 @@
 export interface Project {
     name: string;
-    knowledge: string[];
+    technologies: string[];
     description: string;
     imgSrc: string;
     urlTest?: string;
