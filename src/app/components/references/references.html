@@ -1,1 +1,42 @@
-<p>references works!</p>
+<div class="reference-card">
+    <div class="ref-content">
+        <svg class="icon-quote">
+            <use href="assets/icons/icons.svg#icon-quote"></use>
+        </svg>
+        <div class="txt">{{ references[currentId].text }}</div>
+        <div class="name">{{ references[currentId].name }} - {{ references[currentId].role }}</div>
+    </div>
+    <div class="ref-photo">
+        <img src="/assets/pngs/references/{{ references[currentId].img }}" alt="" />
+    </div>
+</div>
+
+<div class="ref-controls">
+    <button class="btn-arrow" (click)="prev()">
+        @if (currentId > 0) {
+            <svg class="arrow-btn">
+                <use href="/assets/icons/icons.svg#icon-arrow-back"></use>
+            </svg>
+        }
+    </button>
+
+    <div class="dots-wrapper">
+        @for (item of references; track $index) {
+            <button
+                class="dot"
+                [class.active]="currentId === $index"
+                (click)="goTo($index)"
+            ></button>
+        }
+    </div>
+
+    <button class="btn-arrow" (click)="next()">
+        @if (currentId < references.length - 1) {
+            <svg class="arrow-btn">
+                <use href="/assets/icons/icons.svg#icon-arrow-forward"></use>
+            </svg>
+        }
+    </button>
+</div>
+
+<img class="shadow" src="assets/pngs/shadows/green-shadow.png" alt="" />

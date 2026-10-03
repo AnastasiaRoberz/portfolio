@@ -8,6 +8,8 @@ import { Reference } from '../../interfaces/reference';
     templateUrl: './references.html',
 })
 export class References {
+    currentId = 0;
+
     references: Reference[] = [
         {
             name: 'V.Schuster',
@@ -25,7 +27,19 @@ export class References {
             name: 'I.Nuber',
             role: 'Frontend Engineer',
             text: 'It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well.',
-            img: 'refernce3.png',
+            img: 'reference3.png',
         },
     ];
+
+    prev(): void {
+        this.currentId -= 1;
+    }
+
+    next(): void {
+        this.currentId += 1;
+    }
+
+    goTo(index: number): void {
+        this.currentId = index;
+    }
 }

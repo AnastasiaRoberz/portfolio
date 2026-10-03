@@ -1,0 +1,118 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    @include styles.flex-center(column);
+    width: 100%;
+    max-width: 1440px;
+    padding: styles.$padding-main;
+    position: relative;
+    gap: 36px;
+}
+
+.reference-card {
+    @include styles.flex-center;
+    align-items: stretch;
+    gap: 48px;
+    margin-left: 68px;
+}
+
+.ref-content {
+    flex: 1;
+    border: 4px solid styles.$primary2;
+    border-radius: 32px;
+    padding: 48px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+    .icon-quote {
+        width: 97px;
+        height: 68px;
+        position: absolute;
+        top: -34px;
+        left: -68px;
+    }
+
+    .txt {
+        font-size: 1.25rem;
+    }
+}
+
+.name {
+    align-self: flex-end;
+    position: relative;
+    font-size: 1.125rem;
+
+    &::before {
+        content: '';
+        height: 1px;
+        width: 100vw;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc(100% + 16px);
+        background-color: styles.$secondary;
+    }
+}
+
+.ref-photo {
+    @include styles.flex-center;
+    @include styles.line-right(styles.$primary1);
+    width: 272px;
+    height: 272px;
+    border-radius: 50%;
+    border: 4px solid styles.$primary1;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        left: 100%;
+    }
+}
+
+.ref-controls {
+    @include styles.flex-center;
+    gap: 24px;
+
+    .arrow-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    button {
+        padding: 0;
+        width: 32px;
+        height: 32px;
+    }
+
+    .v-none {
+        visibility: hidden;
+    }
+}
+
+.dots-wrapper {
+    @include styles.flex-center;
+    gap: 20px;
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        background-color: styles.$primary1;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.active {
+            background-color: styles.$secondary;
+        }
+    }
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    transform: translateY(-70%);
+}
