@@ -1,10 +1,11 @@
+import { JsonPipe } from '@angular/common';
 import { ChangeDetectorRef, Component, computed, DestroyRef, inject, input } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { AbstractControl } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-    imports: [TranslatePipe],
+    imports: [TranslatePipe, JsonPipe],
     selector: 'app-error-handling',
     styleUrl: './error-handling.scss',
     templateUrl: './error-handling.html',
