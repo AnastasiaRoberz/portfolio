@@ -9,5 +9,16 @@ import { TranslatePipe } from '@ngx-translate/core';
     templateUrl: './skills.html',
 })
 export class Skills {
-    skills = ['HTML', 'CSS', 'JavaScript', 'Typescript', 'Angular', 'Git', 'REST-API', 'Scrum'];
+    skills = [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Typescript',
+        'Angular',
+        'Supabase',
+        'Git',
+        'REST-API',
+        'Scrum',
+        'Material Design',
+    ];
 }
