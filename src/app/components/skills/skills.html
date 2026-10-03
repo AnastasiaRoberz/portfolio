@@ -1,20 +1,22 @@
-<div class="skills-wrapper">
-    @for (skill of skills; track skill) {
-        <div class="skill">
-            <img src="assets/icons/icon-{{ skill | lowercase }}.svg" alt="" />
-            <p class="skill-name">{{ skill }}</p>
-        </div>
-    }
+<div class="icons">
+    <div class="skills-wrapper">
+        @for (skill of skills; track skill) {
+            <div class="skill">
+                <img src="assets/icons/skills/frontend/{{ skill | lowercase }}.svg" alt="" />
+                <p class="skill-name">{{ skill }}</p>
+            </div>
+        }
+    </div>
     <div class="skill learning">
         <div class="speach-bubble">
             <p>I have a special interest in learning</p>
             <div class="tech-wrapper">
                 <div class="tech-item">
-                    <img src="assets/icons/logo-react.svg" alt="" />
+                    <img src="assets/icons/skills/frontend/react.svg" alt="" />
                     <strong>React</strong>
                 </div>
                 <div class="tech-item">
-                    <img src="assets/icons/logo-vuejs.svg" alt="" />
+                    <img src="assets/icons/skills/frontend/vue-js.svg" alt="" />
                     <strong>Vue.js</strong>
                 </div>
             </div>
@@ -33,9 +35,9 @@
         with the rapid changes in web development.
     </p>
     <div class="another-skill">
-        <h3>Looking for <span class="text-highlight">another skill</span>?</h3>
+        <h3>Looking for <span class="highlight">another skill</span>?</h3>
         <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
     </div>
 
-    <button>Get in touch</button>
+    <button class="btn-primary">Get in touch</button>
 </div>
