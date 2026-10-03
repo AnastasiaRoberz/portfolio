@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Project } from '../../interfaces/project';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-    imports: [],
+    imports: [TranslatePipe],
     selector: 'app-portfolio',
     styleUrl: './portfolio.scss',
     templateUrl: './portfolio.html',

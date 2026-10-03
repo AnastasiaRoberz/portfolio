@@ -9,5 +9,44 @@
         "job-title": "Frontend Developer",
         "btn-talk": "Let's Talk",
         "scroll": "Scroll down"
-    }
+    },
+
+    "about": {
+        "title": "About",
+        "hey-there": "Hey there, I'm Anastasia!",
+        "lets-connect": "Let's connect and create something amazing together!"
+    },
+
+    "skills": {
+        "title": "Skills"
+    },
+
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    },
+
+    "references": {},
+
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Got a problem to solve?",
+
+        "fields": {
+            "name": "Your name",
+            "mail": "Your mail",
+            "msg": "Your message",
+            "privacy": ""
+        },
+
+        "error-msg": {
+            "required": "{{ field }} is required.",
+            "min-length": "{{ field }} must have at least {{ min }} characters.",
+            "mail": "Please enter a valid email address.",
+            "msg": "Your message is empty",
+            "privacy": "Please accept the privacy policy."
+        }
+    },
+
+    "footer": {}
 }
