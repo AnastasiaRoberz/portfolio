@@ -1,7 +1,11 @@
-<div class="footer-content">
-    <div>
-        <p class="logo">Anastasia</p>
-        <a class="legal-notice" routerLink="/legal-notice">{{'footer.legal-notice' | translate}}</a>
+<footer class="footer-content">
+    <div class="logo-wrapper">
+        <img class="logo" src="/assets/icons/logo.svg" alt="" />
+        @if (responsive.isDesktop()) {
+            <a class="legal-notice" routerLink="/legal-notice">{{
+                'footer.legal-notice' | translate
+            }}</a>
+        }
     </div>
 
     <p class="copyright">© Anastasia Roberz 2026</p>
@@ -23,4 +27,9 @@
             </svg>
         </a>
     </div>
-</div>
+    @if (!responsive.isDesktop()) {
+        <a class="legal-notice" routerLink="/legal-notice">{{
+            'footer.legal-notice' | translate
+        }}</a>
+    }
+</footer>

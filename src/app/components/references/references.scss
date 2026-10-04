@@ -2,17 +2,17 @@
 
 :host {
     @include styles.flex-center(column);
+    @include styles.content-boundary;
     width: 100%;
     max-width: 1440px;
-    padding: styles.$padding-main;
     position: relative;
-    gap: 36px;
+    gap: clamp(32px, calc(30.857px + 0.357vw), 36px);
 }
 
 .reference-card {
     @include styles.flex-center;
     @include styles.line('right', styles.$primary1, 0px);
-    gap: 48px;
+    gap: clamp(24px, calc(17.143px + 2.143vw), 48px);
     margin-left: 68px;
 }
 
@@ -20,7 +20,7 @@
     flex: 1;
     border: 4px solid styles.$primary2;
     border-radius: 32px;
-    padding: 48px 96px;
+    padding: clamp(16px, calc(6.857px + 2.857vw), 48px) clamp(16px, calc(-6.857px + 7.143vw), 96px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     }
 
     .txt {
-        font-size: 1.25rem;
+        font-size: clamp(1rem, calc(0.929rem + 0.357vw), 1.25rem);
         line-height: 120%;
         height: 112px;
     }
@@ -58,15 +58,15 @@
     .name {
         align-self: flex-end;
         position: relative;
-        font-size: 1.125rem;
+        font-size: clamp(1rem, calc(0.964rem + 0.179vw), 1.125rem);
         white-space: nowrap;
     }
 }
 
 .ref-photo {
     @include styles.flex-center;
-    width: 272px;
-    height: 272px;
+    width: clamp(144px, calc(107.429px + 11.429vw), 272px);
+    height: clamp(144px, calc(107.429px + 11.429vw), 272px);
     border-radius: 50%;
     border: 4px solid styles.$primary1;
     position: relative;
@@ -128,4 +128,19 @@
     top: 0;
     left: -50%;
     transform: translateY(-70%);
+}
+
+:host.is-mobile {
+    .reference-card {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .ref-photo {
+        order: -1;
+    }
+
+    .ref-content {
+        width: 100%;
+    }
 }

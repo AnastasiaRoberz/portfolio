@@ -1,7 +1,7 @@
 @use '../../../../public/assets/styles';
 
 :host {
-    @include styles.content-boundary;
+    @include styles.content-boundary(hero);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,16 +13,15 @@
     @include styles.flex-center(column);
     flex: 1;
     gap: 72px;
-    padding: 0 25px;
 }
 
 .hero-title {
     @include styles.flex-center;
-    gap: 35px;
+    gap: clamp(10px, calc(2.857px + 2.232vw), 35px);
     position: relative;
 
     .vertical {
-        font-size: 5.625rem;
+        font-size: clamp(2rem, calc(0.964rem + 5.179vw), 5.625rem);
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         line-height: 0.75;
@@ -33,13 +32,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 12px;
         z-index: 3;
     }
 
     .job-title {
-        font-size: 4rem;
+        font-size: clamp(1.375rem, calc(0.625rem + 3.75vw), 4rem);
         color: styles.$primary2;
         text-transform: uppercase;
         line-height: 0.75;

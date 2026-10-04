@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [RouterLink, TranslatePipe],
@@ -8,4 +9,6 @@ import { TranslatePipe } from '@ngx-translate/core';
     styleUrl: './footer.scss',
     templateUrl: './footer.html',
 })
-export class Footer {}
+export class Footer {
+    responsive = inject(ResponsiveService);
+}

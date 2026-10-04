@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Project } from '../../interfaces/project';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe],
@@ -9,6 +10,8 @@ import { TranslatePipe } from '@ngx-translate/core';
     templateUrl: './portfolio.html',
 })
 export class Portfolio {
+    responsive = inject(ResponsiveService);
+
     projects: Project[] = [
         {
             name: 'El Pollo Loco',

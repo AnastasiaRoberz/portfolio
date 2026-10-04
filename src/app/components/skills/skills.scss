@@ -2,24 +2,24 @@
 
 :host {
     @include styles.flex-center;
+    @include styles.content-boundary;
     width: 100%;
     max-width: 1440px;
     gap: 116px;
-    padding: styles.$padding-main;
     z-index: 5;
 }
 
 .icons {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: clamp(16px, calc(-2.286px + 5.714vw), 80px);
 }
 
 .skills-wrapper {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 68px;
+    gap: clamp(16px, calc(-2.286px + 5.714vw), 80px) clamp(39px, calc(27.286px + 3.661vw), 80px);
 }
 
 .skill {
@@ -142,4 +142,37 @@ h2 {
 
 button {
     transform: translateX(-10px);
+}
+
+:host.is-mobile {
+    flex-direction: column;
+    gap: 24px;
+
+    h2 {
+        margin-bottom: 8px;
+        align-self: flex-start;
+    }
+
+    .icons {
+        align-items: center;
+        gap: 16px;
+    }
+
+    .skills-wrapper {
+        justify-content: center;
+    }
+
+    .skill {
+        height: 100px;
+    }
+
+    .skills-text {
+        align-items: center;
+        width: 100%;
+        text-align: right;
+
+        .another-skill {
+            align-items: flex-end;
+        }
+    }
 }

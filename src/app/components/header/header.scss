@@ -18,8 +18,8 @@
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 2.5rem;
+    width: clamp(200px, calc(170px + 9.375vw), 305px);
+    height: auto;
 }
 
 .menu {
@@ -114,6 +114,7 @@ nav {
 
     .btn-mobile-language {
         padding: 0;
+        font-size: 1.5rem;
 
         &.active {
             color: styles.$primary1;

@@ -2,11 +2,8 @@
 
 :host {
     @include styles.flex-center(column);
-    width: 100%;
-    max-width: 1440px;
-    padding: styles.$padding-main;
+    @include styles.content-boundary;
     gap: 40px;
-    position: relative;
 }
 
 h2 {
@@ -17,7 +14,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 150px;
+    gap: clamp(64px, calc(39.429px + 7.679vw), 150px);
 }
 
 .contact-txt {
@@ -154,4 +151,24 @@ input[type='checkbox'] {
     position: absolute;
     top: -100px;
     right: -200px;
+}
+
+:host.is-mobile {
+    gap: 0;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-txt {
+        width: 100%;
+    }
+
+    .icon-arrow-up {
+        margin: 0;
+    }
 }

@@ -1,8 +1,11 @@
 <div class="reference-card">
     <div class="ref-content">
-        <svg class="icon-quote">
-            <use href="assets/icons/icons.svg#icon-quote"></use>
-        </svg>
+        @if (responsive.isDesktop()) {
+            <svg class="icon-quote">
+                <use href="assets/icons/icons.svg#icon-quote"></use>
+            </svg>
+        }
+
         <p class="txt">{{ references[currentId].text | translate }}</p>
         <div class="name-row">
             <p class="name">{{ references[currentId].name }} - {{ references[currentId].role }}</p>

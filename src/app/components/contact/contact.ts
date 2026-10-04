@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angu
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ErrorHandling } from '../error-handling/error-handling';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [RouterLink, TranslatePipe, ReactiveFormsModule, ErrorHandling],
@@ -12,8 +13,9 @@ import { ErrorHandling } from '../error-handling/error-handling';
     templateUrl: './contact.html',
 })
 export class Contact {
-    private fb = inject(FormBuilder);
-    private http = inject(HttpClient);
+    fb = inject(FormBuilder);
+    http = inject(HttpClient);
+    responsive = inject(ResponsiveService);
 
     isSubmitting = false;
     statusMessage = '';

@@ -1,3 +1,3 @@
-<app-header></app-header>
+<app-header [class.is-mobile]="!responsive.isDesktop()"></app-header>
 <router-outlet />
-<app-footer></app-footer>
+<app-footer [class.is-mobile]="!responsive.isDesktop()"></app-footer>

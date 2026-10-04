@@ -4,7 +4,7 @@
 
 <div class="projects-wrapper">
     @for (project of projects; track $index) {
-        <div class="project" [class.reversed]="$odd">
+        <div class="project" [class.reversed]="$odd && responsive.isDesktop()">
             <img src="assets/pngs/portfolio/{{ project.imgSrc }}" alt="" />
             <div class="project-infos">
                 <p class="highlight">{{ project.name }}</p>

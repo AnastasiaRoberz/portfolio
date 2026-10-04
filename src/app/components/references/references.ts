@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Reference } from '../../interfaces/reference';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe],
@@ -9,6 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     templateUrl: './references.html',
 })
 export class References {
+    responsive = inject(ResponsiveService);
     currentId = 0;
 
     references: Reference[] = [

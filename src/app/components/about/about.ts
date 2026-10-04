@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AboutItem } from '../../interfaces/about-item';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe],
@@ -9,6 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     templateUrl: './about.html',
 })
 export class About {
+    responsive = inject(ResponsiveService);
     aboutList: AboutItem[] = [
         {
             iconId: 'icon-location',

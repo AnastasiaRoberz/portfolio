@@ -1,4 +1,5 @@
 @use './variables';
+@use 'sass:map';
 
 @mixin flex-center($direction: row) {
     display: flex;
@@ -7,10 +8,10 @@
     align-items: center;
 }
 
-@mixin content-boundary {
+@mixin content-boundary($section: main) {
     width: 100%;
     max-width: 1440px;
-    padding: variables.$padding-main;
+    padding: map-get($map: variables.$paddings, $key: $section);
 }
 
 @mixin input-field {

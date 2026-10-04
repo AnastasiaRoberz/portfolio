@@ -7,7 +7,7 @@
     gap: 166px;
 }
 
-.about-content {
+.text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +47,7 @@ li {
 }
 
 .photo-wrapper {
-    position: relative;
+    @include styles.flex-center;
 
     .photo {
         width: 593px;
@@ -55,22 +55,22 @@ li {
         z-index: 2;
     }
 
-    .bg {
-        width: 1440px;
-        height: auto;
-        position: absolute;
-        bottom: -90%;
-        right: 0;
-        z-index: 3;
-    }
-
     .elbow {
         position: absolute;
         top: 0;
         left: 0;
-        width: 593px;
-        height: auto;
         z-index: 4;
+        width: 100%;
+        height: auto;
+    }
+
+    .wave {
+        width: clamp(920px, calc(771.429px + 46.429vw), 1440px);
+        height: auto;
+        position: absolute;
+        bottom: -92%;
+        right: 0;
+        z-index: 3;
     }
 
     .photo-green {
@@ -87,5 +87,18 @@ li {
         position: absolute;
         top: 15%;
         left: -10%;
+    }
+}
+
+:host.is-mobile {
+    flex-direction: column;
+    align-items: center;
+
+    .photo-wrapper {
+        order: -1;
+    }
+
+    .photo {
+        width: 100%;
     }
 }
