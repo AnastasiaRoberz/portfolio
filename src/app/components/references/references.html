@@ -9,7 +9,12 @@
         </div>
     </div>
     <div class="ref-photo">
-        <img src="/assets/pngs/references/{{ references[currentId].img }}" alt="" />
+        <img
+            src="/assets/pngs/references/{{ references[currentId].img }}"
+            alt=""
+            [style.object-position]="references[currentId].position"
+            [style.scale]="references[currentId].scale"
+        />
     </div>
 </div>
 

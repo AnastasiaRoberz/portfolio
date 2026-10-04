@@ -17,6 +17,8 @@ export class References {
             role: 'Team Partner',
             text: 'references.schuster',
             img: 'reference1.png',
+            position: 'center 10%',
+            scale: 1.5,
         },
         {
             name: 'E.Eichinger',
@@ -29,6 +31,8 @@ export class References {
             role: 'Frontend Engineer',
             text: 'references.nuber',
             img: 'reference3.png',
+            position: 'center 30%',
+            scale: 1.2,
         },
     ];
 

@@ -3,4 +3,6 @@ export interface Reference {
     text: string;
     role: string;
     img: string;
+    position?: string;
+    scale?: number;
 }
