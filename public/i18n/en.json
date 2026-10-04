@@ -30,7 +30,11 @@
             "text": "Looking for ",
             "highlight": "another skill?"
         },
-        "subtext": "Technologies never stand still, and neither do I. If your stack requires a specific tool or a new framework, I am always enthusiastic and quick to dive in and master it."
+        "subtext": "Technologies never stand still, and neither do I. If your stack requires a specific tool or a new framework, I am always enthusiastic and quick to dive in and master it.",
+        "btn-learning": {
+            "name": "Continually learning",
+            "text": "I have a special interest in learning"
+        }
     },
 
     "portfolio": {

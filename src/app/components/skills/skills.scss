@@ -41,79 +41,82 @@
     .skill-name {
         font-weight: 700;
         text-align: center;
+        height: 1lh;
     }
 
     &:hover {
-        img {
+        .skill-icon {
             transform: translateY(-12px);
         }
     }
 }
 
-.speach-bubble {
-    display: none;
+.speech-bubble {
+    @include styles.flex-center(column);
+    position: absolute;
+    left: 0;
+    top: -50%;
+    z-index: 3;
+    gap: 8px;
+    width: 188px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    padding: 8px 16px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: styles.$transition-base;
+
+    .tech-wrapper {
+        @include styles.flex-center;
+        gap: 16px;
+    }
+
+    .tech-item {
+        @include styles.flex-center(column);
+        gap: 4px;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+    strong {
+        font-size: 0.75rem;
+    }
+
+    .rectangle {
+        width: 26px;
+        height: 17px;
+        position: absolute;
+        bottom: -15px;
+        left: 35px;
+        fill: white;
+    }
 }
 
-.learning {
-    position: relative;
+.learning:hover {
+    .icon-learning {
+        color: white;
+    }
 
-    &:hover {
-        .speach-bubble {
-            @include styles.flex-center(column);
-            position: absolute;
-            left: 0;
-            top: -120.5px;
-            gap: 8px;
-            width: 188px;
-            height: 112px;
-            background-color: white;
-            border-radius: 20px;
-            color: black;
-            text-align: center;
-            padding: 8px 16px;
-            // position: relative;
-
-            .tech-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 16px;
-            }
-
-            .tech-item {
-                @include styles.flex-center(column);
-                gap: 4px;
-            }
-
-            img {
-                width: 32px;
-                height: 32px;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -17px;
-                left: 35px;
-                width: 26px;
-                height: 17px;
-                background-color: white;
-                clip-path: polygon(0 0, 100% 0, 50% 100%);
-            }
-
-            strong {
-                font-size: 0.75rem;
-            }
-        }
+    .speech-bubble {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(-22%);
     }
 }
 
 .icon-learning {
     width: 60px;
     height: 60px;
-    fill: styles.$secondary;
     cursor: pointer;
+    color: styles.$secondary;
+    transition: styles.$transition-fast;
 }
 
 .skills-text {

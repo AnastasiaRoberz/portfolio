@@ -2,14 +2,18 @@
     <div class="skills-wrapper">
         @for (skill of skills; track skill) {
             <div class="skill">
-                <img src="assets/icons/skills/frontend/{{ skill | lowercase }}.svg" alt="" />
+                <img
+                    class="skill-icon"
+                    src="assets/icons/skills/frontend/{{ skill | lowercase }}.svg"
+                    alt=""
+                />
                 <p class="skill-name">{{ skill }}</p>
             </div>
         }
     </div>
     <div class="skill learning">
-        <div class="speach-bubble">
-            <p>I have a special interest in learning</p>
+        <div class="speech-bubble">
+            <p>{{ 'skills.btn-learning.text' | translate }}</p>
             <div class="tech-wrapper">
                 <div class="tech-item">
                     <img src="assets/icons/skills/frontend/react.svg" alt="" />
@@ -20,9 +24,12 @@
                     <strong>Vue.js</strong>
                 </div>
             </div>
+            <svg class="rectangle">
+                <use href="/assets/icons/icons.svg#icon-speech-bubble"></use>
+            </svg>
         </div>
         <svg class="icon-learning"><use href="assets/icons/icons.svg#icon-learning"></use></svg>
-        <p class="skill-name">Continually learning</p>
+        <p class="skill-name">{{ 'skills.btn-learning.name' | translate }}</p>
     </div>
 </div>
 
