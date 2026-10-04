@@ -9,13 +9,18 @@ import { RouterLink } from '@angular/router';
     templateUrl: './header.html',
 })
 export class Header {
+    translate = inject(TranslateService);
+    currentLanguage = 'en';
+
+    ngOnInit(): void {
+        this.useLanguage(this.currentLanguage);
+    }
+
     scrollTo(component: string): void {
         const element = document.getElementById(component);
         if (element) element.scrollIntoView({ block: 'start' });
     }
 
-    translate = inject(TranslateService);
-    currentLanguage = 'en';
     useLanguage(language: string): void {
         this.translate.use(language);
         this.currentLanguage = language;
