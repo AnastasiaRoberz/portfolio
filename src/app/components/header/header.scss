@@ -76,3 +76,48 @@ nav {
         }
     }
 }
+
+.btn-burger-menu {
+    padding: 0;
+}
+
+.icon-burger-menu {
+    width: 30px;
+    height: 30px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    @include styles.flex-center(column);
+    gap: 33px;
+    position: fixed;
+    top: styles.$header-height;
+    left: 0;
+    width: 100vw;
+    height: calc(100dvh - styles.$header-height);
+    background-color: rgba(20, 29, 47, 0.8);
+    backdrop-filter: blur(5px);
+
+    a {
+        font-size: 1.5rem;
+        line-height: 120%;
+    }
+
+    .mobile-language-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-mobile-language {
+        padding: 0;
+
+        &.active {
+            color: styles.$primary1;
+            font-weight: 600;
+        }
+    }
+}

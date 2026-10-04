@@ -1,30 +1,66 @@
 <header class="header-content">
     <a class="logo" routerLink="/">Anastasia</a>
 
-    <div class="menu">
-        <nav>
-            <a class="nav-link" href="#about">{{ 'header.about' | translate }}</a>
-            <a class="nav-link" href="#skills">{{ 'header.skills' | translate }}</a>
-            <a class="nav-link" href="#portfolio">{{ 'header.portfolio' | translate }}</a>
-        </nav>
+    @if (responsive.isDesktop()) {
+        <div class="menu">
+            <nav>
+                <a class="nav-link" href="#about">{{ 'header.about' | translate }}</a>
+                <a class="nav-link" href="#skills">{{ 'header.skills' | translate }}</a>
+                <a class="nav-link" href="#portfolio">{{ 'header.portfolio' | translate }}</a>
+            </nav>
 
-        <div class="language-switch">
-            <button
-                type="button"
-                class="btn-language"
-                (click)="useLanguage('de')"
-                [class.active]="currentLanguage === 'de'"
-            >
-                DE
-            </button>
-            <button
-                type="button"
-                class="btn-language"
-                (click)="useLanguage('en')"
-                [class.active]="currentLanguage === 'en'"
-            >
-                EN
-            </button>
+            <div class="language-switch">
+                <button
+                    type="button"
+                    class="btn-language"
+                    (click)="useLanguage('de')"
+                    [class.active]="currentLanguage === 'de'"
+                >
+                    DE
+                </button>
+                <button
+                    type="button"
+                    class="btn-language"
+                    (click)="useLanguage('en')"
+                    [class.active]="currentLanguage === 'en'"
+                >
+                    EN
+                </button>
+            </div>
         </div>
-    </div>
+    } @else {
+        <button type="button" class="btn-burger-menu" (click)="toggleMenu()">
+            <svg class="icon-burger-menu">
+                <use href="/assets/icons/icons.svg#icon-burger-menu"></use>
+            </svg>
+        </button>
+
+        <div class="mobile-menu" [class.active]="isMenuOpen()">
+            <a href="#about" (click)="closeMenu()">About me</a>
+            <a href="#skills" (click)="closeMenu()">Skills</a>
+            <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+            <a href="#contact" (click)="closeMenu()">Contact</a>
+            <div class="mobile-language-wrapper">
+                <button
+                    type="button"
+                    (click)="useLanguage('en')"
+                    (click)="closeMenu()"
+                    [class.active]="currentLanguage === 'en'"
+                    class="btn-mobile-language"
+                >
+                    EN
+                </button>
+                <span> / </span>
+                <button
+                    type="button"
+                    (click)="useLanguage('de')"
+                    (click)="closeMenu()"
+                    [class.active]="currentLanguage === 'de'"
+                    class="btn-mobile-language"
+                >
+                    DE
+                </button>
+            </div>
+        </div>
+    }
 </header>

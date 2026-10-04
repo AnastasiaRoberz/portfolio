@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe, RouterLink],
@@ -10,19 +11,24 @@ import { RouterLink } from '@angular/router';
 })
 export class Header {
     translate = inject(TranslateService);
+    responsive = inject(ResponsiveService);
     currentLanguage = 'en';
+    isMenuOpen = signal(false);
 
     ngOnInit(): void {
         this.useLanguage(this.currentLanguage);
     }
 
-    scrollTo(component: string): void {
-        const element = document.getElementById(component);
-        if (element) element.scrollIntoView({ block: 'start' });
-    }
-
     useLanguage(language: string): void {
         this.translate.use(language);
         this.currentLanguage = language;
+    }
+
+    toggleMenu(): void {
+        this.isMenuOpen.update((open) => !open);
+    }
+
+    closeMenu(): void {
+        this.isMenuOpen.set(false);
     }
 }

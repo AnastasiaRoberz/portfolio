@@ -11,8 +11,9 @@
 
 .hero-content {
     @include styles.flex-center(column);
-    justify-content: space-between;
     flex: 1;
+    gap: 72px;
+    padding: 0 25px;
 }
 
 .hero-title {
