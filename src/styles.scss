@@ -51,6 +51,7 @@ a {
     cursor: pointer;
     text-decoration: none;
     line-height: 0;
+    transition: styles.$transition-fast;
 }
 
 // -----------------------
@@ -66,6 +67,7 @@ button,
     padding: 15px 30px;
     border-radius: 10px;
     line-height: 1;
+    transition: styles.$transition-fast;
 
     &:disabled {
         visibility: hidden;
@@ -119,6 +121,7 @@ button,
 .social-icon {
     width: 30px;
     height: 30px;
+    transition: styles.$transition-base;
 
     &:hover {
         transform: scale(calc(40 / 30));

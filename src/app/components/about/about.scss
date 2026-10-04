@@ -33,17 +33,17 @@ li {
 
     &:hover {
         .about-icon {
-            padding: 0;
+            transform: scale(calc(48 / 32));
         }
     }
 }
 
 .about-icon {
     fill: none;
-    width: 48px;
-    min-width: 48px;
-    height: 48px;
-    padding: 8px 0;
+    height: 32px;
+    min-width: 32px;
+    width: 32px;
+    transition: styles.$transition-fast;
 }
 
 .photo-wrapper {

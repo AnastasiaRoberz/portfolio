@@ -52,6 +52,7 @@ textarea {
     width: 100%;
     font-family: Poppins;
     border: 1px solid styles.$primary2;
+    transition: styles.$transition-fast;
 
     &:hover {
         border: 1px solid styles.$secondary;
@@ -89,6 +90,7 @@ textarea {
     border-radius: 50%;
     flex-shrink: 0;
     cursor: pointer;
+    transition: styles.$transition-fast;
 
     &:hover {
         background-color: styles.$primary2;
