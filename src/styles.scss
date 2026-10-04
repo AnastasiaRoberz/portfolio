@@ -17,25 +17,26 @@ button {
     font-weight: 400;
     font-size: 16px;
     color: styles.$white;
+    line-height: 120%;
 }
 
 h1 {
     font-size: 8rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.75;
     text-align: right;
 }
 
 h2 {
     font-size: 5.6rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.75;
 }
 
 h3 {
     font-size: 2rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.75;
 }
 
 .highlight {
@@ -49,6 +50,7 @@ h3 {
 a {
     cursor: pointer;
     text-decoration: none;
+    line-height: 0;
 }
 
 // -----------------------
@@ -63,6 +65,7 @@ button,
     font-size: 1.5rem;
     padding: 15px 30px;
     border-radius: 10px;
+    line-height: 1;
 
     &:disabled {
         visibility: hidden;
