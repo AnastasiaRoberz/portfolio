@@ -5,7 +5,7 @@
 <div class="projects-wrapper">
     @for (project of projects; track $index) {
         <div class="project" [class.reversed]="$odd && responsive.isDesktop()">
-            <img src="assets/pngs/portfolio/{{ project.imgSrc }}" alt="" />
+            <img class="img-portfolio" src="assets/pngs/portfolio/{{ project.imgSrc }}" alt="" />
             <div class="project-infos">
                 <p class="highlight">{{ project.name }}</p>
                 <p class="technologies">{{ project.technologies.join(' | ') }}</p>
@@ -24,3 +24,4 @@
 </div>
 
 <img class="blue-shadow" src="assets/pngs/shadows/blue-shadow-2.png" alt="" />
+<img class="green-shadow" src="assets/pngs/shadows/green-shadow.png" alt="" />

@@ -8,6 +8,7 @@
 
 h2 {
     @include styles.line('right', styles.$primary1, clamp(16px, calc(11.429px + 1.429vw), 32px));
+    z-index: 5;
 }
 
 .contact-content {
@@ -151,7 +152,7 @@ input[type='checkbox'] {
 
 .shadow {
     width: 681px;
-    height: 1127px;
+    height: auto;
     position: absolute;
     top: -100px;
     right: -200px;
