@@ -58,6 +58,10 @@ textarea {
     &:invalid {
         border: 1px solid styles.$error;
     }
+
+    &.valid {
+        border: 1px solid styles.$primary1;
+    }
 }
 
 .message {
@@ -175,4 +179,12 @@ input[type='checkbox'] {
     h3::before {
         top: 25%;
     }
+}
+
+.icon-valid {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 25px;
+    top: 12.5px;
 }

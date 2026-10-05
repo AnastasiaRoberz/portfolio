@@ -21,10 +21,13 @@ export class Contact {
     statusMessage = '';
 
     msgForm = this.fb.group({
-        name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-        mail: new FormControl('', [Validators.required, Validators.email]),
-        message: new FormControl('', [Validators.required, Validators.minLength(10)]),
-        privacy: new FormControl(false, Validators.requiredTrue),
+        name: [
+            '',
+            { validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur' },
+        ],
+        mail: ['', { validators: [Validators.required, Validators.email], updateOn: 'blur' }],
+        message: ['', [Validators.required, Validators.minLength(10)]],
+        privacy: [false, Validators.requiredTrue],
     });
 
     get name() {

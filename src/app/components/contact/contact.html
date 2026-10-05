@@ -16,11 +16,20 @@
                 placeholder="Your name"
                 formControlName="name"
                 autocomplete="off"
+                [class.valid]="
+                    msgForm.get('name')?.valid &&
+                    (msgForm.get('name')?.touched || msgForm.get('name')?.dirty)
+                "
             />
             <app-error-handling
                 [control]="msgForm.get('name')"
                 fieldKey="contact.fields.name"
             ></app-error-handling>
+            @if (msgForm.get('name')?.valid) {
+                <svg class="icon-valid">
+                    <use href="./assets/icons/icons.svg#icon-valid"></use>
+                </svg>
+            }
         </div>
 
         <div class="input">
@@ -31,11 +40,20 @@
                 placeholder="Your e-mail"
                 formControlName="mail"
                 autocomplete="off"
+                [class.valid]="
+                    msgForm.get('mail')?.valid &&
+                    (msgForm.get('mail')?.touched || msgForm.get('mail')?.dirty)
+                "
             />
             <app-error-handling
                 [control]="msgForm.get('mail')"
                 fieldKey="contact.fields.mail"
             ></app-error-handling>
+            @if (msgForm.get('mail')?.valid) {
+                <svg class="icon-valid">
+                    <use href="./assets/icons/icons.svg#icon-valid"></use>
+                </svg>
+            }
         </div>
 
         <div class="message">
@@ -46,11 +64,20 @@
                     placeholder="Your message"
                     autocomplete="off"
                     formControlName="message"
+                    [class.valid]="
+                        msgForm.get('message')?.valid &&
+                        (msgForm.get('message')?.touched || msgForm.get('message')?.dirty)
+                    "
                 ></textarea>
                 <app-error-handling
                     [control]="msgForm.get('message')"
                     fieldKey="contact.fields.msg"
                 ></app-error-handling>
+                @if (msgForm.get('message')?.valid) {
+                    <svg class="icon-valid">
+                        <use href="./assets/icons/icons.svg#icon-valid"></use>
+                    </svg>
+                }
             </div>
 
             <div class="check-privacy-policy">
