@@ -14,6 +14,7 @@ h2 {
 
 .description {
     width: 45%;
+    z-index: 3;
 }
 
 .projects-wrapper {
@@ -38,7 +39,7 @@ h2 {
     }
 }
 
-img {
+.img-portfolio {
     width: 620px;
     height: 339px;
 }
@@ -64,9 +65,21 @@ img {
 }
 
 .blue-shadow {
+    width: clamp(350px, calc(278.571px + 22.321vw), 600px);
+    height: auto;
     position: absolute;
-    top: -150px;
-    right: -150px;
+    top: clamp(-150px, -13.39vw + 42.86px, 0px);
+    right: clamp(-250px, -8.04vw - 134.29px, -160px);
+}
+
+.green-shadow {
+    // height: 950px;
+    height: 450px;
+    position: absolute;
+    // bottom: -180px;
+    // left: -600px;
+    bottom: -50px;
+    left: -280px;
 }
 
 :host.is-mobile {
@@ -79,7 +92,7 @@ img {
         flex-direction: column;
     }
 
-    img {
+    .img-portfolio {
         width: 100%;
         height: auto;
     }
