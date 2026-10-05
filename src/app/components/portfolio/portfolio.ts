@@ -19,6 +19,7 @@ export class Portfolio {
             description: 'portfolio.projects.pollo-loco',
             imgSrc: 'pollo-loco.png',
             urlGit: 'https://github.com/AnastasiaRoberz/el-pollo-loco',
+            urlTest: 'https://anastasiaroberz.developerakademie.net/el-pollo-loco/index.html',
         },
         {
             name: 'Join',
