@@ -41,7 +41,7 @@
     background-color: variables.$primary1;
 }
 
-@mixin line($direction, $color, $offset: 32px) {
+@mixin line($direction, $color, $offset: clamp(4px, calc(-4px + 2.5vw), 32px)) {
     $pseudo: if($direction == 'left', 'before', 'after');
 
     &::#{$pseudo} {

@@ -7,7 +7,7 @@
 }
 
 h2 {
-    @include styles.line('right', styles.$primary1);
+    @include styles.line('right', styles.$primary1, clamp(16px, calc(11.429px + 1.429vw), 32px));
 }
 
 .contact-content {
@@ -170,5 +170,9 @@ input[type='checkbox'] {
 
     .icon-arrow-up {
         margin: 0;
+    }
+
+    h3::before {
+        top: 25%;
     }
 }

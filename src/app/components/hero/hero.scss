@@ -45,19 +45,19 @@
     }
 
     .purple-shadow {
-        width: 835px;
+        width: clamp(400px, calc(314.286px + 26.786vw), 700px);
         height: auto;
         position: absolute;
-        top: -55%;
-        left: -65%;
+        top: clamp(-200px, 4.46vw - 214.29px, -150px);
+        left: clamp(-450px, -20.54vw - 154.29px, -220px);
     }
 
     .blue-shadow {
-        width: 865.5px;
+        width: clamp(413px, calc(359.571px + 16.696vw), 600px);
         height: auto;
         position: absolute;
-        top: -105%;
-        right: -90%;
+        top: clamp(-170px, -15.18vw + 48.57px, 0px);
+        right: clamp(-680px, -34.82vw - 178.57px, -290px);
     }
 }
 
@@ -71,7 +71,7 @@
 
 .social-section {
     @include styles.flex-center;
-    @include styles.line('left', styles.$primary1);
+    @include styles.line('left', styles.$primary1, 42px);
     gap: 42px;
     margin-left: 42px;
     position: relative;
@@ -89,5 +89,15 @@
     .arrow-down {
         width: 24px;
         height: 24px;
+    }
+}
+
+:host.is-mobile {
+    .hero-footer {
+        justify-content: center;
+    }
+
+    .social-section {
+        margin: 0;
     }
 }

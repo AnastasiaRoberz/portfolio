@@ -129,7 +129,7 @@
 }
 
 h2 {
-    @include styles.line('right', styles.$secondary);
+    @include styles.line('right', styles.$secondary, clamp(16px, calc(11.429px + 1.429vw), 32px));
 }
 
 .another-skill {
@@ -174,5 +174,20 @@ button {
         .another-skill {
             align-items: flex-end;
         }
+    }
+}
+
+:host.is-mobile {
+    gap: 32px;
+    .speech-bubble {
+        top: -75%;
+    }
+
+    h2 {
+        margin-left: 10px;
+    }
+
+    .learning {
+        margin: 20px 0;
     }
 }

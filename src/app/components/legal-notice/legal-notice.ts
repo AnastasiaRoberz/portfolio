@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe],
@@ -7,4 +8,6 @@ import { TranslatePipe } from '@ngx-translate/core';
     styleUrl: './legal-notice.scss',
     templateUrl: './legal-notice.html',
 })
-export class LegalNotice {}
+export class LegalNotice {
+    responsive = inject(ResponsiveService);
+}

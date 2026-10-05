@@ -1,5 +1,5 @@
 <header class="header-content">
-    <a class="logo" routerLink="/#hero">
+    <a class="logo" href="/#hero">
         <img class="logo" src="/assets/icons/logo.svg" alt="" />
     </a>
 
@@ -31,10 +31,15 @@
             </div>
         </div>
     } @else {
-        <button type="button" class="btn-burger-menu" (click)="toggleMenu()">
-            <svg class="icon-burger-menu">
-                <use href="/assets/icons/icons.svg#icon-burger-menu"></use>
-            </svg>
+        <button
+            type="button"
+            class="btn-burger-menu"
+            (click)="toggleMenu()"
+            [class.open]="isMenuOpen()"
+        >
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
         </button>
 
         <div class="mobile-menu" [class.active]="isMenuOpen()">

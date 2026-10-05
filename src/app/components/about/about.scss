@@ -4,7 +4,7 @@
     @include styles.flex-center;
     @include styles.content-boundary;
     align-items: flex-start;
-    gap: 166px;
+    gap: clamp(64px, calc(34.857px + 9.107vw), 166px);
 }
 
 .text {
@@ -68,8 +68,9 @@ li {
         width: clamp(920px, calc(771.429px + 46.429vw), 1440px);
         height: auto;
         position: absolute;
-        bottom: -92%;
-        right: 0;
+        bottom: clamp(-700px, -21.875vw - 385px, -455px);
+        right: clamp(-100px, 8.93vw - 128.57px, 0px);
+        transform: translateX(clamp(24px, 2.286px + 6.786vw, 100px));
         z-index: 3;
     }
 
