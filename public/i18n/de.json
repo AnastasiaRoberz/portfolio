@@ -7,25 +7,25 @@
 
     "hero": {
         "job-title": "Frontend Developer",
-        "btn-talk": "Lass uns reden",
-        "scroll": "Nach unten scrollen"
+        "btn-talk": "Kontaktiere mich",
+        "scroll": "Entdecke mein Profil"
     },
 
     "about": {
         "title": "Über mich",
-        "greeting": "Hi, ich bin Anastasia!",
-        "text": "Für mich ist Webentwicklung der ideale Schnittpunkt aus logischer Architektur und sichtbarem Mehrwert. Mein technischer Hintergrund treibt mich an, nicht nur funktionierenden, sondern durchdachten, wartbaren und modularen Code zu schreiben – vom sauberen Backend bis zum intuitiven UI-Design. Inspiration schöpfe ich aus der ständigen Weiterentwicklung moderner Technologien und dem Anspruch, komplexe Workflows in greifbare, performante Webanwendungen zu verwandeln.",
-        "cta": "Lass uns vernetzen und gemeinsam etwas Großartiges bauen!",
+        "greeting": "Hey, ich bin Anastasia!",
+        "text": "Für mich ist Webentwicklung der ideale Schnittpunkt aus logischer Architektur und sichtbarem Mehrwert. Mein technischer Hintergrund treibt mich an, nicht nur funktionierenden, sondern durchdachten, wartbaren und modularen Code zu schreiben. Inspiration schöpfe ich aus der ständigen Weiterentwicklung moderner Technologien und dem Anspruch, komplexe Workflows in greifbare, performante Webanwendungen zu verwandeln.",
+        "cta": "Lass uns gemeinsam etwas Großartiges entwickeln!",
         "list": {
-            "location": "Ansässig im Raum Stuttgart. Ich arbeite bevorzugt remote oder hybrid, bringe verlässliche Selbstorganisation mit und schätze gezielten Austausch vor Ort.",
-            "learning": "Webtechnologien entwickeln sich rasant – genau das reizt mich. Ich arbeite mich zügig in moderne Frameworks und Tools ein, hinterfrage Zusammenhänge im Detail und baue mein Wissen kontinuierlich und strukturiert aus.",
+            "location": "Ansässig im Raum Stuttgart. Ich arbeite bevorzugt hybrid, bringe verlässliche Selbstorganisation mit und schätze gezielten Austausch vor Ort.",
+            "learning": "Ich arbeite mich zügig in moderne Frameworks und Tools ein, hinterfrage Zusammenhänge im Detail und baue mein Wissen kontinuierlich und strukturiert aus.",
             "problem-solving": "Probleme gehe ich methodisch und mit Ausdauer an: erst die Ursache verstehen, dann eine saubere, wartbare Architektur wählen. Dabei verbinde ich analytische Präzision mit einem Blick für nutzerfreundliches, durchdachtes UI-Design."
         }
     },
 
     "skills": {
         "title": "Skills",
-        "description": "In meinen Projekten habe ich praxisnah mit modernem HTML, CSS/SCSS und JavaScript gearbeitet und skalierbare Webanwendungen mit Frameworks wie Angular realisiert. Für mich hört Entwicklung nie bei den Basics auf: Angesichts der rasanten Entwicklung im Web bilde ich mich gezielt weiter, setze auf saubere Architektur und lerne laufend neue Werkzeuge und Best Practices dazu.",
+        "description": "In meinen Projekten habe ich praxisnah mit modernem HTML, CSS/SCSS, JavaScript sowie TypeScript gearbeitet und skalierbare Webanwendungen mit Frameworks wie Angular realisiert. Für mich hört Entwicklung nie bei den Basics auf: Angesichts der rasanten Entwicklung im Web bilde ich mich gezielt weiter, setze auf saubere Architektur und lerne laufend neue Werkzeuge und Best Practices dazu.",
         "subheading": {
             "text": "Auf der Suche nach einem ",
             "highlight": "anderen Skill"

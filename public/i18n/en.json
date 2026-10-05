@@ -14,18 +14,18 @@
     "about": {
         "title": "About",
         "greeting": "Hey there, I'm Anastasia!",
-        "text": "For me, web development is the ideal intersection of logical architecture and tangible value. Driven by my technical background, I strive to write code that is not just functional, but well-thought-out, maintainable, and modular—from a clean backend to intuitive UI design. I draw inspiration from the continuous evolution of modern technologies and the challenge of turning complex workflows into responsive, high-performance web applications.",
+        "text": "For me, web development is the ideal intersection of logical architecture and tangible value. Driven by my technical background, I strive to write code that is not just functional, but well-thought-out, maintainable, and modular. I draw inspiration from the continuous evolution of modern technologies and the challenge of turning complex workflows into intuitive, high-performance web applications.",
         "cta": "Let's connect and create something amazing together!",
         "list": {
-            "location": "Based in the Stuttgart area. I prefer working remotely or in a hybrid setup, bring dependable self-organization to the table, and value purposeful on-site collaboration.",
-            "learning": "Web technologies evolve rapidly—and that is exactly what drives me. I quickly get up to speed with modern frameworks and tools, dig deep into underlying concepts, and continuously expand my skill set in a structured way.",
+            "location": "Based in the Stuttgart area. I prefer working in a hybrid setup, bring dependable self-organization to the table, and value purposeful on-site collaboration.",
+            "learning": "I quickly get up to speed with modern frameworks and tools, dig deep into underlying concepts, and continuously expand my skill set in a structured way.",
             "problem-solving": "I tackle challenges methodically and with perseverance: first understanding the root cause, then designing a clean, maintainable architecture. In doing so, I combine analytical precision with an eye for user-friendly, well-crafted UI design."
         }
     },
 
     "skills": {
         "title": "Skills",
-        "description": "Throughout my projects, I have worked hands-on with modern HTML, CSS/SCSS, and JavaScript, building scalable web applications with frameworks like Angular. For me, development never stops at the basics: with web technologies moving fast, I actively expand my knowledge, prioritize clean architecture, and continuously adopt new tools and best practices.",
+        "description": "Throughout my projects, I have worked hands-on with modern HTML, CSS/SCSS, JavaScript, and TypeScript, building scalable web applications with frameworks like Angular. For me, development never stops at the basics: with web technologies moving fast, I actively expand my knowledge, prioritize clean architecture, and continuously adopt new tools and best practices.",
         "subheading": {
             "text": "Looking for ",
             "highlight": "another skill"
