@@ -1,0 +1,108 @@
+<header class="header-content">
+    <a class="logo" href="/#hero">
+        <img class="logo" src="./assets/icons/logo.svg" alt="" />
+    </a>
+
+    @if (responsive.isDesktop()) {
+        <div class="menu">
+            <nav>
+                <a
+                    class="nav-link"
+                    [class.active]="scrollSpy.activeSection() === 'about'"
+                    href="#about"
+                    >{{ 'header.about' | translate }}</a
+                >
+                <a
+                    class="nav-link"
+                    [class.active]="scrollSpy.activeSection() === 'skills'"
+                    href="#skills"
+                    >{{ 'header.skills' | translate }}</a
+                >
+                <a
+                    class="nav-link"
+                    [class.active]="scrollSpy.activeSection() === 'portfolio'"
+                    href="#portfolio"
+                    >{{ 'header.portfolio' | translate }}</a
+                >
+            </nav>
+
+            <div class="language-switch">
+                <button
+                    type="button"
+                    class="btn-language"
+                    (click)="useLanguage('de')"
+                    [class.active]="currentLanguage === 'de'"
+                >
+                    DE
+                </button>
+                <button
+                    type="button"
+                    class="btn-language"
+                    (click)="useLanguage('en')"
+                    [class.active]="currentLanguage === 'en'"
+                >
+                    EN
+                </button>
+            </div>
+        </div>
+    } @else {
+        <button
+            type="button"
+            class="btn-burger-menu"
+            (click)="toggleMenu()"
+            [class.open]="isMenuOpen()"
+        >
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <div class="mobile-menu" [class.active]="isMenuOpen()">
+            <a
+                href="#about"
+                [class.active]="scrollSpy.activeSection() === 'about'"
+                (click)="closeMenu()"
+                >About me</a
+            >
+            <a
+                href="#skills"
+                [class.active]="scrollSpy.activeSection() === 'skills'"
+                (click)="closeMenu()"
+                >Skills</a
+            >
+            <a
+                href="#portfolio"
+                [class.active]="scrollSpy.activeSection() === 'portfolio'"
+                (click)="closeMenu()"
+                >Portfolio</a
+            >
+            <a
+                href="#contact"
+                [class.active]="scrollSpy.activeSection() === 'contact'"
+                (click)="closeMenu()"
+                >Contact</a
+            >
+            <div class="mobile-language-wrapper">
+                <button
+                    type="button"
+                    (click)="useLanguage('en')"
+                    (click)="closeMenu()"
+                    [class.active]="currentLanguage === 'en'"
+                    class="btn-mobile-language"
+                >
+                    EN
+                </button>
+                <span> / </span>
+                <button
+                    type="button"
+                    (click)="useLanguage('de')"
+                    (click)="closeMenu()"
+                    [class.active]="currentLanguage === 'de'"
+                    class="btn-mobile-language"
+                >
+                    DE
+                </button>
+            </div>
+        </div>
+    }
+</header>

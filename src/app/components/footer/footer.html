@@ -1,0 +1,35 @@
+<footer class="footer-content">
+    <div class="logo-wrapper">
+        <img class="logo" src="./assets/icons/logo.svg" alt="" />
+        @if (responsive.isDesktop()) {
+            <a class="legal-notice" routerLink="/legal-notice">{{
+                'footer.legal-notice' | translate
+            }}</a>
+        }
+    </div>
+
+    <p class="copyright">© Anastasia Roberz 2026</p>
+
+    <div class="social-icon-wrapper">
+        <a href="https://github.com/AnastasiaRoberz" target="_blank">
+            <svg class="social-icon">
+                <use href="assets/icons/icons.svg#icon-github"></use>
+            </svg>
+        </a>
+        <a href="mailto:anastasia.roberz@gmx.de" target="_blank">
+            <svg class="social-icon">
+                <use href="assets/icons/icons.svg#icon-mail"></use>
+            </svg>
+        </a>
+        <a href="http://" target="_blank">
+            <svg class="social-icon">
+                <use href="assets/icons/icons.svg#icon-linkedin"></use>
+            </svg>
+        </a>
+    </div>
+    @if (!responsive.isDesktop()) {
+        <a class="legal-notice" routerLink="/legal-notice">{{
+            'footer.legal-notice' | translate
+        }}</a>
+    }
+</footer>

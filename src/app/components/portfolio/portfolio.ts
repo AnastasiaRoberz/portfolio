@@ -1,0 +1,38 @@
+import { Component, inject } from '@angular/core';
+import { Project } from '../../interfaces/project';
+import { TranslatePipe } from '@ngx-translate/core';
+import { ResponsiveService } from '../../services/responsive.service';
+
+@Component({
+    imports: [TranslatePipe],
+    selector: 'app-portfolio',
+    styleUrl: './portfolio.scss',
+    templateUrl: './portfolio.html',
+})
+export class Portfolio {
+    responsive = inject(ResponsiveService);
+
+    projects: Project[] = [
+        {
+            name: 'El Pollo Loco',
+            technologies: ['JavaScript', 'HTML', 'CSS'],
+            description: 'portfolio.projects.pollo-loco',
+            imgSrc: 'pollo-loco.png',
+            urlGit: 'https://github.com/AnastasiaRoberz/el-pollo-loco',
+            urlTest: 'https://anastasiaroberz.developerakademie.net/el-pollo-loco/index.html',
+        },
+        {
+            name: 'Join',
+            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+            description: 'portfolio.projects.join',
+            imgSrc: 'join.png',
+        },
+        {
+            name: 'Pokédex',
+            technologies: ['JavaScript', 'HTML', 'CSS', 'API'],
+            description: 'portfolio.projects.pokedex',
+            imgSrc: 'pokedex.png',
+            urlGit: 'https://github.com/AnastasiaRoberz/pokedex',
+        },
+    ];
+}

@@ -1,0 +1,193 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    @include styles.flex-center;
+    @include styles.content-boundary;
+    width: 100%;
+    max-width: 1440px;
+    gap: 116px;
+    z-index: 5;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, calc(-2.286px + 5.714vw), 80px);
+}
+
+.skills-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(16px, calc(-2.286px + 5.714vw), 80px) clamp(39px, calc(27.286px + 3.661vw), 80px);
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 88px;
+    height: 120px;
+    cursor: pointer;
+
+    img {
+        width: 60px;
+        height: 60px;
+        transition: styles.$transition-base;
+    }
+
+    .skill-name {
+        font-weight: 700;
+        text-align: center;
+        height: 1lh;
+    }
+
+    &:hover {
+        .skill-icon {
+            transform: translateY(-12px);
+        }
+    }
+}
+
+.speech-bubble {
+    @include styles.flex-center(column);
+    position: absolute;
+    left: 0;
+    top: -50%;
+    z-index: 3;
+    gap: 8px;
+    width: 188px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    padding: 8px 16px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: styles.$transition-base;
+
+    .tech-wrapper {
+        @include styles.flex-center;
+        gap: 16px;
+    }
+
+    .tech-item {
+        @include styles.flex-center(column);
+        gap: 4px;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+    strong {
+        font-size: 0.75rem;
+    }
+
+    .rectangle {
+        width: 26px;
+        height: 17px;
+        position: absolute;
+        bottom: -15px;
+        left: 35px;
+        fill: white;
+    }
+}
+
+.learning:hover {
+    .icon-learning {
+        color: white;
+    }
+
+    .speech-bubble {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(-22%);
+    }
+}
+
+.icon-learning {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    color: styles.$secondary;
+    transition: styles.$transition-fast;
+}
+
+.skills-text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+h2 {
+    @include styles.line('right', styles.$secondary, clamp(16px, calc(11.429px + 1.429vw), 32px));
+}
+
+.another-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+button {
+    transform: translateX(-10px);
+}
+
+:host.is-mobile {
+    flex-direction: column;
+    gap: 24px;
+
+    h2 {
+        margin-bottom: 8px;
+        align-self: flex-start;
+    }
+
+    .icons {
+        align-items: center;
+        gap: 16px;
+    }
+
+    .skills-wrapper {
+        justify-content: center;
+    }
+
+    .skill {
+        height: 100px;
+    }
+
+    .skills-text {
+        align-items: center;
+        width: 100%;
+        text-align: right;
+
+        .another-skill {
+            align-items: flex-end;
+        }
+    }
+}
+
+:host.is-mobile {
+    gap: 32px;
+    .speech-bubble {
+        top: -75%;
+    }
+
+    h2 {
+        margin-left: 10px;
+    }
+
+    .learning {
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,52 @@
+<div class="reference-card">
+    <div class="ref-content">
+        @if (responsive.isDesktop()) {
+            <svg class="icon-quote">
+                <use href="assets/icons/icons.svg#icon-quote"></use>
+            </svg>
+        }
+
+        <p class="txt">{{ references[currentId].text | translate }}</p>
+        <div class="name-row">
+            <p class="name">
+                {{ references[currentId].name }} - {{ references[currentId].role | translate }}
+            </p>
+        </div>
+    </div>
+    <div class="ref-photo">
+        <div class="photo-mask">
+            <img
+                src="./assets/pngs/references/{{ references[currentId].img }}"
+                alt=""
+                [style.object-position]="references[currentId].position"
+                [style.scale]="references[currentId].scale"
+            />
+        </div>
+    </div>
+</div>
+
+<div class="ref-controls">
+    <button class="btn-arrow" (click)="prev()" [disabled]="currentId == 0">
+        <svg class="arrow-btn">
+            <use href="./assets/icons/icons.svg#icon-arrow-back"></use>
+        </svg>
+    </button>
+
+    <div class="dots-wrapper">
+        @for (item of references; track $index) {
+            <button
+                class="dot"
+                [class.active]="currentId === $index"
+                (click)="goTo($index)"
+            ></button>
+        }
+    </div>
+
+    <button class="btn-arrow" (click)="next()" [disabled]="currentId == references.length - 1">
+        <svg class="arrow-btn">
+            <use href="./assets/icons/icons.svg#icon-arrow-forward"></use>
+        </svg>
+    </button>
+</div>
+
+<img class="shadow" src="assets/pngs/shadows/green-shadow.png" alt="" />

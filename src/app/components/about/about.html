@@ -1,0 +1,28 @@
+<div class="text">
+    <h2>{{ 'about.title' | translate }}</h2>
+    <p>
+        {{ 'about.greeting' | translate }} <br />
+        {{ 'about.text' | translate }}
+        <br /><br />
+        {{ 'about.cta' | translate }}
+    </p>
+
+    <ul>
+        @for (item of aboutList; track item.iconId) {
+            <li>
+                <svg class="about-icon">
+                    <use [attr.href]="'./assets/icons/icons.svg#' + item.iconId"></use>
+                </svg>
+                <p>{{ item.text | translate }}</p>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="photo-wrapper">
+    <img class="photo" src="./assets/pngs/hero-character-photo.png" alt="" />
+    <img class="elbow" src="./assets/pngs/elbow.png" alt="" />
+    <img class="photo-green" src="./assets/pngs/shadows/photo-green-shadow.png" alt="" />
+    <img class="photo-purple" src="./assets/pngs/shadows/photo-purple-shadow.png" alt="" />
+    <img class="wave" src="./assets/pngs/bg.png" alt="" />
+</div>

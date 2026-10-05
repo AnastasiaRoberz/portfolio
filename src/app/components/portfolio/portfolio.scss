@@ -1,0 +1,95 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    @include styles.flex-center(column);
+    @include styles.content-boundary;
+    align-items: flex-start;
+    gap: 32px;
+    z-index: 3;
+}
+
+h2 {
+    @include styles.line('left', styles.$primary2);
+}
+
+.description {
+    width: 45%;
+}
+
+.projects-wrapper {
+    @include styles.flex-center(column);
+    width: 100%;
+    gap: clamp(1.5rem, calc(0.5rem + 5vw), 5rem);
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    &.reversed {
+        flex-direction: row-reverse;
+
+        .project-infos {
+            align-items: flex-end;
+            text-align: right;
+        }
+    }
+}
+
+img {
+    width: 620px;
+    height: 339px;
+}
+
+.project-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.technologies {
+    font-size: 1.5rem;
+    color: styles.$primary1;
+}
+
+.project-btns {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.875rem, calc(0.875rem + 5vw), 5.375rem);
+    margin-top: 20px;
+}
+
+.blue-shadow {
+    position: absolute;
+    top: -150px;
+    right: -150px;
+}
+
+:host.is-mobile {
+    .description {
+        width: 100%;
+    }
+
+    .project {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-infos {
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn {
+        margin: 0;
+    }
+}

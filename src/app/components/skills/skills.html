@@ -1,0 +1,57 @@
+@if (!responsive.isDesktop()) {
+    <h2>{{ 'skills.title' | translate }}</h2>
+    <p class="description">{{ 'skills.description' | translate }}</p>
+}
+
+<div class="icons">
+    <div class="skills-wrapper">
+        @for (skill of skills; track skill) {
+            <div class="skill">
+                <img
+                    class="skill-icon"
+                    src="assets/icons/skills/frontend/{{ skill | lowercase }}.svg"
+                    alt=""
+                />
+                <p class="skill-name">{{ skill }}</p>
+            </div>
+        }
+    </div>
+    <div class="skill learning">
+        <div class="speech-bubble">
+            <p>{{ 'skills.btn-learning.text' | translate }}</p>
+            <div class="tech-wrapper">
+                <div class="tech-item">
+                    <img src="assets/icons/skills/frontend/react.svg" alt="" />
+                    <strong>React</strong>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/skills/frontend/vue-js.svg" alt="" />
+                    <strong>Vue.js</strong>
+                </div>
+            </div>
+            <svg class="rectangle">
+                <use href="./assets/icons/icons.svg#icon-speech-bubble"></use>
+            </svg>
+        </div>
+        <svg class="icon-learning"><use href="assets/icons/icons.svg#icon-learning"></use></svg>
+        <p class="skill-name">{{ 'skills.btn-learning.name' | translate }}</p>
+    </div>
+</div>
+
+<div class="skills-text">
+    @if (responsive.isDesktop()) {
+        <h2>{{ 'skills.title' | translate }}</h2>
+
+        <p class="description">{{ 'skills.description' | translate }}</p>
+    }
+
+    <div class="another-skill">
+        <h3>
+            {{ 'skills.subheading.text' | translate }}
+            <span class="highlight">{{ 'skills.subheading.highlight' | translate }} </span>?
+        </h3>
+        <p>{{ 'skills.subtext' | translate }}</p>
+    </div>
+
+    <a class="btn btn-primary" href="#contact">{{ 'skills.btn' | translate }}</a>
+</div>

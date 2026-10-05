@@ -1,0 +1,22 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    display: contents;
+}
+
+.error-msg {
+    color: styles.$error;
+    font-size: 0.875rem;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(110%);
+    left: 0;
+}
+
+.icon-invalid {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 25px;
+    top: 12.5px;
+}

@@ -1,0 +1,48 @@
+<div class="content" [class.is-mobile]="!responsive.isDesktop()">
+    <h2>
+        <span class="title">{{ 'legal-notice.title' | translate }}</span>
+    </h2>
+
+    <section>
+        <h3>{{ 'legal-notice.imprint' | translate }}</h3>
+        <ul>
+            <li>Anastasia Roberz</li>
+            <li>Max-Lang-Straße 1</li>
+            <li>70771 Leinfelden-Echterdingen</li>
+            <li>E-Mail: anastasia.roberz@gmx.de</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>{{ 'legal-notice.terms.title' | translate }}</h4>
+        <p [innerHTML]="'legal-notice.terms.text' | translate"></p>
+    </section>
+
+    <section>
+        <h4>{{ 'legal-notice.ownership.title' | translate }}</h4>
+        <p [innerHTML]="'legal-notice.ownership.text' | translate"></p>
+    </section>
+
+    <section>
+        <h4>{{ 'legal-notice.rights.title' | translate }}</h4>
+        <p [innerHTML]="'legal-notice.rights.text' | translate"></p>
+    </section>
+
+    <section>
+        <h4>{{ 'legal-notice.use.title' | translate }}</h4>
+        <p [innerHTML]="'legal-notice.use.text' | translate"></p>
+    </section>
+
+    <section>
+        <h4>{{ 'legal-notice.disclaimer.title' | translate }}</h4>
+        <p [innerHTML]="'legal-notice.disclaimer.text' | translate"></p>
+    </section>
+
+    <section>
+        <h4>{{ 'legal-notice.indemnity.title' | translate }}</h4>
+        <p [innerHTML]="'legal-notice.indemnity.text' | translate"></p>
+    </section>
+
+    <p>{{ 'legal-notice.contact-me' | translate }}</p>
+    <p>{{ 'legal-notice.date' | translate }}</p>
+</div>

@@ -1,9 +1,23 @@
+// COLORS
 $background: rgb(20, 29, 47);
 $primary1: rgb(112, 230, 28);
 $primary2: rgb(151, 71, 255);
 $secondary: rgb(28, 218, 230);
-
+$white: rgb(255, 250, 250);
 $error: rgb(230, 28, 64);
 $disabled: rgb(182, 182, 182);
 
-$padding-main: 50px clamp(24px, calc(2.286px + 6.786vw), 100px);
+// LAYOUT & DIMENSIONS
+$header-height: 110px;
+$paddings: (
+    main: 50px clamp(24px, calc(2.286px + 6.786vw), 100px),
+    hero: 50px clamp(16px, calc(-8px + 7.5vw), 100px),
+);
+$max-width: 1440px;
+
+// Z-INDICES
+$z-header: 10;
+
+// TRANSITIONS
+$transition-base: all 250ms ease-in-out;
+$transition-fast: all 150ms ease-in-out;

@@ -1,0 +1,44 @@
+@if (showErrors()) {
+    @switch (getErrorKey()?.key) {
+        @case ('required') {
+            @if (fieldKey() === 'contact.fields.privacy') {
+                <span class="error-msg">
+                    {{ 'contact.error-msg.privacy' | translate }}
+                </span>
+            } @else if (fieldKey() === 'contact.fields.message') {
+                <span class="error-msg">
+                    {{ 'contact.error-msg.msg' | translate }}
+                </span>
+            } @else {
+                <span class="error-msg">{{
+                    'contact.error-msg.required' | translate: { field: (fieldKey() | translate) }
+                }}</span>
+            }
+        }
+
+        @case ('minlength') {
+            <span class="error-msg">
+                {{
+                    'contact.error-msg.min-length'
+                        | translate
+                            : {
+                                  field: (fieldKey() | translate),
+                                  min: getErrorKey()?.value?.requiredLength,
+                              }
+                }}
+            </span>
+        }
+
+        @case ('email') {
+            <span class="error-msg">
+                {{ 'contact.error-msg.mail' | translate }}
+            </span>
+        }
+    }
+
+    @if (fieldKey() !== 'contact.fields.privacy') {
+        <svg class="icon-invalid">
+            <use href="assets/icons/icons.svg#icon-invalid"></use>
+        </svg>
+    }
+}

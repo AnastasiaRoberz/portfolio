@@ -1,0 +1,226 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    @include styles.flex-center;
+    width: 100%;
+    height: styles.$header-height;
+    z-index: styles.$z-header;
+    background-color: styles.$background;
+    position: fixed;
+    top: 0;
+}
+
+.header-content {
+    @include styles.content-boundary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: clamp(200px, calc(170px + 9.375vw), 305px);
+    height: auto;
+}
+
+.menu {
+    @include styles.flex-center;
+    gap: 92px;
+}
+
+nav {
+    @include styles.flex-center;
+    gap: 30px;
+
+    .nav-link {
+        font-size: 1.5rem;
+
+        &:hover {
+            color: styles.$primary1;
+        }
+
+        &.active {
+            color: styles.$primary1;
+
+            &::after {
+                @include styles.txt-underline;
+                background-color: styles.$primary2;
+            }
+        }
+    }
+}
+
+.language-switch {
+    @include styles.flex-center;
+    gap: 14px;
+
+    .btn-language {
+        padding: 4px 8px;
+        font-size: 1.125rem;
+        border: 1px solid styles.$primary1;
+
+        &:hover {
+            border: 1px solid transparent;
+            background-color: styles.$primary2;
+        }
+
+        &:active {
+            border: 1px solid transparent;
+            background-color: white;
+            color: styles.$primary2;
+            font-weight: 600;
+        }
+
+        &.active {
+            background-color: styles.$primary1;
+            font-weight: 700;
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    @include styles.flex-center(column);
+    gap: 33px;
+    position: fixed;
+    top: styles.$header-height;
+    left: 0;
+    width: 100vw;
+    height: calc(100dvh - styles.$header-height);
+    background-color: rgba(20, 29, 47, 0.8);
+    backdrop-filter: blur(5px);
+
+    a {
+        font-size: 1.5rem;
+        line-height: 120%;
+    }
+
+    .mobile-language-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-mobile-language {
+        padding: 0;
+        font-size: 1.5rem;
+
+        &.active {
+            color: styles.$primary1;
+            font-weight: 600;
+        }
+    }
+}
+
+.btn-burger-menu {
+    @include styles.flex-center(column);
+    gap: 14px;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent; // Entfernt blauen Klick-Rahmen auf Smartphones
+
+    .line {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: styles.$white;
+        transform-origin: center;
+    }
+
+    &.open {
+        .line:nth-child(1) {
+            animation: toCrossTop 350ms ease forwards;
+        }
+        .line:nth-child(2) {
+            animation: shrinkMiddle 350ms ease forwards;
+        }
+        .line:nth-child(3) {
+            animation: toCrossBottom 350ms ease forwards;
+        }
+    }
+
+    &:not(.open) {
+        .line:nth-child(1) {
+            animation: resetTop 350ms ease forwards;
+        }
+        .line:nth-child(2) {
+            animation: resetMiddle 350ms ease forwards;
+        }
+        .line:nth-child(3) {
+            animation: resetBottom 350ms ease forwards;
+        }
+    }
+}
+
+@keyframes toCrossTop {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    35% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(2px + 14px) rotate(45deg);
+    }
+}
+
+@keyframes shrinkMiddle {
+    0% {
+        width: 30px;
+        opacity: 1;
+    }
+    35% {
+        width: 10px;
+        opacity: 1;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes toCrossBottom {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    35% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(-(2px + 14px)) rotate(-45deg);
+    }
+}
+
+@keyframes resetTop {
+    0% {
+        transform: translateY(2px + 14px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes resetMiddle {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    65% {
+        width: 10px;
+        opacity: 1;
+    }
+    100% {
+        width: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes resetBottom {
+    0% {
+        transform: translateY(-(2px + 14px)) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}

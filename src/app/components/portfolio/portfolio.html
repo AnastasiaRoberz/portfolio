@@ -1,0 +1,26 @@
+<h2>{{ 'portfolio.title' | translate }}</h2>
+
+<p class="description">{{ 'portfolio.description' | translate }}</p>
+
+<div class="projects-wrapper">
+    @for (project of projects; track $index) {
+        <div class="project" [class.reversed]="$odd && responsive.isDesktop()">
+            <img src="assets/pngs/portfolio/{{ project.imgSrc }}" alt="" />
+            <div class="project-infos">
+                <p class="highlight">{{ project.name }}</p>
+                <p class="technologies">{{ project.technologies.join(' | ') }}</p>
+                <p>{{ project.description | translate }}</p>
+                <div class="project-btns">
+                    <a class="btn btn-primary" target="_blank" href="{{ project.urlTest }}"
+                        >Live Test</a
+                    >
+                    <a class="btn btn-secondary" target="_blank" href="{{ project.urlGit }}"
+                        >GitHub</a
+                    >
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<img class="blue-shadow" src="assets/pngs/shadows/blue-shadow-2.png" alt="" />

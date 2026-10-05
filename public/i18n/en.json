@@ -1,0 +1,147 @@
+{
+    "header": {
+        "about": "About",
+        "skills": "Skills",
+        "portfolio": "Portfolio"
+    },
+
+    "hero": {
+        "job-title": "Frontend Developer",
+        "btn-talk": "Let's Talk",
+        "scroll": "Scroll down"
+    },
+
+    "about": {
+        "title": "About",
+        "greeting": "Hey there, I'm Anastasia!",
+        "text": "For me, web development is the ideal intersection of logical architecture and tangible value. Driven by my technical background, I strive to write code that is not just functional, but well-thought-out, maintainable, and modular. I draw inspiration from the continuous evolution of modern technologies and the challenge of turning complex workflows into intuitive, high-performance web applications.",
+        "cta": "Let's connect and create something amazing together!",
+        "list": {
+            "location": "Based in the Stuttgart area. I prefer working in a hybrid setup, bring dependable self-organization to the table, and value purposeful on-site collaboration.",
+            "learning": "I quickly get up to speed with modern frameworks and tools, dig deep into underlying concepts, and continuously expand my skill set in a structured way.",
+            "problem-solving": "I tackle challenges methodically and with perseverance: first understanding the root cause, then designing a clean, maintainable architecture. In doing so, I combine analytical precision with an eye for user-friendly, well-crafted UI design."
+        }
+    },
+
+    "skills": {
+        "title": "Skills",
+        "description": "Throughout my projects, I have worked hands-on with modern HTML, CSS/SCSS, JavaScript, and TypeScript, building scalable web applications with frameworks like Angular. For me, development never stops at the basics: with web technologies moving fast, I actively expand my knowledge, prioritize clean architecture, and continuously adopt new tools and best practices.",
+        "subheading": {
+            "text": "Looking for ",
+            "highlight": "another skill"
+        },
+        "subtext": "Technology never stands still—and neither do I. If your tech stack requires a specific technology or a new framework, I am driven and eager to master it thoroughly.",
+        "btn-learning": {
+            "name": "Continually learning",
+            "text": "I have a special interest in learning"
+        }
+    },
+
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "projects": {
+            "pollo-loco": "Jump, run and throw game based on object-orientated approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            "pokedex": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+        }
+    },
+
+    "references": {
+        "roberz": {
+            "role": "The lesser half",
+            "text": "You can trust Ana with any project, as long as you don't ask if it's running. If you ask whether it looks good, you'll get a twenty-minute, enthusiastic answer. On the plus side, she reliably solves problems—especially the ones nobody asked her to."
+        },
+        "kids": {
+            "role": "Tiny Creative Directors",
+            "text": "Mom's screen is glowing all colorful, but nothing is happening. Turbo cool! But the chicken game was the Turbo Coolest. And now: playground?"
+        },
+        "ai": {
+            "role": "Chief Overthinking Officer",
+            "text": "Working with Ana means turning a good idea into an even better result. She thinks creatively, finds solutions you wouldn't have thought of yourself, and only occasionally gets lost in a tiny detail that, naturally, turned out to be important after all."
+        }
+    },
+
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Got a problem to solve?",
+        "description": "I help you turn ideas into clean, performant, and user-friendly web applications. Whether you are looking to strengthen your frontend team or need support building modern web projects—let's connect for an informal chat.",
+        "prompt": "Need a Frontend developer? <span>Contact me!</span>",
+        "privacy-policy": {
+            "prefix": "I've read the",
+            "link": "privacy policy",
+            "suffix": "and agree to the processing of my data as outlined."
+        },
+        "button": "Send message",
+
+        "fields": {
+            "name": "Your name",
+            "mail": "Your mail",
+            "msg": "Your message",
+            "privacy": ""
+        },
+
+        "error-msg": {
+            "required": "{{ field }} is required.",
+            "min-length": "{{ field }} must have at least {{ min }} characters.",
+            "mail": "Please enter a valid email address.",
+            "msg": "Your message is empty",
+            "privacy": "Please accept the privacy policy."
+        }
+    },
+
+    "footer": {
+        "legal-notice": "Legal Notice"
+    },
+
+    "privacy-policy": {
+        "title": "Privacy Policy",
+        "responsible": {
+            "title": "Controller",
+            "text": "The controller responsible for data processing on this website is:"
+        },
+        "hosting": {
+            "title": "Web Hosting",
+            "text": "When you visit this website, the hosting server automatically collects technical connection data (e.g. IP address, browser type, operating system, timestamp of access). This information is technically necessary to reliably and securely display the website. The legal basis is Art. 6(1)(f) GDPR."
+        },
+        "contact": {
+            "title": "Contact Form",
+            "text": "When you send a message via the contact form, the submitted details (name, email address, message text) are stored and processed solely to answer your inquiry. This processing is based on your consent pursuant to Art. 6(1)(a) GDPR. Your data is treated confidentially and deleted once your inquiry has been resolved, unless statutory retention requirements apply."
+        },
+        "rights": {
+            "title": "Your Rights",
+            "text": "You have the right to request free information regarding your stored personal data, its origin, recipients, and purpose of processing at any time. You also have the right to rectification, restriction of processing, or deletion of this data, as well as the right to revoke your consent at any time with future effect via email."
+        }
+    },
+
+    "legal-notice": {
+        "title": "Legal Notice",
+        "imprint": "Imprint",
+        "terms": {
+            "title": "Acceptance of terms",
+            "text": "By accessing and using <span>Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice."
+        },
+        "ownership": {
+            "title": "Scope and ownership of the product",
+            "text": "<span>Portfolio</span> has been developed as part of a student group project in a web development bootcamp at the <span>Developer Akademie GmbH</span>. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. <br /> <br /> The design of <span>Portfolio</span> is owned by the <span>Developer Akademie GmbH</span>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited."
+        },
+        "rights": {
+            "title": "Proprietary rights",
+            "text": "Aside from the design owned by <span>Developer Akademie GmbH</span>, we, the listed students, retain all proprietary rights in <span>Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information."
+        },
+        "use": {
+            "title": "Use of the product",
+            "text": "<span>Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <span>Portfolio</span> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <span>Portfolio</span>."
+        },
+        "disclaimer": {
+            "title": "Disclaimer of warranties and limitation of liability",
+            "text": "<span>Portfolio</span> is provided 'as is' without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the <span>Developer Akademie</span>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss ofprofits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <span>Portfolio</span>."
+        },
+        "indemnity": {
+            "title": "Indemnity",
+            "text": "You agree to indemnify, defend and hold harmless us, the listed students, the <span>Developer Akademie</span>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span>Portfolio</span> and/or your breach of this Legal Notice."
+        },
+        "contact-me": "For any questions or notices, please contact me at anastasia.roberz@gmx.de.",
+        "date": "Date: July 26, 2025"
+    }
+}
