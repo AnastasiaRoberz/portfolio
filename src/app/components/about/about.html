@@ -11,7 +11,7 @@
         @for (item of aboutList; track item.iconId) {
             <li>
                 <svg class="about-icon">
-                    <use [attr.href]="'/assets/icons/icons.svg#' + item.iconId"></use>
+                    <use [attr.href]="'./assets/icons/icons.svg#' + item.iconId"></use>
                 </svg>
                 <p>{{ item.text | translate }}</p>
             </li>
@@ -20,9 +20,9 @@
 </div>
 
 <div class="photo-wrapper">
-    <img class="photo" src="/assets/pngs/hero-character-photo.png" alt="" />
-    <img class="elbow" src="/assets/pngs/elbow.png" alt="" />
-    <img class="photo-green" src="/assets/pngs/shadows/photo-green-shadow.png" alt="" />
-    <img class="photo-purple" src="/assets/pngs/shadows/photo-purple-shadow.png" alt="" />
-    <img class="wave" src="/assets/pngs/bg.png" alt="" />
+    <img class="photo" src="./assets/pngs/hero-character-photo.png" alt="" />
+    <img class="elbow" src="./assets/pngs/elbow.png" alt="" />
+    <img class="photo-green" src="./assets/pngs/shadows/photo-green-shadow.png" alt="" />
+    <img class="photo-purple" src="./assets/pngs/shadows/photo-purple-shadow.png" alt="" />
+    <img class="wave" src="./assets/pngs/bg.png" alt="" />
 </div>

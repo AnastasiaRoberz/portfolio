@@ -14,24 +14,23 @@
     "about": {
         "title": "About",
         "greeting": "Hey there, I'm Anastasia!",
-        "text": "For me, web development is the perfect intersection of logical architecture and tangible user value. With a strong IT background, my focus goes beyond just making things work: I build clean, modular, and maintainable applications—from reliable backend logic to responsive, intuitive UI design. My drive comes from solving complex technical challenges and turning robust ideas into performant digital solutions.",
+        "text": "For me, web development is the ideal intersection of logical architecture and tangible value. Driven by my technical background, I strive to write code that is not just functional, but well-thought-out, maintainable, and modular—from a clean backend to intuitive UI design. I draw inspiration from the continuous evolution of modern technologies and the challenge of turning complex workflows into responsive, high-performance web applications.",
         "cta": "Let's connect and create something amazing together!",
         "list": {
-            "location": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
-            "learning": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
-            "problem-solving": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration."
+            "location": "Based in the Stuttgart area. I prefer working remotely or in a hybrid setup, bring dependable self-organization to the table, and value purposeful on-site collaboration.",
+            "learning": "Web technologies evolve rapidly—and that is exactly what drives me. I quickly get up to speed with modern frameworks and tools, dig deep into underlying concepts, and continuously expand my skill set in a structured way.",
+            "problem-solving": "I tackle challenges methodically and with perseverance: first understanding the root cause, then designing a clean, maintainable architecture. In doing so, I combine analytical precision with an eye for user-friendly, well-crafted UI design."
         }
     },
 
     "skills": {
         "title": "Skills",
-        "description": "Through various projects, I have gained hands-on experience building dynamic web applications with modern HTML, CSS/SCSS, and JavaScript, leveraging frameworks like Angular. Given how quickly web development evolves, I continuously expand my skill set—focusing on clean, scalable code and keeping up with modern standards and best practices.",
+        "description": "Throughout my projects, I have worked hands-on with modern HTML, CSS/SCSS, and JavaScript, building scalable web applications with frameworks like Angular. For me, development never stops at the basics: with web technologies moving fast, I actively expand my knowledge, prioritize clean architecture, and continuously adopt new tools and best practices.",
         "subheading": {
             "text": "Looking for ",
             "highlight": "another skill"
         },
-        "subtext": "Technologies never stand still, and neither do I. If your stack requires a specific tool or a new framework, I am always enthusiastic and quick to dive in and master it.",
-        "btn": "Get in touch",
+        "subtext": "Technology never stands still—and neither do I. If your tech stack requires a specific technology or a new framework, I am driven and eager to master it thoroughly.",
         "btn-learning": {
             "name": "Continually learning",
             "text": "I have a special interest in learning"
@@ -57,7 +56,7 @@
     "contact": {
         "title": "Contact",
         "subtitle": "Got a problem to solve?",
-        "description": "I help turn ideas into clean, performant, and intuitive web applications. Whether you're looking to strengthen your frontend team or need a reliable developer to bring your digital project to life—let's connect and discuss how I can contribute.",
+        "description": "I help you turn ideas into clean, performant, and user-friendly web applications. Whether you are looking to strengthen your frontend team or need support building modern web projects—let's connect for an informal chat.",
         "prompt": "Need a Frontend developer? <span>Contact me!</span>",
         "privacy-policy": {
             "prefix": "I've read the",

@@ -14,7 +14,7 @@
     <div class="ref-photo">
         <div class="photo-mask">
             <img
-                src="/assets/pngs/references/{{ references[currentId].img }}"
+                src="./assets/pngs/references/{{ references[currentId].img }}"
                 alt=""
                 [style.object-position]="references[currentId].position"
                 [style.scale]="references[currentId].scale"
@@ -26,7 +26,7 @@
 <div class="ref-controls">
     <button class="btn-arrow" (click)="prev()" [disabled]="currentId == 0">
         <svg class="arrow-btn">
-            <use href="/assets/icons/icons.svg#icon-arrow-back"></use>
+            <use href="./assets/icons/icons.svg#icon-arrow-back"></use>
         </svg>
     </button>
 
@@ -42,7 +42,7 @@
 
     <button class="btn-arrow" (click)="next()" [disabled]="currentId == references.length - 1">
         <svg class="arrow-btn">
-            <use href="/assets/icons/icons.svg#icon-arrow-forward"></use>
+            <use href="./assets/icons/icons.svg#icon-arrow-forward"></use>
         </svg>
     </button>
 </div>
