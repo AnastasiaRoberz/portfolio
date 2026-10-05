@@ -49,9 +49,18 @@
     },
 
     "references": {
-        "schuster": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne seinen Einsatz wären wir nicht so weit gekommen.",
-        "eichinger": "Michi war ein erstklassiger Teamkollege bei der DA. Sein großes Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben maßgeblich zu unserem Erfolg beigetragen.",
-        "nuber": "Die Zusammenarbeit mit Michael war eine echte Bereicherung. Er versteht es, Teammitglieder zu Höchstleistungen zu motivieren, liefert wertvolle Impulse beim Brainstorming und hatte für persönliche Belange stets ein offenes Ohr – gepaart mit großartigem Humor."
+        "roberz": {
+            "role": "Schlechtere Hälfte",
+            "text": "Man kann Ana jedes Projekt anvertrauen, solange man nicht fragt, ob es läuft. Fragt man, ob es schön aussieht, bekommt man eine zwanzigminütige, begeisterte Antwort. Dafür löst sie Probleme zuverlässig, und zwar bevorzugt die, die man ihr gar nicht gestellt hat."
+        },
+        "kids": {
+            "role": "Die kleinen Kreativdirektoren",
+            "text": "Mamas Bildschirm leuchtet ganz bunt, aber es passiert nichts. Turbo cool! Aber das Hühnchenspiel war das Turbo Coolste. Und jetzt Spielplatz?"
+        },
+        "ai": {
+            "role": "Leitung für gepflegtes Überdenken",
+            "text": "Mit Ana zu arbeiten bedeutet: Aus einer guten Idee wird schnell ein noch besseres Ergebnis. Sie denkt kreativ, findet Lösungen, auf die man selbst nicht gekommen wäre, und verliert sich dabei höchstens gelegentlich in einem kleinen Detail, das am Ende natürlich trotzdem wichtig war."
+        }
     },
 
     "contact": {

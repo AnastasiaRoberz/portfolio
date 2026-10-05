@@ -15,26 +15,23 @@ export class References {
 
     references: Reference[] = [
         {
-            name: 'V.Schuster',
-            role: 'Team Partner',
-            text: 'references.schuster',
-            img: 'reference1.png',
-            position: 'center 10%',
-            scale: 1.5,
-        },
-        {
-            name: 'E.Eichinger',
-            role: 'Team Partner',
-            text: 'references.eichinger',
-            img: 'reference2.png',
-        },
-        {
-            name: 'I.Nuber',
-            role: 'Frontend Engineer',
-            text: 'references.nuber',
-            img: 'reference3.png',
-            position: 'center 30%',
+            name: 'P.Roberz',
+            role: 'references.roberz.role',
+            text: 'references.roberz.text',
+            img: 'reference1.jpeg',
             scale: 1.2,
+        },
+        {
+            name: 'Max & Moritz Roberz',
+            role: 'references.kids.role',
+            text: 'references.kids.text',
+            img: 'reference2.jpeg',
+        },
+        {
+            name: 'Dr. Byte McReason',
+            role: 'references.ai.role',
+            text: 'references.ai.text',
+            img: 'reference3.jpg',
         },
     ];
 

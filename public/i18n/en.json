@@ -48,9 +48,18 @@
     },
 
     "references": {
-        "schuster": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-        "eichinger": "Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
-        "nuber": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+        "roberz": {
+            "role": "The lesser half",
+            "text": "You can trust Ana with any project, as long as you don't ask if it's running. If you ask whether it looks good, you'll get a twenty-minute, enthusiastic answer. On the plus side, she reliably solves problems—especially the ones nobody asked her to."
+        },
+        "kids": {
+            "role": "Tiny Creative Directors",
+            "text": "Mom's screen is glowing all colorful, but nothing is happening. Turbo cool! But the chicken game was the Turbo Coolest. And now: playground?"
+        },
+        "ai": {
+            "role": "Chief Overthinking Officer",
+            "text": "Working with Ana means turning a good idea into an even better result. She thinks creatively, finds solutions you wouldn't have thought of yourself, and only occasionally gets lost in a tiny detail that, naturally, turned out to be important after all."
+        }
     },
 
     "contact": {

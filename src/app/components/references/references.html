@@ -8,7 +8,9 @@
 
         <p class="txt">{{ references[currentId].text | translate }}</p>
         <div class="name-row">
-            <p class="name">{{ references[currentId].name }} - {{ references[currentId].role }}</p>
+            <p class="name">
+                {{ references[currentId].name }} - {{ references[currentId].role | translate }}
+            </p>
         </div>
     </div>
     <div class="ref-photo">
