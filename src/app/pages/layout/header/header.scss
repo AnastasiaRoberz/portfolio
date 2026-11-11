@@ -1,6 +1,9 @@
 @use '../../../../../public/assets/styles/' as *;
 
 :host {
+    @include flex-center;
+    background-color: $background;
+    width: 100dvw;
 }
 
 .header-content {
