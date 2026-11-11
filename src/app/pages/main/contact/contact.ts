@@ -3,8 +3,8 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ErrorHandling } from '../error-handling/error-handling';
-import { ResponsiveService } from '../../services/responsive.service';
+import { ErrorHandling } from '../../../components/error-handling/error-handling';
+import { ResponsiveService } from '../../../services/responsive.service';
 
 @Component({
     imports: [RouterLink, TranslatePipe, ReactiveFormsModule, ErrorHandling],

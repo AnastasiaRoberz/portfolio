@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { Project } from '../../interfaces/project';
+import { Project } from '../../../interfaces/project';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ResponsiveService } from '../../services/responsive.service';
+import { ResponsiveService } from '../../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe],

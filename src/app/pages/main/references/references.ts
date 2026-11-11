@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { Reference } from '../../interfaces/reference';
+import { Reference } from '../../../interfaces/reference';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ResponsiveService } from '../../services/responsive.service';
+import { ResponsiveService } from '../../../services/responsive.service';
 
 @Component({
     imports: [TranslatePipe],

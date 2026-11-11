@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './components/header/header';
-import { Footer } from './components/footer/footer';
+import { Header } from './pages/layout/header/header';
+import { Footer } from './pages/layout/footer/footer';
 import { ResponsiveService } from './services/responsive.service';
 
 @Component({

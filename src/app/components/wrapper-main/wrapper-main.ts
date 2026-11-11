@@ -1,10 +1,10 @@
 import { Component, ElementRef, inject } from '@angular/core';
-import { Hero } from '../hero/hero';
-import { About } from '../about/about';
-import { Skills } from '../skills/skills';
-import { Portfolio } from '../portfolio/portfolio';
-import { References } from '../references/references';
-import { Contact } from '../contact/contact';
+import { Hero } from '../../pages/main/hero/hero';
+import { About } from '../../pages/main/about/about';
+import { Skills } from '../../pages/main/skills/skills';
+import { Portfolio } from '../../pages/main/portfolio/portfolio';
+import { References } from '../../pages/main/references/references';
+import { Contact } from '../../pages/main/contact/contact';
 import { ResponsiveService } from '../../services/responsive.service';
 import { ScrollService } from '../../services/scroll.service';
 
