@@ -10,9 +10,10 @@ import {
     customNameValidator,
     generalCustomValidators,
 } from '../../../utils/custom-validators';
+import { InputField } from '../../../shared/input-field/input-field';
 
 @Component({
-    imports: [RouterLink, TranslatePipe, ReactiveFormsModule, ErrorHandling],
+    imports: [RouterLink, TranslatePipe, ReactiveFormsModule, ErrorHandling, InputField],
     selector: 'app-contact',
     styleUrl: './contact.scss',
     templateUrl: './contact.html',

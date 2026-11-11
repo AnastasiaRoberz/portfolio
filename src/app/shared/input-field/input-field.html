@@ -1,0 +1,10 @@
+<label [for]="fieldId()">{{ label() }}</label>
+
+@if (type() === 'input') {
+    <input type="text" [id]="fieldId()" [value]="value" autocomplete="off" placeholder=" " />
+} @else if (type() === 'textarea') {
+    <textarea [id]="fieldId()" [value]="value" placeholder=" "></textarea>
+}
+<svg class="icon">
+    <use [attr.href]="'./assets/icons/icons.svg#icon-valid' + icon()"></use>
+</svg>

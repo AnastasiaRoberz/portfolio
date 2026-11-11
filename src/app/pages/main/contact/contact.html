@@ -7,8 +7,9 @@
         <p [innerHTML]="'contact.prompt' | translate"></p>
     </div>
 
-    <form class="input-wrapper" autocomplete="off" [formGroup]="msgForm" (ngSubmit)="onSubmit()">
-        <div class="input">
+    <form [formGroup]="msgForm" (ngSubmit)="onSubmit()">
+        <app-input-field fieldId="name" label="Your Name" formControlName="name" />
+        <!-- <div class="input">
             <input
                 type="text"
                 name="input-name"
@@ -30,9 +31,9 @@
                     <use href="./assets/icons/icons.svg#icon-valid"></use>
                 </svg>
             }
-        </div>
+        </div> -->
 
-        <div class="input">
+        <!-- <div class="input">
             <input
                 type="email"
                 name="input-mail"
@@ -54,9 +55,9 @@
                     <use href="./assets/icons/icons.svg#icon-valid"></use>
                 </svg>
             }
-        </div>
+        </div> -->
 
-        <div class="message">
+        <!-- <div class="message">
             <div class="input">
                 <textarea
                     name="txta-message"
@@ -107,10 +108,10 @@
                     fieldKey="contact.fields.privacy"
                 ></app-error-handling>
             </div>
-        </div>
+        </div> -->
 
         <button class="btn-primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">
-            {{ 'contact.button' | translate }} :)
+            {{ 'contact.button' | translate }}
         </button>
 
         @if (statusMessage) {
@@ -119,7 +120,7 @@
     </form>
 </div>
 
-<img class="shadow" src="./assets/pngs/shadows/purple-shadow.png" alt="" />
+<!-- <img class="shadow" src="./assets/pngs/shadows/purple-shadow.png" alt="" /> -->
 
 <a class="icon-arrow-up" href="#hero"
     ><svg class="icon-arrow-up">

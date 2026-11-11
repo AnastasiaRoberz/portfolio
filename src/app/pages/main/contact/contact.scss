@@ -30,51 +30,10 @@ h3 {
     @include line('left', $secondary);
 }
 
-.input-wrapper {
-    @include flex-center(column);
-    gap: 32px;
-    z-index: 3;
-}
-
-.input {
+form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 10px;
-}
-
-input:not(input[type='checkbox']),
-textarea {
-    @include input-field;
-    width: 100%;
-    font-family: Poppins;
-    border: 1px solid $primary2;
-    transition: $transition-fast;
-
-    &:hover {
-        border: 1px solid $secondary;
-    }
-
-    &:invalid {
-        border: 1px solid $error;
-    }
-
-    &.valid {
-        border: 1px solid $primary1;
-    }
-}
-
-.message {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-textarea {
-    height: 202px;
+    flex: 1;
 }
 
 .check-privacy-policy {
@@ -156,36 +115,4 @@ input[type='checkbox'] {
     position: absolute;
     top: -100px;
     right: -200px;
-}
-
-:host.is-mobile {
-    gap: 0;
-
-    h2 {
-        margin-bottom: 32px;
-    }
-
-    .contact-content {
-        flex-direction: column;
-    }
-
-    .contact-txt {
-        width: 100%;
-    }
-
-    .icon-arrow-up {
-        margin: 0;
-    }
-
-    h3::before {
-        top: 25%;
-    }
-}
-
-.icon-valid {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 25px;
-    top: 12.5px;
 }

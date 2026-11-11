@@ -10,13 +10,10 @@
 }
 
 // --- FONTS ---
-html,
-a,
-button {
+html {
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 16px;
-    color: styles.$white;
     line-height: 1.2;
 }
 

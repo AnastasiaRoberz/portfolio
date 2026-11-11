@@ -1,0 +1,74 @@
+@use '../../../../public/assets/styles/' as *;
+
+input,
+textarea {
+    background: none;
+    border: none;
+    outline: none;
+    flex: 1;
+    color: $text-light;
+}
+
+:host {
+    --padding-block: 16px;
+    --padding-inline: 24px;
+    display: flex;
+    width: 100%;
+    padding-block: var(--padding-block);
+    padding-inline: var(--padding-inline);
+    color: $text-light;
+    border: 1px solid $primary2;
+    border-radius: 10px;
+    background-color: $background;
+    position: relative;
+    transition: border-color 0.3s ease;
+
+    &:focus-within {
+        border-color: $primary1;
+
+        label {
+            color: $primary1;
+        }
+    }
+
+    &:focus-within,
+    &:has(input:not(:placeholder-shown)),
+    &:has(textarea:not(:placeholder-shown)) {
+        label {
+            transform: translateY(calc(-50% - var(--padding-block)));
+        }
+    }
+
+    &:active {
+        border-color: $primary1;
+
+        label {
+            color: $primary1;
+        }
+    }
+
+    &:valid {
+        border-color: $primary1;
+    }
+
+    &:invalid {
+        border-color: $error;
+    }
+}
+
+label {
+    position: absolute;
+    inset-block: var(--padding-block);
+    inset-inline-start: var(--padding-inline);
+    padding-inline: 8px;
+    background-color: $background;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    visibility: visible;
+}
