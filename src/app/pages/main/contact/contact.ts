@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ErrorHandling } from '../../../components/error-handling/error-handling';
 import { ResponsiveService } from '../../../services/responsive.service';
 import {
     customMailValidator,
@@ -13,7 +11,7 @@ import {
 import { InputField } from '../../../shared/input-field/input-field';
 
 @Component({
-    imports: [RouterLink, TranslatePipe, ReactiveFormsModule, ErrorHandling, InputField],
+    imports: [TranslatePipe, ReactiveFormsModule, InputField],
     selector: 'app-contact',
     styleUrl: './contact.scss',
     templateUrl: './contact.html',
@@ -23,7 +21,7 @@ export class Contact {
     http = inject(HttpClient);
     responsive = inject(ResponsiveService);
 
-    isSubmitting = false;
+    isSubmitting = signal<boolean>(false);
     statusMessage = '';
 
     msgForm = this.fb.group({
@@ -50,9 +48,9 @@ export class Contact {
     }
 
     onSubmit(): void {
-        if (this.msgForm.invalid || this.isSubmitting) return;
+        if (this.msgForm.invalid || this.isSubmitting()) return;
 
-        this.isSubmitting = true;
+        this.isSubmitting.set(true);
         this.statusMessage = 'Sende Nachricht...';
 
         const payload = {
@@ -68,11 +66,11 @@ export class Contact {
                 } else {
                     this.statusMessage = 'Fehler beim Senden.';
                 }
-                this.isSubmitting = false;
+                this.isSubmitting.set(false);
             },
             error: () => {
                 this.statusMessage = 'Netzwerkfehler.';
-                this.isSubmitting = false;
+                this.isSubmitting.set(false);
             },
         });
     }

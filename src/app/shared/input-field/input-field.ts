@@ -1,5 +1,14 @@
-import { ChangeDetectorRef, Component, effect, inject, input, signal } from '@angular/core';
+import {
+    ChangeDetectorRef,
+    Component,
+    computed,
+    effect,
+    inject,
+    input,
+    signal,
+} from '@angular/core';
 import { ControlValueAccessor, NgControl, ReactiveFormsModule } from '@angular/forms';
+import { ErrorService } from '../../services/error.service';
 
 let nextId = 0;
 
@@ -10,6 +19,7 @@ let nextId = 0;
     templateUrl: './input-field.html',
 })
 export class InputField implements ControlValueAccessor {
+    public readonly errorService = inject(ErrorService);
     private readonly ngControl = inject(NgControl);
 
     private readonly cdr = inject(ChangeDetectorRef);
@@ -26,7 +36,9 @@ export class InputField implements ControlValueAccessor {
 
     public readonly type = input<'input' | 'textarea'>('input');
 
-    public readonly icon = signal<string>('');
+    public readonly isValid = signal<boolean>(false);
+
+    public icon = computed(() => (this.isValid() ? 'icon-valid' : 'icon-invalid'));
 
     constructor() {
         if (this.ngControl) {
@@ -40,6 +52,7 @@ export class InputField implements ControlValueAccessor {
             const ctrl = this.ngControl.control;
             if (ctrl) {
                 const sub = ctrl.events.subscribe(() => {
+                    this.isValid.set(ctrl.valid);
                     this.cdr.markForCheck();
                 });
                 onCleanUp(() => sub.unsubscribe());
@@ -58,5 +71,24 @@ export class InputField implements ControlValueAccessor {
 
     public registerOnTouched(fn: () => void): void {
         this.onTouched = fn;
+    }
+
+    protected onInput(event: Event): void {
+        const inputElement = event.target as HTMLInputElement | HTMLTextAreaElement;
+        this.value = inputElement.value;
+        this.onChange(this.value);
+    }
+
+    /**
+     * Returns the error message to display below the field.
+     *
+     * @returns Validation error message string, or `null` if valid/untouched.
+     */
+    protected showError(): string | null {
+        const ctrl = this.ngControl.control;
+        if (!ctrl || !ctrl.invalid || !ctrl.touched) return null;
+
+        const errors = ctrl.errors?.['required'] ? { requiredDefault: true } : ctrl.errors;
+        return this.errorService.getErrorMessage(errors, this.label() ?? '');
     }
 }

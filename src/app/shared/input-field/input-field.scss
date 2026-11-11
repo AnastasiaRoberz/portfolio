@@ -9,10 +9,16 @@ textarea {
     color: $text-light;
 }
 
+textarea {
+    height: 12lh;
+    resize: none;
+}
+
 :host {
     --padding-block: 16px;
     --padding-inline: 24px;
     display: flex;
+    align-items: flex-start;
     width: 100%;
     padding-block: var(--padding-block);
     padding-inline: var(--padding-inline);
@@ -23,12 +29,9 @@ textarea {
     position: relative;
     transition: border-color 0.3s ease;
 
-    &:focus-within {
+    &:focus-within,
+    &:active {
         border-color: $primary1;
-
-        label {
-            color: $primary1;
-        }
     }
 
     &:focus-within,
@@ -39,27 +42,27 @@ textarea {
         }
     }
 
-    &:active {
-        border-color: $primary1;
+    &.ng-invalid.ng-touched {
+        border-color: $error;
 
-        label {
-            color: $primary1;
+        .icon {
+            visibility: visible;
         }
     }
 
-    &:valid {
+    &.ng-valid.ng-touched {
         border-color: $primary1;
-    }
 
-    &:invalid {
-        border-color: $error;
+        .icon {
+            visibility: visible;
+        }
     }
 }
 
 label {
     position: absolute;
-    inset-block: var(--padding-block);
-    inset-inline-start: var(--padding-inline);
+    top: var(--padding-block);
+    left: var(--padding-inline);
     padding-inline: 8px;
     background-color: $background;
     transition:
@@ -70,5 +73,13 @@ label {
 .icon {
     width: 24px;
     height: 24px;
-    visibility: visible;
+    visibility: hidden;
+}
+
+.error-msg {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    transform: translateY(100%);
+    color: $error;
 }

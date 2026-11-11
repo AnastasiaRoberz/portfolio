@@ -8,107 +8,14 @@
     </div>
 
     <form [formGroup]="msgForm" (ngSubmit)="onSubmit()">
-        <app-input-field fieldId="name" label="Your Name" formControlName="name" />
-        <!-- <div class="input">
-            <input
-                type="text"
-                name="input-name"
-                id="input-name"
-                placeholder="Your name"
-                formControlName="name"
-                autocomplete="off"
-                [class.valid]="
-                    msgForm.get('name')?.valid &&
-                    (msgForm.get('name')?.touched || msgForm.get('name')?.dirty)
-                "
-            />
-            <app-error-handling
-                [control]="msgForm.get('name')"
-                fieldKey="contact.fields.name"
-            ></app-error-handling>
-            @if (msgForm.get('name')?.valid) {
-                <svg class="icon-valid">
-                    <use href="./assets/icons/icons.svg#icon-valid"></use>
-                </svg>
-            }
-        </div> -->
-
-        <!-- <div class="input">
-            <input
-                type="email"
-                name="input-mail"
-                id="input-mail"
-                placeholder="Your e-mail"
-                formControlName="mail"
-                autocomplete="off"
-                [class.valid]="
-                    msgForm.get('mail')?.valid &&
-                    (msgForm.get('mail')?.touched || msgForm.get('mail')?.dirty)
-                "
-            />
-            <app-error-handling
-                [control]="msgForm.get('mail')"
-                fieldKey="contact.fields.mail"
-            ></app-error-handling>
-            @if (msgForm.get('mail')?.valid) {
-                <svg class="icon-valid">
-                    <use href="./assets/icons/icons.svg#icon-valid"></use>
-                </svg>
-            }
-        </div> -->
-
-        <!-- <div class="message">
-            <div class="input">
-                <textarea
-                    name="txta-message"
-                    id="txta-message"
-                    placeholder="Your message"
-                    autocomplete="off"
-                    formControlName="message"
-                    [class.valid]="
-                        msgForm.get('message')?.valid &&
-                        (msgForm.get('message')?.touched || msgForm.get('message')?.dirty)
-                    "
-                ></textarea>
-                <app-error-handling
-                    [control]="msgForm.get('message')"
-                    fieldKey="contact.fields.msg"
-                ></app-error-handling>
-                @if (msgForm.get('message')?.valid) {
-                    <svg class="icon-valid">
-                        <use href="./assets/icons/icons.svg#icon-valid"></use>
-                    </svg>
-                }
-            </div>
-
-            <div class="check-privacy-policy">
-                <label class="lbl-checkbox">
-                    <input
-                        type="checkbox"
-                        name="checkbox-privacy-policy"
-                        id="checkbox-privacy-policy"
-                        formControlName="privacy"
-                    />
-
-                    @if (privacy?.valid) {
-                        <svg class="icon-checked">
-                            <use href="./assets/icons/icons.svg#icon-checked"></use>
-                        </svg>
-                    }
-                </label>
-                <p class="privacy-policy">
-                    {{ 'contact.privacy-policy.prefix' | translate }}
-                    <a class="txt-highlight" routerLink="/privacy-policy">{{
-                        'contact.privacy-policy.link' | translate
-                    }}</a>
-                    {{ 'contact.privacy-policy.suffix' | translate }}
-                </p>
-                <app-error-handling
-                    [control]="msgForm.get('privacy')"
-                    fieldKey="contact.fields.privacy"
-                ></app-error-handling>
-            </div>
-        </div> -->
+        <app-input-field fieldId="name" label="Your name" formControlName="name" />
+        <app-input-field fieldId="mail" label="Your email" formControlName="mail" />
+        <app-input-field
+            fieldId="message"
+            label="Your message"
+            type="textarea"
+            formControlName="message"
+        />
 
         <button class="btn-primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">
             {{ 'contact.button' | translate }}

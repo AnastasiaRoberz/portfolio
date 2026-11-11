@@ -1,10 +1,20 @@
 <label [for]="fieldId()">{{ label() }}</label>
 
 @if (type() === 'input') {
-    <input type="text" [id]="fieldId()" [value]="value" autocomplete="off" placeholder=" " />
+    <input
+        type="text"
+        [id]="fieldId()"
+        [value]="value"
+        (input)="onInput($event)"
+        autocomplete="off"
+        (blur)="onTouched()"
+        placeholder=" "
+    />
 } @else if (type() === 'textarea') {
-    <textarea [id]="fieldId()" [value]="value" placeholder=" "></textarea>
+    <textarea [id]="fieldId()" [value]="value" placeholder=" " (blur)="onTouched()"></textarea>
 }
 <svg class="icon">
-    <use [attr.href]="'./assets/icons/icons.svg#icon-valid' + icon()"></use>
+    <use [attr.href]="'./assets/icons/icons.svg#' + icon()"></use>
 </svg>
+
+<span class="error-msg" role="alert" aria-live="polite">{{ showError() }}</span>
