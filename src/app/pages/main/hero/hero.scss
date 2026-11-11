@@ -1,22 +1,22 @@
-@use '../../../../public/assets/styles';
+@use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include styles.content-boundary(hero);
+    @include content-boundary(hero);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-height: calc(100dvh - styles.$header-height);
+    min-height: calc(100dvh - $header-height);
 }
 
 .hero-content {
-    @include styles.flex-center(column);
+    @include flex-center(column);
     flex: 1;
     gap: 72px;
 }
 
 .hero-title {
-    @include styles.flex-center;
+    @include flex-center;
     gap: clamp(10px, calc(2.857px + 2.232vw), 35px);
     position: relative;
 
@@ -39,7 +39,7 @@
 
     .job-title {
         font-size: clamp(1.375rem, calc(0.625rem + 3.75vw), 4rem);
-        color: styles.$primary2;
+        color: $primary2;
         text-transform: uppercase;
         line-height: 0.75;
     }
@@ -70,8 +70,8 @@
 }
 
 .social-section {
-    @include styles.flex-center;
-    @include styles.line('left', styles.$primary1, 42px);
+    @include flex-center;
+    @include line('left', $primary1, 42px);
     gap: 42px;
     margin-left: 42px;
     position: relative;

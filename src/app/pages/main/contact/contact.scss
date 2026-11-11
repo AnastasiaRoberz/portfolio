@@ -1,13 +1,13 @@
-@use '../../../../public/assets/styles';
+@use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include styles.flex-center(column);
-    @include styles.content-boundary;
+    @include flex-center(column);
+    @include content-boundary;
     gap: 40px;
 }
 
 h2 {
-    @include styles.line('right', styles.$primary1, clamp(16px, calc(11.429px + 1.429vw), 32px));
+    @include line('right', $primary1, clamp(16px, calc(11.429px + 1.429vw), 32px));
     z-index: 5;
 }
 
@@ -27,11 +27,11 @@ h2 {
 }
 
 h3 {
-    @include styles.line('left', styles.$secondary);
+    @include line('left', $secondary);
 }
 
 .input-wrapper {
-    @include styles.flex-center(column);
+    @include flex-center(column);
     gap: 32px;
     z-index: 3;
 }
@@ -46,22 +46,22 @@ h3 {
 
 input:not(input[type='checkbox']),
 textarea {
-    @include styles.input-field;
+    @include input-field;
     width: 100%;
     font-family: Poppins;
-    border: 1px solid styles.$primary2;
-    transition: styles.$transition-fast;
+    border: 1px solid $primary2;
+    transition: $transition-fast;
 
     &:hover {
-        border: 1px solid styles.$secondary;
+        border: 1px solid $secondary;
     }
 
     &:invalid {
-        border: 1px solid styles.$error;
+        border: 1px solid $error;
     }
 
     &.valid {
-        border: 1px solid styles.$primary1;
+        border: 1px solid $primary1;
     }
 }
 
@@ -85,17 +85,17 @@ textarea {
 }
 
 .lbl-checkbox {
-    @include styles.flex-center;
+    @include flex-center;
     width: 24px;
     height: 24px;
     background-color: transparent;
     border-radius: 50%;
     flex-shrink: 0;
     cursor: pointer;
-    transition: styles.$transition-fast;
+    transition: $transition-fast;
 
     &:hover {
-        background-color: styles.$primary2;
+        background-color: $primary2;
     }
 
     .icon-checked {
@@ -111,9 +111,9 @@ input[type='checkbox'] {
     appearance: none;
     width: 18px;
     height: 18px;
-    border: 2px solid styles.$primary1;
+    border: 2px solid $primary1;
     background: transparent;
-    accent-color: styles.$primary1;
+    accent-color: $primary1;
     cursor: pointer;
 }
 
@@ -121,7 +121,7 @@ input[type='checkbox'] {
     color: white;
 
     .txt-highlight {
-        color: styles.$primary2;
+        color: $primary2;
     }
 }
 
@@ -129,11 +129,11 @@ input[type='checkbox'] {
     font-size: 1.5rem;
     color: white;
     padding: 15px 30px;
-    background-color: styles.$primary1;
+    background-color: $primary1;
     border-radius: 10px;
 
     &[disabled] {
-        background-color: styles.$disabled;
+        background-color: $disabled;
     }
 }
 
@@ -146,7 +146,7 @@ input[type='checkbox'] {
     color: white;
 
     &:hover {
-        color: styles.$primary1;
+        color: $primary1;
     }
 }
 

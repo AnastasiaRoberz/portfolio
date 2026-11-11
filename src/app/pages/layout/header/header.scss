@@ -1,17 +1,10 @@
-@use '../../../../public/assets/styles';
+@use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include styles.flex-center;
-    width: 100%;
-    height: styles.$header-height;
-    z-index: styles.$z-header;
-    background-color: styles.$background;
-    position: fixed;
-    top: 0;
 }
 
 .header-content {
-    @include styles.content-boundary;
+    @include content-boundary;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,55 +16,55 @@
 }
 
 .menu {
-    @include styles.flex-center;
+    @include flex-center;
     gap: 92px;
 }
 
 nav {
-    @include styles.flex-center;
+    @include flex-center;
     gap: 30px;
 
     .nav-link {
         font-size: 1.5rem;
 
         &:hover {
-            color: styles.$primary1;
+            color: $primary1;
         }
 
         &.active {
-            color: styles.$primary1;
+            color: $primary1;
 
             &::after {
-                @include styles.txt-underline;
-                background-color: styles.$primary2;
+                @include txt-underline;
+                background-color: $primary2;
             }
         }
     }
 }
 
 .language-switch {
-    @include styles.flex-center;
+    @include flex-center;
     gap: 14px;
 
     .btn-language {
         padding: 4px 8px;
         font-size: 1.125rem;
-        border: 1px solid styles.$primary1;
+        border: 1px solid $primary1;
 
         &:hover {
             border: 1px solid transparent;
-            background-color: styles.$primary2;
+            background-color: $primary2;
         }
 
         &:active {
             border: 1px solid transparent;
             background-color: white;
-            color: styles.$primary2;
+            color: $primary2;
             font-weight: 600;
         }
 
         &.active {
-            background-color: styles.$primary1;
+            background-color: $primary1;
             font-weight: 700;
         }
     }
@@ -82,13 +75,13 @@ nav {
 }
 
 .mobile-menu.active {
-    @include styles.flex-center(column);
+    @include flex-center(column);
     gap: 33px;
     position: fixed;
-    top: styles.$header-height;
+    top: $header-height;
     left: 0;
     width: 100vw;
-    height: calc(100dvh - styles.$header-height);
+    height: calc(100dvh - $header-height);
     background-color: rgba(20, 29, 47, 0.8);
     backdrop-filter: blur(5px);
 
@@ -108,14 +101,14 @@ nav {
         font-size: 1.5rem;
 
         &.active {
-            color: styles.$primary1;
+            color: $primary1;
             font-weight: 600;
         }
     }
 }
 
 .btn-burger-menu {
-    @include styles.flex-center(column);
+    @include flex-center(column);
     gap: 14px;
     padding: 0;
     -webkit-tap-highlight-color: transparent; // Entfernt blauen Klick-Rahmen auf Smartphones
@@ -124,7 +117,7 @@ nav {
         display: block;
         width: 30px;
         height: 2px;
-        background-color: styles.$white;
+        background-color: $white;
         transform-origin: center;
     }
 

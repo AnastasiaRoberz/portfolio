@@ -1,12 +1,8 @@
-@use '../../public/assets/styles';
+@use '../../public/assets/styles/' as *;
 
 :host {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: styles.$background;
-    min-height: 100dvh;
-    overflow-x: clip;
-    overflow: hidden;
+    width: 100dvw;
+    height: 100dvh;
 }

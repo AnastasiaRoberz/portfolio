@@ -6,7 +6,7 @@ import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
     imports: [TranslatePipe, RouterLink],
-    selector: 'app-header',
+    selector: 'header[app-header]',
     styleUrl: './header.scss',
     templateUrl: './header.html',
 })

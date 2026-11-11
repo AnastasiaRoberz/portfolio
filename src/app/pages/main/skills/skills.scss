@@ -1,8 +1,8 @@
-@use '../../../../public/assets/styles';
+@use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include styles.flex-center;
-    @include styles.content-boundary;
+    @include flex-center;
+    @include content-boundary;
     width: 100%;
     max-width: 1440px;
     gap: 116px;
@@ -35,7 +35,7 @@
     img {
         width: 60px;
         height: 60px;
-        transition: styles.$transition-base;
+        transition: $transition-base;
     }
 
     .skill-name {
@@ -52,7 +52,7 @@
 }
 
 .speech-bubble {
-    @include styles.flex-center(column);
+    @include flex-center(column);
     position: absolute;
     left: 0;
     top: -50%;
@@ -67,15 +67,15 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: styles.$transition-base;
+    transition: $transition-base;
 
     .tech-wrapper {
-        @include styles.flex-center;
+        @include flex-center;
         gap: 16px;
     }
 
     .tech-item {
-        @include styles.flex-center(column);
+        @include flex-center(column);
         gap: 4px;
     }
 
@@ -115,8 +115,8 @@
     width: 60px;
     height: 60px;
     cursor: pointer;
-    color: styles.$secondary;
-    transition: styles.$transition-fast;
+    color: $secondary;
+    transition: $transition-fast;
 }
 
 .skills-text {
@@ -129,7 +129,7 @@
 }
 
 h2 {
-    @include styles.line('right', styles.$secondary, clamp(16px, calc(11.429px + 1.429vw), 32px));
+    @include line('right', $secondary, clamp(16px, calc(11.429px + 1.429vw), 32px));
 }
 
 .another-skill {

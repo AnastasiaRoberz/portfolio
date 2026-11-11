@@ -1,15 +1,15 @@
-@use '../../../../public/assets/styles';
+@use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include styles.flex-center(column);
-    @include styles.content-boundary;
+    @include flex-center(column);
+    @include content-boundary;
     align-items: flex-start;
     gap: 32px;
     z-index: 3;
 }
 
 h2 {
-    @include styles.line('left', styles.$primary2);
+    @include line('left', $primary2);
 }
 
 .description {
@@ -18,7 +18,7 @@ h2 {
 }
 
 .projects-wrapper {
-    @include styles.flex-center(column);
+    @include flex-center(column);
     width: 100%;
     gap: clamp(1.5rem, calc(0.5rem + 5vw), 5rem);
 }
@@ -54,7 +54,7 @@ h2 {
 
 .technologies {
     font-size: 1.5rem;
-    color: styles.$primary1;
+    color: $primary1;
 }
 
 .project-btns {

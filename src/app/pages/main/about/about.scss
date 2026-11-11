@@ -1,8 +1,8 @@
-@use '../../../../public/assets/styles';
+@use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include styles.flex-center;
-    @include styles.content-boundary;
+    @include flex-center;
+    @include content-boundary;
     align-items: flex-start;
     gap: clamp(64px, calc(34.857px + 9.107vw), 166px);
 }
@@ -43,11 +43,11 @@ li {
     height: 32px;
     min-width: 32px;
     width: 32px;
-    transition: styles.$transition-fast;
+    transition: $transition-fast;
 }
 
 .photo-wrapper {
-    @include styles.flex-center;
+    @include flex-center;
 
     .photo {
         width: 593px;
