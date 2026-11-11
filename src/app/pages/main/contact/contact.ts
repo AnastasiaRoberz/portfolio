@@ -5,6 +5,11 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ErrorHandling } from '../../../components/error-handling/error-handling';
 import { ResponsiveService } from '../../../services/responsive.service';
+import {
+    customMailValidator,
+    customNameValidator,
+    generalCustomValidators,
+} from '../../../utils/custom-validators';
 
 @Component({
     imports: [RouterLink, TranslatePipe, ReactiveFormsModule, ErrorHandling],
@@ -21,11 +26,8 @@ export class Contact {
     statusMessage = '';
 
     msgForm = this.fb.group({
-        name: [
-            '',
-            { validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur' },
-        ],
-        mail: ['', { validators: [Validators.required, Validators.email], updateOn: 'blur' }],
+        name: ['', [Validators.required, generalCustomValidators(), customNameValidator()]],
+        mail: ['', [Validators.required, customMailValidator()]],
         message: ['', [Validators.required, Validators.minLength(10)]],
         privacy: [false, Validators.requiredTrue],
     });
