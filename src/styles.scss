@@ -23,3 +23,20 @@ a {
 }
 
 // ----------------------
+
+.cursor-tooltip {
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    white-space: pre-line;
+    line-height: 1.2;
+    text-align: left;
+
+    background-color: $primary-purple;
+    color: $text-light;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+
+    user-select: none;
+}
