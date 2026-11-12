@@ -1,29 +1,32 @@
 <div class="header-content">
-    <a class="logo" href="/portfolio/#hero">
+    <a class="logo" href="#hero">
         <img class="logo" src="./assets/icons/logo.svg" alt="" />
     </a>
 
     @if (responsive.isDesktop()) {
         <div class="menu">
             <nav>
-                <a
+                <button
                     class="btn btn--text"
-                    [class.active]="scrollSpy.activeSection() === 'about'"
-                    href="#about"
-                    >{{ 'header.about' | translate }}</a
+                    [class.active]="scrollService.activeSection() === 'about'"
+                    (click)="scrollService.scrollTo('about')"
                 >
-                <a
+                    {{ 'header.about' | translate }}
+                </button>
+                <button
                     class="btn btn--text"
-                    [class.active]="scrollSpy.activeSection() === 'skills'"
-                    href="#skills"
-                    >{{ 'header.skills' | translate }}</a
+                    [class.active]="scrollService.activeSection() === 'skills'"
+                    (click)="scrollService.scrollTo('skills')"
                 >
-                <a
+                    {{ 'header.skills' | translate }}
+                </button>
+                <button
                     class="btn btn--text"
-                    [class.active]="scrollSpy.activeSection() === 'portfolio'"
-                    href="#portfolio"
-                    >{{ 'header.portfolio' | translate }}</a
+                    [class.active]="scrollService.activeSection() === 'portfolio'"
+                    (click)="scrollService.scrollTo('portfolio')"
                 >
+                    {{ 'header.portfolio' | translate }}
+                </button>
             </nav>
 
             <div class="language-switch">
@@ -60,7 +63,7 @@
         </button>
 
         <div class="mobile-menu" [class.active]="isMenuOpen()">
-            <a
+            <!-- <a
                 href="#about"
                 [class.active]="scrollSpy.activeSection() === 'about'"
                 (click)="closeMenu()"
@@ -83,7 +86,7 @@
                 [class.active]="scrollSpy.activeSection() === 'contact'"
                 (click)="closeMenu()"
                 >Contact</a
-            >
+            > -->
             <div class="mobile-language-wrapper">
                 <button
                     type="button"
