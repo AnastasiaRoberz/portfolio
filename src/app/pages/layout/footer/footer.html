@@ -1,8 +1,8 @@
-<footer class="footer-content">
-    <div class="logo-wrapper">
-        <img class="logo" src="./assets/icons/logo.svg" alt="" />
+<div class="footer-content">
+    <div class="footer-content__logo-wrapper">
+        <img class="footer-content__logo" src="./assets/icons/logo.svg" alt="" />
         @if (responsive.isDesktop()) {
-            <a class="legal-notice" routerLink="/legal-notice">{{
+            <a class="btn btn--text footer-content__legal-notice" routerLink="/legal-notice">{{
                 'footer.legal-notice' | translate
             }}</a>
         }
@@ -16,4 +16,4 @@
             'footer.legal-notice' | translate
         }}</a>
     }
-</footer>
+</div>

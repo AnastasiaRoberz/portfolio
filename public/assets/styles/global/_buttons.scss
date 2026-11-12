@@ -25,6 +25,10 @@ a {
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 
     // VARIANTS
     &.btn--primary {
@@ -55,10 +59,21 @@ a {
     }
 
     &.btn--lang {
+        flex-direction: column;
         padding-block: 4px;
         padding-inline: 8px;
         border-color: map.get($btn-lang, default);
         font-size: 18px;
+
+        &::after {
+            content: attr(data-text);
+            font-weight: 600;
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            user-select: none;
+            pointer-events: none;
+        }
 
         &:hover {
             background-color: map.get($btn-lang, hover);
@@ -89,6 +104,36 @@ a {
 
         &:hover {
             transform: scale(calc(40 / 30));
+        }
+    }
+
+    &--text {
+        padding: 0;
+        font-size: 24px;
+        line-height: 1.2;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $primary-green;
+
+            &::after {
+                background-color: $primary-purple;
+                width: 55px;
+            }
+        }
+
+        &::after {
+            content: '';
+            background-color: transparent;
+            height: 3px;
+            width: 0;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition:
+                width 0.3s ease,
+                background-color 0.3s ease;
         }
     }
 

@@ -7,19 +7,19 @@
         <div class="menu">
             <nav>
                 <a
-                    class="nav-link"
+                    class="btn btn--text"
                     [class.active]="scrollSpy.activeSection() === 'about'"
                     href="#about"
                     >{{ 'header.about' | translate }}</a
                 >
                 <a
-                    class="nav-link"
+                    class="btn btn--text"
                     [class.active]="scrollSpy.activeSection() === 'skills'"
                     href="#skills"
                     >{{ 'header.skills' | translate }}</a
                 >
                 <a
-                    class="nav-link"
+                    class="btn btn--text"
                     [class.active]="scrollSpy.activeSection() === 'portfolio'"
                     href="#portfolio"
                     >{{ 'header.portfolio' | translate }}</a
@@ -32,6 +32,7 @@
                     class="btn btn--lang"
                     (click)="useLanguage('de')"
                     [class.active]="currentLanguage === 'de'"
+                    data-text="DE"
                 >
                     DE
                 </button>
@@ -40,6 +41,7 @@
                     class="btn btn--lang"
                     (click)="useLanguage('en')"
                     [class.active]="currentLanguage === 'en'"
+                    data-text="EN"
                 >
                     EN
                 </button>
