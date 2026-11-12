@@ -4,8 +4,9 @@
 <app-portfolio id="portfolio" />
 <app-references id="references" />
 <app-contact id="contact" />
-<a class="icon-arrow-up"
-    ><svg class="icon-arrow-up">
-        <use href="./assets/icons/icons.svg#icon-arrow-up"></use></svg
-></a>
+<button class="icon-arrow-up" (click)="scrollService.scrollToTop()">
+    <svg class="icon-arrow-up">
+        <use href="./assets/icons/icons.svg#icon-arrow-up"></use>
+    </svg>
+</button>
 <footer app-footer></footer>

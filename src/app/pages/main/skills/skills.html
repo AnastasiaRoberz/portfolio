@@ -53,5 +53,7 @@
         <p>{{ 'skills.subtext' | translate }}</p>
     </div>
 
-    <a class="btn btn--primary" href="#contact">{{ 'skills.btn' | translate }}</a>
+    <button class="btn btn--primary" (click)="scrollService.scrollTo('contact')">
+        {{ 'skills.btn' | translate }}
+    </button>
 </div>

@@ -19,7 +19,7 @@ import { ScrollService } from '../../services/scroll.service';
 })
 export class Main implements AfterViewInit, OnDestroy {
     private readonly hostElement = inject(ElementRef<HTMLElement>);
-    private readonly scrollService = inject(ScrollService);
+    public readonly scrollService = inject(ScrollService);
 
     ngAfterViewInit(): void {
         const sections = ['hero', 'about', 'skills', 'portfolio', 'references', 'contact'];

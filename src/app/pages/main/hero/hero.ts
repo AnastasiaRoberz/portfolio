@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ResponsiveService } from '../../../services/responsive.service';
 import { SocialLinks } from '../../../shared/social-links/social-links';
+import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
     imports: [TranslatePipe, SocialLinks],
@@ -11,4 +12,5 @@ import { SocialLinks } from '../../../shared/social-links/social-links';
 })
 export class Hero {
     responsive = inject(ResponsiveService);
+    scrollService = inject(ScrollService);
 }

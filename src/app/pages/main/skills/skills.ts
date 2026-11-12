@@ -2,6 +2,7 @@ import { LowerCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ResponsiveService } from '../../../services/responsive.service';
+import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
     imports: [LowerCasePipe, TranslatePipe],
@@ -24,4 +25,5 @@ export class Skills {
     ];
 
     responsive = inject(ResponsiveService);
+    scrollService = inject(ScrollService);
 }

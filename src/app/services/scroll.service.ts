@@ -38,8 +38,7 @@ export class ScrollService {
     }
 
     scrollToTop(): void {
-        const element = document.getElementById('hero');
-        element?.scrollTop;
+        this.container?.scrollTo({ top: 0 });
     }
 
     destroy(): void {
