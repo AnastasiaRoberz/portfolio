@@ -38,6 +38,8 @@ export class InputField implements ControlValueAccessor {
 
     public readonly isValid = signal<boolean>(false);
 
+    public readonly requiredKey = input<string>('required');
+
     public icon = computed(() => (this.isValid() ? 'icon-valid' : 'icon-invalid'));
 
     constructor() {
@@ -87,8 +89,7 @@ export class InputField implements ControlValueAccessor {
     protected showError(): string | null {
         const ctrl = this.ngControl.control;
         if (!ctrl || !ctrl.invalid || !ctrl.touched) return null;
-
-        const errors = ctrl.errors?.['required'] ? { requiredDefault: true } : ctrl.errors;
+        const errors = ctrl.errors?.['required'] ? { [this.requiredKey()]: true } : ctrl.errors;
         return this.errorService.getErrorMessage(errors, this.label() ?? '');
     }
 }

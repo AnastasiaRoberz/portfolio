@@ -11,7 +11,14 @@
         placeholder=" "
     />
 } @else if (type() === 'textarea') {
-    <textarea [id]="fieldId()" [value]="value" placeholder=" " (blur)="onTouched()"></textarea>
+    <textarea
+        [id]="fieldId()"
+        [value]="value"
+        (input)="onInput($event)"
+        autocomplete="off"
+        (blur)="onTouched()"
+        placeholder=" "
+    ></textarea>
 }
 <svg class="icon">
     <use [attr.href]="'./assets/icons/icons.svg#' + icon()"></use>
