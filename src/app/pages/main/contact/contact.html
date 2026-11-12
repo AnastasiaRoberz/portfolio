@@ -17,6 +17,19 @@
             formControlName="message"
         />
 
+        <div class="privacy-policy">
+            <label class="lbl-checkbox">
+                <input type="checkbox" />
+                <svg class="icon-checked">
+                    <use href="./assets/icons/icons.svg#icon-checked"></use></svg
+            ></label>
+            <p>
+                I've read the
+                <a href="" class="txt-highlight">privacy policy</a>
+                and agree to the processing of my data as outlined.
+            </p>
+        </div>
+
         <button class="btn-primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">
             {{ 'contact.button' | translate }}
         </button>

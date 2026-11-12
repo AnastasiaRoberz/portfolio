@@ -37,11 +37,16 @@ form {
     gap: 32px;
 }
 
-.check-privacy-policy {
+.privacy-policy {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
+    color: white;
+
+    .txt-highlight {
+        color: $primary2;
+    }
 }
 
 .lbl-checkbox {
@@ -58,12 +63,8 @@ form {
         background-color: $primary2;
     }
 
-    .icon-checked {
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        top: 0;
-        left: 0;
+    &:has(input:checked) .icon-checked {
+        display: block;
     }
 }
 
@@ -72,17 +73,17 @@ input[type='checkbox'] {
     width: 18px;
     height: 18px;
     border: 2px solid $primary1;
-    background: transparent;
     accent-color: $primary1;
     cursor: pointer;
 }
 
-.privacy-policy {
-    color: white;
-
-    .txt-highlight {
-        color: $primary2;
-    }
+.icon-checked {
+    display: none;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .submit {
