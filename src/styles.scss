@@ -19,7 +19,6 @@ a {
     cursor: pointer;
     text-decoration: none;
     line-height: 0.75;
-    transition: $transition-fast;
 }
 
 // ----------------------
@@ -39,4 +38,28 @@ a {
     border-radius: 8px;
 
     user-select: none;
+}
+
+.scroll-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    flex: 1;
+    min-height: 0;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 24px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 10px solid transparent;
+        border-radius: 999px;
+        background-clip: content-box;
+        background-color: $secondary-light;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
 }

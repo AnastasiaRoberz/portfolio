@@ -1,11 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './pages/layout/header/header';
-import { Footer } from './pages/layout/footer/footer';
 import { ResponsiveService } from './services/responsive.service';
 
 @Component({
-    imports: [RouterOutlet, Header, Footer],
+    imports: [RouterOutlet, Header],
     selector: 'app-root',
     styleUrl: './app.scss',
     templateUrl: './app.html',
