@@ -17,9 +17,10 @@ import {
 } from '../../../utils/custom-validators';
 import { InputField } from '../../../shared/input-field/input-field';
 import { ErrorService } from '../../../services/error.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
-    imports: [TranslatePipe, ReactiveFormsModule, InputField],
+    imports: [TranslatePipe, ReactiveFormsModule, InputField, RouterLink],
     selector: 'app-contact',
     styleUrl: './contact.scss',
     templateUrl: './contact.html',

@@ -1,10 +1,17 @@
 @use '../../styles/' as *;
 @use 'sass:map';
 
+@property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 button {
     background: none;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 a {
@@ -29,7 +36,6 @@ a {
     font-size: 24px;
     color: $text-light;
     white-space: nowrap;
-    cursor: pointer;
     user-select: none;
     transition:
         background-color 0.3s ease,
@@ -159,9 +165,23 @@ a {
         border-width: 2px;
         border-radius: 50%;
         color: $primary;
+        background:
+            linear-gradient($background, $background) padding-box,
+            conic-gradient(
+                    from 0deg,
+                    $primary 0deg,
+                    $primary calc(var(--border-angle) - 30deg),
+                    transparent var(--border-angle),
+                    transparent 360deg
+                )
+                border-box;
+        transition:
+            --border-angle 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.4s ease;
 
         &:hover {
-            border-color: $primary;
+            --border-angle: 390deg;
+            box-shadow: 0 0 12px rgba($primary, 0.35);
         }
 
         &:disabled {

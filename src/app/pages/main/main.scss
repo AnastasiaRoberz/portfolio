@@ -6,4 +6,70 @@
     align-items: center;
     flex: 1;
     width: 100%;
+    max-width: 1440px;
+}
+
+@property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.arrow-up {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    background:
+        linear-gradient($background, $background) padding-box,
+        conic-gradient(
+                from 0deg,
+                $secondary 0deg,
+                $secondary calc(var(--border-angle) - 30deg),
+                white var(--border-angle),
+                white 360deg
+            )
+            border-box;
+    transition:
+        --border-angle 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s ease;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        color: white;
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        --border-angle: 390deg;
+        box-shadow: 0 0 12px rgba($secondary, 0.35);
+
+        .icon {
+            color: $secondary;
+        }
+    }
+
+    &:active {
+        transform: scale(0.92);
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 50%;
+            border: 2px solid $secondary;
+            animation: pulse-out 0.5s ease-out;
+        }
+    }
+    @keyframes pulse-out {
+        to {
+            transform: scale(1.6);
+            opacity: 0;
+        }
+    }
 }

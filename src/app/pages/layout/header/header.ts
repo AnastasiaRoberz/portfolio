@@ -2,9 +2,10 @@ import { Component, inject, signal } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ResponsiveService } from '../../../services/responsive.service';
 import { ScrollService } from '../../../services/scroll.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
-    imports: [TranslatePipe],
+    imports: [TranslatePipe, RouterLink],
     selector: 'header[app-header]',
     styleUrl: './header.scss',
     templateUrl: './header.html',
