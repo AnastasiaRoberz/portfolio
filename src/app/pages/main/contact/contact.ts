@@ -35,8 +35,8 @@ export class Contact {
 
     msgForm = this.fb.group({
         name: ['', [Validators.required, generalCustomValidators(), customNameValidator()]],
-        mail: ['', [Validators.required, customMailValidator()]],
-        message: ['', [Validators.required, Validators.minLength(10)]],
+        mail: ['', [Validators.required, generalCustomValidators(), customMailValidator()]],
+        message: ['', [Validators.required, Validators.minLength(10), generalCustomValidators()]],
         privacy: [false, Validators.requiredTrue],
     });
 
