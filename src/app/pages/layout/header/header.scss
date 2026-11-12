@@ -3,6 +3,7 @@
 :host {
     @include flex-center;
     width: 100dvw;
+    height: $header-height;
 }
 
 .header-content {

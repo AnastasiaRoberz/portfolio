@@ -46,6 +46,7 @@ a {
     scrollbar-gutter: stable;
     flex: 1;
     min-height: 0;
+    width: 100%;
 
     &::-webkit-scrollbar {
         background: transparent;

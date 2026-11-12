@@ -1,26 +1,30 @@
 @use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include content-boundary(hero);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     min-height: calc(100dvh - $header-height);
+    flex-shrink: 0;
+    padding-block: 20px;
+    padding-inline: 100px;
+    width: 100%;
+    max-width: 1440px;
 }
 
 .hero-content {
     @include flex-center(column);
     flex: 1;
     gap: 72px;
-}
 
-.hero-title {
-    @include flex-center;
-    gap: clamp(10px, calc(2.857px + 2.232vw), 35px);
-    position: relative;
+    &__title {
+        @include flex-center;
+        gap: clamp(10px, calc(2.857px + 2.232vw), 35px);
+        position: relative;
+    }
 
-    .vertical {
+    &__vertical {
         font-size: clamp(2rem, calc(0.964rem + 5.179vw), 5.625rem);
         writing-mode: vertical-rl;
         transform: rotate(180deg);
@@ -28,7 +32,7 @@
         z-index: 3;
     }
 
-    .name-wrapper {
+    &__name {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -37,7 +41,7 @@
         z-index: 3;
     }
 
-    .job-title {
+    &__job-title {
         font-size: clamp(1.375rem, calc(0.625rem + 3.75vw), 4rem);
         color: $primary-purple;
         text-transform: uppercase;
@@ -56,14 +60,28 @@
 .scroll {
     color: white;
     writing-mode: vertical-rl;
-    font-size: 1.4rem;
+    font-size: 24px;
     position: absolute;
     bottom: 0;
     right: 0;
     white-space: nowrap;
+    cursor: default;
+    overflow: hidden;
+
+    .scroll-track {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
 
     .arrow-down {
         width: 24px;
         height: 24px;
+    }
+
+    &:hover {
+        .scroll-track {
+            animation: scroll-text 1.1s ease-in-out;
+        }
     }
 }
