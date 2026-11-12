@@ -1,6 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, computed, inject, signal } from '@angular/core';
-import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+    AbstractControl,
+    FormBuilder,
+    FormControl,
+    NgControl,
+    ReactiveFormsModule,
+    Validators,
+} from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ResponsiveService } from '../../../services/responsive.service';
 import {
@@ -9,6 +16,7 @@ import {
     generalCustomValidators,
 } from '../../../utils/custom-validators';
 import { InputField } from '../../../shared/input-field/input-field';
+import { ErrorService } from '../../../services/error.service';
 
 @Component({
     imports: [TranslatePipe, ReactiveFormsModule, InputField],
@@ -20,6 +28,7 @@ export class Contact {
     fb = inject(FormBuilder);
     http = inject(HttpClient);
     responsive = inject(ResponsiveService);
+    errorService = inject(ErrorService);
 
     isSubmitting = signal<boolean>(false);
     statusMessage = '';
@@ -73,5 +82,11 @@ export class Contact {
                 this.isSubmitting.set(false);
             },
         });
+    }
+
+    protected showError(ctrl: AbstractControl | null): string | null {
+        if (!ctrl || !ctrl.invalid || !ctrl.touched) return null;
+        const errors = ctrl.errors?.['required'] ? { requiredPrivacy: true } : ctrl.errors;
+        return this.errorService.getErrorMessage(errors, '');
     }
 }

@@ -1,7 +1,7 @@
 <h2>{{ 'contact.title' | translate }}</h2>
 
-<div class="contact-content">
-    <div class="contact-txt">
+<div class="content">
+    <div class="content__text">
         <h3>{{ 'contact.subtitle' | translate }}</h3>
         <p>{{ 'contact.description' | translate }}</p>
         <p [innerHTML]="'contact.prompt' | translate"></p>
@@ -18,8 +18,8 @@
         />
 
         <div class="privacy-policy">
-            <label class="lbl-checkbox">
-                <input type="checkbox" />
+            <label class="privacy-policy__checkbox">
+                <input type="checkbox" formControlName="privacy" />
                 <svg class="icon-checked">
                     <use href="./assets/icons/icons.svg#icon-checked"></use></svg
             ></label>
@@ -28,6 +28,7 @@
                 <a href="" class="txt-highlight">privacy policy</a>
                 and agree to the processing of my data as outlined.
             </p>
+            <span class="error-msg" role="alert" aria-live="polite">{{ showError(privacy) }}</span>
         </div>
 
         <button class="btn-primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">

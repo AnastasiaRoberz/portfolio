@@ -11,23 +11,23 @@ h2 {
     z-index: 5;
 }
 
-.contact-content {
+.content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: clamp(64px, calc(39.429px + 7.679vw), 150px);
-}
 
-.contact-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    width: 40%;
-}
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 40%;
+    }
 
-h3 {
-    @include line('left', $secondary);
+    h3 {
+        @include line('left', $secondary);
+    }
 }
 
 form {
@@ -44,46 +44,50 @@ form {
     gap: 8px;
     color: white;
 
-    .txt-highlight {
-        color: $primary2;
+    &__checkbox {
+        @include flex-center;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border-radius: 50%;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: $transition-fast;
+
+        &:hover {
+            background-color: $primary2;
+        }
+
+        &:has(input:checked) .icon-checked {
+            display: block;
+        }
     }
-}
 
-.lbl-checkbox {
-    @include flex-center;
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    border-radius: 50%;
-    flex-shrink: 0;
-    cursor: pointer;
-    transition: $transition-fast;
-
-    &:hover {
-        background-color: $primary2;
+    input[type='checkbox'] {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $primary1;
+        accent-color: $primary1;
+        cursor: pointer;
     }
 
-    &:has(input:checked) .icon-checked {
-        display: block;
+    .icon-checked {
+        display: none;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
-}
 
-input[type='checkbox'] {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid $primary1;
-    accent-color: $primary1;
-    cursor: pointer;
-}
-
-.icon-checked {
-    display: none;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    .error-msg {
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transform: translateY(100%);
+        color: $error;
+    }
 }
 
 .submit {
@@ -109,12 +113,4 @@ input[type='checkbox'] {
     &:hover {
         color: $primary1;
     }
-}
-
-.shadow {
-    width: 681px;
-    height: auto;
-    position: absolute;
-    top: -100px;
-    right: -200px;
 }

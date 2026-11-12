@@ -32,6 +32,8 @@ export class ErrorService {
         required: (field) => `${field} is required.`,
 
         requiredDefault: () => 'This field is required.',
+
+        requiredPrivacy: () => 'Please accept the privacy policy.',
     };
 
     /**

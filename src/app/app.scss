@@ -4,6 +4,5 @@
     display: flex;
     flex-direction: column;
     width: 100dvw;
-    height: 100svh;
-    overflow: clip;
+    overflow-x: clip;
 }
