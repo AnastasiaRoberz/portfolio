@@ -7,6 +7,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     position: relative;
+    text-wrap-style: pretty;
     // text-box: cap alphabetic;
 }
 
@@ -38,20 +39,19 @@ svg {
 }
 
 .scroll-container {
+    overflow-y: overlay;
     overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-gutter: stable;
     flex: 1;
     min-height: 0;
     width: 100%;
 
     &::-webkit-scrollbar {
         background: transparent;
-        width: 24px;
+        width: 4px;
     }
 
     &::-webkit-scrollbar-thumb {
-        border: 10px solid transparent;
         border-radius: 999px;
         background-clip: content-box;
         background-color: $secondary-light;

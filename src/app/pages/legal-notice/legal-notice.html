@@ -1,8 +1,8 @@
-<div class="content" [class.is-mobile]="!responsive.isDesktop()">
-    <h2>
-        <span class="title">{{ 'legal-notice.title' | translate }}</span>
-    </h2>
+<h2>
+    <span class="title">{{ 'legal-notice.title' | translate }}</span>
+</h2>
 
+<div class="content scroll-container">
     <section>
         <h3>{{ 'legal-notice.imprint' | translate }}</h3>
         <ul>
@@ -46,3 +46,5 @@
     <p>{{ 'legal-notice.contact-me' | translate }}</p>
     <p>{{ 'legal-notice.date' | translate }}</p>
 </div>
+
+<footer app-footer></footer>

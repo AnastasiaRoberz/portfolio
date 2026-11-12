@@ -2,7 +2,8 @@
 
 :host {
     @include flex-center(column);
-    @include content-boundary;
+    padding-block: 80px;
+    padding-inline: 100px;
     gap: 40px;
 }
 

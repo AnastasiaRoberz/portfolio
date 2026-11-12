@@ -1,29 +1,29 @@
-<div class="reference-card">
-    <div class="reference-card__content">
-        @if (responsive.isDesktop()) {
-            <svg class="reference-card__icon-quote">
-                <use href="assets/icons/icons.svg#icon-quote"></use>
-            </svg>
-        }
+@for (ref of [references[currentId]]; track ref.name) {
+    <div class="reference-card fade-in">
+        <div class="reference-card__content">
+            @if (responsive.isDesktop()) {
+                <svg class="reference-card__icon-quote">
+                    <use href="assets/icons/icons.svg#icon-quote"></use>
+                </svg>
+            }
 
-        <p class="reference-card__text">{{ references[currentId].text | translate }}</p>
-        <div class="reference-card__name-row">
-            <p class="reference-card__name">
-                {{ references[currentId].name }} - {{ references[currentId].role | translate }}
-            </p>
+            <p class="reference-card__text">{{ ref.text | translate }}</p>
+            <div class="reference-card__name-row">
+                <p class="reference-card__name">{{ ref.name }} - {{ ref.role | translate }}</p>
+            </div>
+        </div>
+        <div class="reference-card__photo">
+            <div class="photo-mask">
+                <img
+                    src="./assets/pngs/references/{{ ref.img }}"
+                    alt=""
+                    [style.object-position]="ref.position"
+                    [style.scale]="ref.scale"
+                />
+            </div>
         </div>
     </div>
-    <div class="reference-card__photo">
-        <div class="photo-mask">
-            <img
-                src="./assets/pngs/references/{{ references[currentId].img }}"
-                alt=""
-                [style.object-position]="references[currentId].position"
-                [style.scale]="references[currentId].scale"
-            />
-        </div>
-    </div>
-</div>
+}
 
 <div class="ref-control">
     <button class="btn btn--arrow" (click)="prev()" [disabled]="currentId == 0">

@@ -6,6 +6,7 @@
     height: 291px;
     border-top: 4px solid $primary;
     position: relative;
+    flex-shrink: 0;
 }
 
 .footer-content {

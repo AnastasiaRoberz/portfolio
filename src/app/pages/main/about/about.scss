@@ -31,17 +31,19 @@ ul {
         justify-content: flex-start;
         align-items: flex-start;
         gap: 16px;
-        cursor: pointer;
+        cursor: default;
 
         &:hover {
             .about-icon {
                 transform: scale(calc(48 / 32));
+                filter: drop-shadow(0 0 8px rgba($secondary, 0.5));
             }
         }
     }
 
     .about-icon {
         fill: none;
+        color: $secondary;
         height: 32px;
         min-width: 32px;
         width: 32px;

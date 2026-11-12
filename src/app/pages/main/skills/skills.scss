@@ -2,7 +2,8 @@
 
 :host {
     @include flex-center;
-    @include content-boundary;
+    padding-inline: 100px;
+    padding-block: 80px;
     width: 100%;
     max-width: 1440px;
     gap: 116px;
@@ -16,10 +17,9 @@
 }
 
 .skills-wrapper {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: clamp(16px, calc(-2.286px + 5.714vw), 80px) clamp(39px, calc(27.286px + 3.661vw), 80px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
 }
 
 .skill {
@@ -46,7 +46,7 @@
 
     &:hover {
         .skill-icon {
-            transform: translateY(-12px);
+            animation: bounce-loop 0.8s ease-in-out infinite;
         }
     }
 }
@@ -94,7 +94,7 @@
         position: absolute;
         bottom: -15px;
         left: 35px;
-        fill: white;
+        color: white;
     }
 }
 
@@ -138,8 +138,4 @@ h2 {
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
-}
-
-button {
-    transform: translateX(-10px);
 }

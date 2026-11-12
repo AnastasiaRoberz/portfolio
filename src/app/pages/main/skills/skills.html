@@ -48,7 +48,9 @@
     <div class="another-skill">
         <h3>
             {{ 'skills.subheading.text' | translate }}
-            <span class="highlight">{{ 'skills.subheading.highlight' | translate }} </span>?
+            <span class="highlight" [attr.data-text]="'skills.subheading.highlight' | translate"
+                >{{ 'skills.subheading.highlight' | translate }} </span
+            >?
         </h3>
         <p>{{ 'skills.subtext' | translate }}</p>
     </div>
