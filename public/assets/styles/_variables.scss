@@ -1,11 +1,12 @@
 // COLORS
 $background: rgb(20, 29, 47);
-$primary1: rgb(112, 230, 28);
-$primary2: rgb(151, 71, 255);
+$primary-green: rgb(112, 230, 28);
+$primary-purple: rgb(151, 71, 255);
 $secondary: rgb(28, 218, 230);
 $white: rgb(255, 250, 250);
 $error: rgb(230, 28, 64);
-$disabled: rgb(182, 182, 182);
+$color-grey: rgb(182, 182, 182);
+$color-anthrazit: rgb(71, 71, 71);
 
 // LAYOUT & DIMENSIONS
 $header-height: 110px;
@@ -19,7 +20,32 @@ $max-width: 1440px;
 $z-header: 10;
 
 $text-light: #ffffff;
+$text-dark: #000000;
+$text-hover: $primary-green;
 
 // TRANSITIONS
 $transition-base: all 250ms ease-in-out;
 $transition-fast: all 150ms ease-in-out;
+
+// BUTTONS
+$btn-primary: (
+    default: $primary-green,
+    hover: $primary-purple,
+    click: $white,
+);
+
+$btn-secondary: (
+    default: $primary-green,
+    hover: $primary-green,
+    click: $white,
+);
+
+$btn-lang: (
+    default: $primary-green,
+    hover: $primary-green,
+    click: $white,
+    active: $primary-green,
+);
+
+$btn-disabled-bg: $color-grey;
+$btn-disabled-txt: $color-anthrazit;

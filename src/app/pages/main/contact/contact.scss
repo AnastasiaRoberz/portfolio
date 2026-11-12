@@ -7,7 +7,7 @@
 }
 
 h2 {
-    @include line('right', $primary1, clamp(16px, calc(11.429px + 1.429vw), 32px));
+    @include line('right', $primary-green, clamp(16px, calc(11.429px + 1.429vw), 32px));
     z-index: 5;
 }
 
@@ -33,6 +33,7 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex: 1;
     gap: 32px;
 }
@@ -55,7 +56,7 @@ form {
         transition: $transition-fast;
 
         &:hover {
-            background-color: $primary2;
+            background-color: $primary-purple;
         }
 
         &:has(input:checked) .icon-checked {
@@ -67,8 +68,8 @@ form {
         appearance: none;
         width: 18px;
         height: 18px;
-        border: 2px solid $primary1;
-        accent-color: $primary1;
+        border: 2px solid $primary-green;
+        accent-color: $primary-green;
         cursor: pointer;
     }
 
@@ -90,18 +91,6 @@ form {
     }
 }
 
-.submit {
-    font-size: 1.5rem;
-    color: white;
-    padding: 15px 30px;
-    background-color: $primary1;
-    border-radius: 10px;
-
-    &[disabled] {
-        background-color: $disabled;
-    }
-}
-
 .icon-arrow-up {
     width: 39px;
     height: 39px;
@@ -111,6 +100,6 @@ form {
     color: white;
 
     &:hover {
-        color: $primary1;
+        color: $primary-green;
     }
 }

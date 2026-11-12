@@ -23,7 +23,7 @@ textarea {
     padding-block: var(--padding-block);
     padding-inline: var(--padding-inline);
     color: $text-light;
-    border: 1px solid $primary2;
+    border: 1px solid $primary-purple;
     border-radius: 10px;
     background-color: $background;
     position: relative;
@@ -31,7 +31,7 @@ textarea {
 
     &:focus-within,
     &:active {
-        border-color: $primary1;
+        border-color: $primary-green;
     }
 
     &:focus-within,
@@ -51,7 +51,7 @@ textarea {
     }
 
     &.ng-valid.ng-touched {
-        border-color: $primary1;
+        border-color: $primary-green;
 
         .icon {
             visibility: visible;

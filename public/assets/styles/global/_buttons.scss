@@ -1,0 +1,99 @@
+@use '../../styles/' as *;
+@use 'sass:map';
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 0.75;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-block: 16px;
+    padding-inline: 32px;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 24px;
+    color: $text-light;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+
+    // VARIANTS
+    &.btn--primary {
+        background-color: map.get($btn-primary, default);
+
+        &:hover {
+            background-color: map.get($btn-primary, hover);
+            transform: scale(1.2);
+        }
+
+        &:active {
+            background-color: map.get($btn-primary, click);
+            color: $text-dark;
+        }
+    }
+
+    &.btn--secondary {
+        border-color: map.get($btn-secondary, default);
+
+        &:hover {
+            background-color: map.get($btn-secondary, hover);
+        }
+
+        &:active {
+            background-color: map.get($btn-secondary, click);
+            color: $primary-purple;
+        }
+    }
+
+    &.btn--lang {
+        padding-block: 4px;
+        padding-inline: 8px;
+        border-color: map.get($btn-lang, default);
+        font-size: 18px;
+
+        &:hover {
+            background-color: map.get($btn-lang, hover);
+        }
+
+        &:active {
+            background-color: map.get($btn-lang, click);
+            color: $primary-purple;
+            font-weight: 600;
+        }
+
+        &.active {
+            background-color: map.get($btn-lang, active);
+            font-weight: 600;
+        }
+    }
+
+    &--icon {
+        width: 30px;
+        height: 30px;
+
+        .icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:hover {
+            transform: scale(calc(40 / 30));
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: $btn-disabled-bg;
+        color: $btn-disabled-txt;
+    }
+}
