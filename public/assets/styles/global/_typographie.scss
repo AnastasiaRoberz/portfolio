@@ -11,8 +11,8 @@ html {
 h1 {
     font-size: clamp(2.813rem, calc(1.33rem + 7.411vw), 8rem);
     font-weight: 700;
-    // line-height: 100%;
     text-align: right;
+    color: $text-light;
 }
 
 h2 {

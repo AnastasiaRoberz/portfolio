@@ -1,0 +1,45 @@
+@use 'sass:math';
+@use '../variables' as *;
+
+@function to-px($value) {
+    @if math.is-unitless($value) {
+        @return #{$value}px;
+    }
+    @return $value;
+}
+
+@mixin responsive($size, $direction: width, $value: max) {
+    @media screen and (#{$value}-#{$direction}: to-px($size)) {
+        @content;
+    }
+}
+
+@mixin mobile($width: $bp-mobile) {
+    @include responsive($width, width, max) {
+        @content;
+    }
+}
+
+@mixin tablet($width: $bp-tablet) {
+    @include responsive($width, width, max) {
+        @content;
+    }
+}
+
+@mixin desktop($width: $bp-desktop) {
+    @include responsive($width, width, min) {
+        @content;
+    }
+}
+
+@mixin widescreen($height: 1800) {
+    @include responsive($height, height, min) {
+        @content;
+    }
+}
+
+@mixin short-height($height: $bp-short-height) {
+    @include responsive($height, height, max) {
+        @content;
+    }
+}
