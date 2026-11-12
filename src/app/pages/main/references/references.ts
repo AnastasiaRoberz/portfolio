@@ -15,17 +15,17 @@ export class References {
 
     references: Reference[] = [
         {
+            name: 'Max & Moritz Roberz',
+            role: 'references.kids.role',
+            text: 'references.kids.text',
+            img: 'reference2.jpeg',
+        },
+        {
             name: 'P.Roberz',
             role: 'references.roberz.role',
             text: 'references.roberz.text',
             img: 'reference1.jpeg',
             scale: 1.2,
-        },
-        {
-            name: 'Max & Moritz Roberz',
-            role: 'references.kids.role',
-            text: 'references.kids.text',
-            img: 'reference2.jpeg',
         },
         {
             name: 'Dr. Byte McReason',

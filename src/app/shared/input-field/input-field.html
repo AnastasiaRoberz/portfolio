@@ -1,4 +1,8 @@
-<label [for]="fieldId()">{{ label() }}</label>
+<label [for]="fieldId()">
+    @for (char of (label() ?? '').split(''); track $index) {
+        <span class="char" [style.--index]="$index">{{ char }}</span>
+    }
+</label>
 
 @if (type() === 'input') {
     <input

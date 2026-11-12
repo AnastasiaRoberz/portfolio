@@ -26,13 +26,7 @@ export class Portfolio {
             technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
             description: 'portfolio.projects.join',
             imgSrc: 'join.png',
-        },
-        {
-            name: 'Pokédex',
-            technologies: ['JavaScript', 'HTML', 'CSS', 'API'],
-            description: 'portfolio.projects.pokedex',
-            imgSrc: 'pokedex.png',
-            urlGit: 'https://github.com/AnastasiaRoberz/pokedex',
+            urlGit: 'https://github.com/AnastasiaRoberz/join',
         },
     ];
 }

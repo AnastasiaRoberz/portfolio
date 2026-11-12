@@ -11,14 +11,14 @@ html {
 h1 {
     font-size: clamp(2.813rem, calc(1.33rem + 7.411vw), 8rem);
     font-weight: 700;
-    line-height: 100%;
+    // line-height: 100%;
     text-align: right;
 }
 
 h2 {
     font-size: clamp(2.813rem, calc(2.009rem + 4.018vw), 5.625rem);
     font-weight: 700;
-    line-height: 0.75;
+    // line-height: 0.75;
 }
 
 h3 {
@@ -28,7 +28,7 @@ h3 {
 }
 
 .highlight {
-    color: $primary-purple;
+    color: $secondary;
     font-size: 2rem;
     font-weight: 700;
 }

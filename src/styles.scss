@@ -6,19 +6,16 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding-top: $header-height;
     position: relative;
+    // text-box: cap alphabetic;
 }
 
 body {
     background-color: $background;
 }
 
-// --- GENERAL STYLING ---
-a {
-    cursor: pointer;
-    text-decoration: none;
-    line-height: 0.75;
+svg {
+    color: inherit;
 }
 
 // ----------------------
@@ -31,7 +28,7 @@ a {
     line-height: 1.2;
     text-align: left;
 
-    background-color: $primary-purple;
+    background-color: $secondary;
     color: $text-light;
     font-size: 0.75rem;
     padding: 6px 12px;

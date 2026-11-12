@@ -1,19 +1,19 @@
 <div class="reference-card">
-    <div class="ref-content">
+    <div class="reference-card__content">
         @if (responsive.isDesktop()) {
-            <svg class="icon-quote">
+            <svg class="reference-card__icon-quote">
                 <use href="assets/icons/icons.svg#icon-quote"></use>
             </svg>
         }
 
-        <p class="txt">{{ references[currentId].text | translate }}</p>
-        <div class="name-row">
-            <p class="name">
+        <p class="reference-card__text">{{ references[currentId].text | translate }}</p>
+        <div class="reference-card__name-row">
+            <p class="reference-card__name">
                 {{ references[currentId].name }} - {{ references[currentId].role | translate }}
             </p>
         </div>
     </div>
-    <div class="ref-photo">
+    <div class="reference-card__photo">
         <div class="photo-mask">
             <img
                 src="./assets/pngs/references/{{ references[currentId].img }}"
@@ -25,28 +25,26 @@
     </div>
 </div>
 
-<div class="ref-controls">
-    <button class="btn-arrow" (click)="prev()" [disabled]="currentId == 0">
-        <svg class="arrow-btn">
+<div class="ref-control">
+    <button class="btn btn--arrow" (click)="prev()" [disabled]="currentId == 0">
+        <svg class="icon">
             <use href="./assets/icons/icons.svg#icon-arrow-back"></use>
         </svg>
     </button>
 
-    <div class="dots-wrapper">
+    <div class="ref-control__dots-wrapper">
         @for (item of references; track $index) {
             <button
-                class="dot"
+                class="ref-control__dot"
                 [class.active]="currentId === $index"
                 (click)="goTo($index)"
             ></button>
         }
     </div>
 
-    <button class="btn-arrow" (click)="next()" [disabled]="currentId == references.length - 1">
-        <svg class="arrow-btn">
+    <button class="btn btn--arrow" (click)="next()" [disabled]="currentId == references.length - 1">
+        <svg class="icon">
             <use href="./assets/icons/icons.svg#icon-arrow-forward"></use>
         </svg>
     </button>
 </div>
-
-<!-- <img class="shadow" src="assets/pngs/shadows/green-shadow.png" alt="" /> -->

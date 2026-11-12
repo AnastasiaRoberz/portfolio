@@ -1,10 +1,16 @@
 @use '../../styles/' as *;
 @use 'sass:map';
 
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
-    line-height: 0.75;
+    // line-height: 0.75;
 }
 
 .btn {
@@ -42,6 +48,7 @@ a {
         &:active {
             background-color: map.get($btn-primary, click);
             color: $text-dark;
+            transform: none;
         }
     }
 
@@ -54,7 +61,7 @@ a {
 
         &:active {
             background-color: map.get($btn-secondary, click);
-            color: $primary-purple;
+            color: $secondary;
         }
     }
 
@@ -81,7 +88,7 @@ a {
 
         &:active {
             background-color: map.get($btn-lang, click);
-            color: $primary-purple;
+            color: $secondary;
             font-weight: 600;
         }
 
@@ -114,11 +121,12 @@ a {
         position: relative;
         transition: color 0.3s ease;
 
-        &:hover {
-            color: $primary-green;
+        &:hover,
+        &.active {
+            color: $primary;
 
             &::after {
-                background-color: $primary-purple;
+                background-color: $secondary;
                 width: 55px;
             }
         }
@@ -142,5 +150,23 @@ a {
         pointer-events: none;
         background-color: $btn-disabled-bg;
         color: $btn-disabled-txt;
+    }
+
+    &--arrow {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        border-width: 2px;
+        border-radius: 50%;
+        color: $primary;
+
+        &:hover {
+            border-color: $primary;
+        }
+
+        &:disabled {
+            visibility: hidden;
+            background-color: transparent;
+        }
     }
 }

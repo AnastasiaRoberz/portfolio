@@ -9,7 +9,7 @@
 }
 
 h2 {
-    @include line('left', $primary-purple);
+    @include line('left', $secondary);
 }
 
 .description {
@@ -54,7 +54,7 @@ h2 {
 
 .technologies {
     font-size: 1.5rem;
-    color: $primary-green;
+    color: $primary;
 }
 
 .project-btns {

@@ -1,11 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
 import { ResponsiveService } from '../../../services/responsive.service';
 import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
-    imports: [TranslatePipe, RouterLink],
+    imports: [TranslatePipe],
     selector: 'header[app-header]',
     styleUrl: './header.scss',
     templateUrl: './header.html',
@@ -13,9 +12,9 @@ import { ScrollService } from '../../../services/scroll.service';
 export class Header {
     translate = inject(TranslateService);
     responsive = inject(ResponsiveService);
-    scrollSpy = inject(ScrollService);
+    scrollService = inject(ScrollService);
     currentLanguage = 'en';
-    isMenuOpen = signal(false);
+    isMenuOpen = signal<boolean>(false);
 
     ngOnInit(): void {
         this.useLanguage(this.currentLanguage);

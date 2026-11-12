@@ -1,8 +1,7 @@
 // COLORS
 $background: rgb(20, 29, 47);
 $primary-green: rgb(112, 230, 28);
-$primary-green-light: rgba(112, 230, 28, 0.2);
-$primary-purple: rgb(151, 71, 255);
+$primary: rgb(151, 71, 255);
 $primary-purple-light: rgba(151, 71, 255, 0.3);
 $secondary: rgb(28, 218, 230);
 $secondary-light: rgba(28, 218, 230, 0.4);
@@ -32,22 +31,22 @@ $transition-fast: all 150ms ease-in-out;
 
 // BUTTONS
 $btn-primary: (
-    default: $primary-green,
-    hover: $primary-purple,
+    default: $primary,
+    hover: $secondary,
     click: $white,
 );
 
 $btn-secondary: (
-    default: $primary-green,
-    hover: $primary-green,
+    default: $primary,
+    hover: $primary,
     click: $white,
 );
 
 $btn-lang: (
-    default: $primary-green,
-    hover: $primary-green,
+    default: $primary,
+    hover: $primary,
     click: $white,
-    active: $primary-green,
+    active: $primary,
 );
 
 $btn-disabled-bg: $color-grey;

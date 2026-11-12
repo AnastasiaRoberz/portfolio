@@ -7,7 +7,7 @@
 }
 
 h2 {
-    @include line('right', $primary-green, clamp(16px, calc(11.429px + 1.429vw), 32px));
+    @include line('right', $primary, clamp(16px, calc(11.429px + 1.429vw), 32px));
     z-index: 5;
 }
 
@@ -56,7 +56,7 @@ form {
         transition: $transition-fast;
 
         &:hover {
-            background-color: $primary-purple;
+            background-color: $secondary;
         }
 
         &:has(input:checked) .icon-checked {
@@ -68,8 +68,8 @@ form {
         appearance: none;
         width: 18px;
         height: 18px;
-        border: 2px solid $primary-green;
-        accent-color: $primary-green;
+        border: 2px solid $primary;
+        accent-color: $primary;
         cursor: pointer;
     }
 
@@ -89,6 +89,10 @@ form {
         transform: translateY(100%);
         color: $error;
     }
+
+    .txt-highlight {
+        color: $secondary;
+    }
 }
 
 .icon-arrow-up {
@@ -100,6 +104,6 @@ form {
     color: white;
 
     &:hover {
-        color: $primary-green;
+        color: $primary;
     }
 }
