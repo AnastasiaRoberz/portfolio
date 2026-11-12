@@ -32,7 +32,11 @@
             <span class="error-msg" role="alert" aria-live="polite">{{ showError(privacy) }}</span>
         </div>
 
-        <button class="btn btn--primary" type="submit" [disabled]="msgForm.invalid || isSubmitting">
+        <button
+            class="btn btn--primary"
+            type="submit"
+            [disabled]="msgForm.invalid || isSubmitting()"
+        >
             {{ 'contact.button' | translate }} :)
         </button>
 
