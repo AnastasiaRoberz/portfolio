@@ -1,0 +1,6 @@
+@use '../../../../public/assets/styles/' as *;
+
+:host {
+    display: flex;
+    gap: 42px;
+}

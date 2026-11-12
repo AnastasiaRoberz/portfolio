@@ -1,0 +1,7 @@
+@for (link of socialLinks; track link.icon) {
+    <a [attr.href]="link.url" target="_blank" class="btn btn--social-icon">
+        <svg class="icon">
+            <use [attr.href]="'assets/icons/icons.svg#' + link.icon"></use>
+        </svg>
+    </a>
+}

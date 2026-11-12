@@ -76,13 +76,15 @@ a {
         }
     }
 
-    &--icon {
+    &--social-icon {
         width: 30px;
         height: 30px;
+        padding: 0;
 
         .icon {
             width: 30px;
             height: 30px;
+            color: $text-light;
         }
 
         &:hover {
