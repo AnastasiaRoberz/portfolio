@@ -8,9 +8,8 @@
 
 .header-content {
     @include content-boundary;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
@@ -20,7 +19,7 @@
 
 .menu {
     @include flex-center;
-    gap: 92px;
+    gap: calcClamp(48, 96, 1440, 769);
 }
 
 nav {
@@ -85,12 +84,22 @@ nav {
     left: 0;
     width: 100vw;
     height: calc(100dvh - $header-height);
-    background-color: rgba(20, 29, 47, 0.8);
+    background-color: rgba(20, 29, 47, 0.9);
     backdrop-filter: blur(5px);
+    z-index: 999;
 
     a {
         font-size: 1.5rem;
         line-height: 120%;
+
+        &.active {
+            color: $primary;
+
+            &::after {
+                @include txt-underline;
+                background-color: $secondary;
+            }
+        }
     }
 
     .mobile-language-wrapper {
@@ -102,6 +111,7 @@ nav {
     .btn-mobile-language {
         padding: 0;
         font-size: 1.5rem;
+        color: $text-light;
 
         &.active {
             color: $primary;

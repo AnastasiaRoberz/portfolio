@@ -12,10 +12,7 @@ $color-anthrazit: rgb(71, 71, 71);
 
 // LAYOUT & DIMENSIONS
 $header-height: 110px;
-$paddings: (
-    main: 50px clamp(24px, calc(2.286px + 6.786vw), 100px),
-    hero: 50px clamp(16px, calc(-8px + 7.5vw), 100px),
-);
+
 $max-width: 1440px;
 
 // Z-INDICES
@@ -51,3 +48,8 @@ $btn-lang: (
 
 $btn-disabled-bg: $color-grey;
 $btn-disabled-txt: $color-anthrazit;
+
+$bp-mobile: 768;
+$bp-tablet: 1024;
+$bp-desktop: 1025;
+$bp-short-height: 500;

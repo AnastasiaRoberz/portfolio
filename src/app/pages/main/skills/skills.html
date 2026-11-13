@@ -1,21 +1,19 @@
-@if (!responsive.isDesktop()) {
+<!-- @if (!responsive.isDesktop()) {
     <h2>{{ 'skills.title' | translate }}</h2>
     <p class="description">{{ 'skills.description' | translate }}</p>
-}
+} -->
 
-<div class="icons">
-    <div class="skills-wrapper">
-        @for (skill of skills; track skill) {
-            <div class="skill">
-                <img
-                    class="skill-icon"
-                    src="assets/icons/skills/frontend/{{ skill | lowercase }}.svg"
-                    alt=""
-                />
-                <p class="skill-name">{{ skill }}</p>
-            </div>
-        }
-    </div>
+<div class="skills-wrapper">
+    @for (skill of skills; track skill) {
+        <div class="skill">
+            <img
+                class="skill-icon"
+                src="assets/icons/skills/frontend/{{ skill | lowercase }}.svg"
+                alt=""
+            />
+            <p class="skill-name">{{ skill }}</p>
+        </div>
+    }
     <div class="skill learning">
         <div class="speech-bubble">
             <p>{{ 'skills.btn-learning.text' | translate }}</p>
@@ -39,11 +37,9 @@
 </div>
 
 <div class="skills-text">
-    @if (responsive.isDesktop()) {
-        <h2>{{ 'skills.title' | translate }}</h2>
+    <h2>{{ 'skills.title' | translate }}</h2>
 
-        <p class="description">{{ 'skills.description' | translate }}</p>
-    }
+    <p class="description">{{ 'skills.description' | translate }}</p>
 
     <div class="another-skill">
         <h3>

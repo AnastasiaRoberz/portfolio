@@ -14,10 +14,14 @@ textarea {
 textarea {
     height: 12lh;
     resize: none;
+
+    @include mobile {
+        height: 162px;
+    }
 }
 
 :host {
-    --padding-block: 16px;
+    --padding-block: #{calcClamp(8, 16)};
     --padding-inline: 24px;
     display: flex;
     align-items: center;

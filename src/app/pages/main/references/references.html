@@ -1,11 +1,9 @@
 @for (ref of [references[currentId]]; track ref.name) {
     <div class="reference-card fade-in">
         <div class="reference-card__content">
-            @if (responsive.isDesktop()) {
-                <svg class="reference-card__icon-quote">
-                    <use href="assets/icons/icons.svg#icon-quote"></use>
-                </svg>
-            }
+            <svg class="reference-card__icon-quote">
+                <use href="assets/icons/icons.svg#icon-quote"></use>
+            </svg>
 
             <p class="reference-card__text">{{ ref.text | translate }}</p>
             <div class="reference-card__name-row">

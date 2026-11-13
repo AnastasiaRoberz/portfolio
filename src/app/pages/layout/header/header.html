@@ -3,7 +3,7 @@
         <img class="logo" src="./assets/icons/logo.svg" alt="" />
     </a>
 
-    @if (responsive.isDesktop()) {
+    @if (!breakpoint()) {
         <div class="menu">
             <nav>
                 <button
@@ -63,35 +63,30 @@
         </button>
 
         <div class="mobile-menu" [class.active]="isMenuOpen()">
-            <!-- <a
-                href="#about"
-                [class.active]="scrollSpy.activeSection() === 'about'"
-                (click)="closeMenu()"
+            <a
+                [class.active]="scrollService.activeSection() === 'about'"
+                (click)="scrollMobile('about')"
                 >About me</a
             >
             <a
-                href="#skills"
-                [class.active]="scrollSpy.activeSection() === 'skills'"
-                (click)="closeMenu()"
+                [class.active]="scrollService.activeSection() === 'skills'"
+                (click)="scrollMobile('skills')"
                 >Skills</a
             >
             <a
-                href="#portfolio"
-                [class.active]="scrollSpy.activeSection() === 'portfolio'"
-                (click)="closeMenu()"
+                [class.active]="scrollService.activeSection() === 'portfolio'"
+                (click)="scrollMobile('portfolio')"
                 >Portfolio</a
             >
             <a
-                href="#contact"
-                [class.active]="scrollSpy.activeSection() === 'contact'"
-                (click)="closeMenu()"
+                [class.active]="scrollService.activeSection() === 'contact'"
+                (click)="scrollMobile('contact')"
                 >Contact</a
-            > -->
+            >
             <div class="mobile-language-wrapper">
                 <button
                     type="button"
                     (click)="useLanguage('en')"
-                    (click)="closeMenu()"
                     [class.active]="currentLanguage === 'en'"
                     class="btn-mobile-language"
                 >
@@ -101,7 +96,6 @@
                 <button
                     type="button"
                     (click)="useLanguage('de')"
-                    (click)="closeMenu()"
                     [class.active]="currentLanguage === 'de'"
                     class="btn-mobile-language"
                 >

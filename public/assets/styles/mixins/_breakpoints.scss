@@ -32,12 +32,6 @@
     }
 }
 
-@mixin widescreen($height: 1800) {
-    @include responsive($height, height, min) {
-        @content;
-    }
-}
-
 @mixin short-height($height: $bp-short-height) {
     @include responsive($height, height, max) {
         @content;

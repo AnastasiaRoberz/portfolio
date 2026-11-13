@@ -1,25 +1,27 @@
 @use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include flex-center;
-    padding-inline: 100px;
-    padding-block: 80px;
-    width: 100%;
-    max-width: 1440px;
-    gap: 116px;
+    @include content-boundary;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calcClamp(32, 120, 1440, 769);
     z-index: 5;
-}
 
-.icons {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(16px, calc(-2.286px + 5.714vw), 80px);
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 .skills-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: calcClamp(32, 80, 1440, 769);
+    flex: 1.5;
+
+    @include mobile {
+        justify-content: center;
+    }
 }
 
 .skill {
@@ -47,6 +49,14 @@
     &:hover {
         .skill-icon {
             animation: bounce-loop 0.8s ease-in-out infinite;
+        }
+    }
+
+    &:last-child {
+        margin-right: 100%;
+
+        @include mobile {
+            margin-right: auto;
         }
     }
 }
@@ -120,12 +130,16 @@
 }
 
 .skills-text {
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
+    flex: 1;
+
+    @include mobile {
+        align-items: center;
+    }
 }
 
 h2 {
@@ -137,5 +151,10 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
     gap: 16px;
+
+    @include mobile {
+        text-align: right;
+    }
 }

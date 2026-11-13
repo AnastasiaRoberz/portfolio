@@ -17,6 +17,8 @@ export class Header {
     currentLanguage = 'en';
     isMenuOpen = signal<boolean>(false);
 
+    breakpoint = this.responsive.isMaxWidth(992);
+
     ngOnInit(): void {
         this.useLanguage(this.currentLanguage);
     }
@@ -24,13 +26,15 @@ export class Header {
     useLanguage(language: string): void {
         this.translate.use(language);
         this.currentLanguage = language;
+        this.isMenuOpen.set(false);
     }
 
     toggleMenu(): void {
         this.isMenuOpen.update((open) => !open);
     }
 
-    closeMenu(): void {
+    scrollMobile(section: string): void {
+        this.scrollService.scrollTo(section);
         this.isMenuOpen.set(false);
     }
 }

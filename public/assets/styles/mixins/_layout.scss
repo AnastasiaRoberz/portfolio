@@ -1,0 +1,51 @@
+@use '../variables' as *;
+@use 'sass:math';
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin input-field {
+    background-color: $background;
+    border: 1px solid $secondary;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+
+    &::placeholder {
+        color: white;
+    }
+}
+
+@mixin txt-underline {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 55.5px;
+    height: 3px;
+    background-color: $primary;
+}
+
+@mixin line($direction, $color, $offset: clamp(4px, calc(-4px + 2.5vw), 32px)) {
+    $pseudo: if($direction == 'left', 'before', 'after');
+
+    &::#{$pseudo} {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 200vw;
+        background-color: $color;
+
+        @if ($direction == 'left') {
+            right: calc(100% + $offset);
+        } @else {
+            left: calc(100% + $offset);
+        }
+    }
+}

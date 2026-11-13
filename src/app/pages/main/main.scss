@@ -22,7 +22,8 @@
     align-self: flex-end;
     width: 40px;
     height: 40px;
-    margin-block: 60px;
+    margin-block: calcClamp(50, 60);
+    margin-right: calcClamp(16, 100);
     border: 2px solid transparent;
     border-radius: 50%;
     flex-shrink: 0;

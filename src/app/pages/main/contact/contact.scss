@@ -1,9 +1,9 @@
 @use '../../../../../public/assets/styles/' as *;
 
 :host {
-    @include flex-center(column);
-    padding-block: 80px;
-    padding-inline: 100px;
+    @include content-boundary;
+    align-items: center;
+    padding-bottom: 0;
     gap: 40px;
 }
 
@@ -16,7 +16,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: clamp(64px, calc(39.429px + 7.679vw), 150px);
+    gap: calcClamp(32, 116);
 
     &__text {
         display: flex;
@@ -29,6 +29,14 @@ h2 {
     h3 {
         @include line('left', $secondary);
     }
+
+    @include responsive(992) {
+        flex-direction: column;
+
+        &__text {
+            width: 100%;
+        }
+    }
 }
 
 form {
@@ -37,6 +45,7 @@ form {
     align-items: center;
     flex: 1;
     gap: 32px;
+    width: 100%;
 }
 
 .privacy-policy {

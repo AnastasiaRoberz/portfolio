@@ -9,7 +9,7 @@ html {
 }
 
 h1 {
-    font-size: clamp(2.813rem, calc(1.33rem + 7.411vw), 8rem);
+    font-size: calcClampMin(40, 128);
     font-weight: 700;
     text-align: right;
     color: $text-light;
@@ -22,13 +22,13 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: calcClamp(24, 32);
     font-weight: 700;
     line-height: 120%;
 }
 
 .highlight {
     color: $secondary;
-    font-size: 2rem;
+    font-size: calcClamp(24, 32);
     font-weight: 700;
 }
