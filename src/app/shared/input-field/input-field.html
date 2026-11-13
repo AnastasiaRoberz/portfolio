@@ -1,0 +1,31 @@
+<label [for]="fieldId()">
+    @for (char of (label() ?? '').split(''); track $index) {
+        <span class="char" [style.--index]="$index">{{ char }}</span>
+    }
+</label>
+
+@if (type() === 'input') {
+    <input
+        type="text"
+        [id]="fieldId()"
+        [value]="value"
+        (input)="onInput($event)"
+        autocomplete="off"
+        (blur)="onTouched()"
+        placeholder=" "
+    />
+} @else if (type() === 'textarea') {
+    <textarea
+        [id]="fieldId()"
+        [value]="value"
+        (input)="onInput($event)"
+        autocomplete="off"
+        (blur)="onTouched()"
+        placeholder=" "
+    ></textarea>
+}
+<svg class="icon">
+    <use [attr.href]="'./assets/icons/icons.svg#' + icon()"></use>
+</svg>
+
+<span class="error-msg" role="alert" aria-live="polite">{{ showError() }}</span>

@@ -1,0 +1,48 @@
+@for (ref of [references[currentId]]; track ref.name) {
+    <div class="reference-card fade-in">
+        <div class="reference-card__content">
+            <svg class="reference-card__icon-quote">
+                <use href="assets/icons/icons.svg#icon-quote"></use>
+            </svg>
+
+            <p class="reference-card__text">{{ ref.text | translate }}</p>
+            <div class="reference-card__name-row">
+                <p class="reference-card__name">{{ ref.name }} - {{ ref.role | translate }}</p>
+            </div>
+        </div>
+        <div class="reference-card__photo">
+            <div class="photo-mask">
+                <img
+                    src="./assets/pngs/references/{{ ref.img }}"
+                    alt=""
+                    [style.object-position]="ref.position"
+                    [style.scale]="ref.scale"
+                />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="ref-control">
+    <button class="btn btn--arrow" (click)="prev()" [disabled]="currentId == 0">
+        <svg class="icon">
+            <use href="./assets/icons/icons.svg#icon-arrow-back"></use>
+        </svg>
+    </button>
+
+    <div class="ref-control__dots-wrapper">
+        @for (item of references; track $index) {
+            <button
+                class="ref-control__dot"
+                [class.active]="currentId === $index"
+                (click)="goTo($index)"
+            ></button>
+        }
+    </div>
+
+    <button class="btn btn--arrow" (click)="next()" [disabled]="currentId == references.length - 1">
+        <svg class="icon">
+            <use href="./assets/icons/icons.svg#icon-arrow-forward"></use>
+        </svg>
+    </button>
+</div>

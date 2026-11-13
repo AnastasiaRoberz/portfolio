@@ -1,0 +1,57 @@
+@use '../../../../../public/assets/styles/' as *;
+
+:host {
+    @include flex-center;
+    width: 100%;
+    height: calcClamp(380, 291);
+    border-top: 4px solid $primary;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    @include content-boundary;
+    padding-block: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 304.5px;
+        height: auto;
+    }
+
+    &__legal-notice {
+        font-size: 16px;
+        color: $text-light;
+
+        &:hover {
+            &::after {
+                height: 2px;
+                background-color: $primary;
+            }
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 24px;
+
+        &__logo {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.copyright {
+    font-size: calcClamp(20, 24);
+    text-align: center;
+}

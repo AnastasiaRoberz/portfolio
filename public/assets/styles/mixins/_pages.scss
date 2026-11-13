@@ -1,0 +1,11 @@
+@use '../variables' as *;
+@use '../functions' as *;
+
+@mixin content-boundary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $max-width;
+    padding-block: calcClampMin((60, 80), (32, 80, 800, 350));
+    padding-inline: calcClamp(16, 100);
+}

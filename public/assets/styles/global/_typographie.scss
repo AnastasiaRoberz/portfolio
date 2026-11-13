@@ -1,0 +1,34 @@
+@use '../../styles/' as *;
+
+html {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $text-light;
+}
+
+h1 {
+    font-size: calcClampMin(40, 128);
+    font-weight: 700;
+    text-align: right;
+    color: $text-light;
+}
+
+h2 {
+    font-size: clamp(2.813rem, calc(2.009rem + 4.018vw), 5.625rem);
+    font-weight: 700;
+    // line-height: 0.75;
+}
+
+h3 {
+    font-size: calcClamp(24, 32);
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.highlight {
+    color: $secondary;
+    font-size: calcClamp(24, 32);
+    font-weight: 700;
+}

@@ -1,0 +1,160 @@
+@use '../../../../../public/assets/styles/' as *;
+
+:host {
+    @include content-boundary;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calcClamp(32, 120, 1440, 769);
+    z-index: 5;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: calcClamp(32, 80, 1440, 769);
+    flex: 1.5;
+
+    @include mobile {
+        justify-content: center;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 88px;
+    height: 120px;
+    cursor: pointer;
+
+    img {
+        width: 60px;
+        height: 60px;
+        transition: $transition-base;
+    }
+
+    .skill-name {
+        font-weight: 700;
+        text-align: center;
+        height: 1lh;
+    }
+
+    &:hover {
+        .skill-icon {
+            animation: bounce-loop 0.8s ease-in-out infinite;
+        }
+    }
+
+    &:last-child {
+        margin-right: 100%;
+
+        @include mobile {
+            margin-right: auto;
+        }
+    }
+}
+
+.speech-bubble {
+    @include flex-center(column);
+    position: absolute;
+    left: 0;
+    top: -50%;
+    z-index: 3;
+    gap: 8px;
+    width: 188px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    padding: 8px 16px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $transition-base;
+
+    .tech-wrapper {
+        @include flex-center;
+        gap: 16px;
+    }
+
+    .tech-item {
+        @include flex-center(column);
+        gap: 4px;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+    strong {
+        font-size: 0.75rem;
+    }
+
+    .rectangle {
+        width: 26px;
+        height: 17px;
+        position: absolute;
+        bottom: -15px;
+        left: 35px;
+        color: white;
+    }
+}
+
+.learning:hover {
+    .icon-learning {
+        color: white;
+    }
+
+    .speech-bubble {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(-22%);
+    }
+}
+
+.icon-learning {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    color: $secondary;
+    transition: $transition-fast;
+}
+
+.skills-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1;
+
+    @include mobile {
+        align-items: center;
+    }
+}
+
+h2 {
+    @include line('right', $secondary, clamp(16px, calc(11.429px + 1.429vw), 32px));
+}
+
+.another-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 16px;
+
+    @include mobile {
+        text-align: right;
+    }
+}

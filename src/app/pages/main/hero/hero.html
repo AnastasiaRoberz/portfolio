@@ -1,0 +1,32 @@
+<div class="hero-content">
+    <div class="hero-content__title">
+        <p class="hero-content__vertical">I am</p>
+        <div class="hero-content__name">
+            <h1>
+                Anastasia <br />
+                Roberz
+            </h1>
+            <p class="hero-content__job-title">{{ 'hero.job-title' | translate }}</p>
+        </div>
+    </div>
+
+    <button class="btn btn--primary" (click)="scrollService.scrollTo('contact')">
+        {{ 'hero.btn-talk' | translate }}
+    </button>
+</div>
+
+<div class="hero-footer">
+    <app-social-links />
+
+    @if (responsive.isDesktop()) {
+        <p class="scroll">
+            <span class="scroll-track"
+                >{{ 'hero.scroll' | translate }}
+
+                <svg class="arrow-down">
+                    <use href="./assets/icons/icons.svg#icon-arrow-down"></use>
+                </svg>
+            </span>
+        </p>
+    }
+</div>

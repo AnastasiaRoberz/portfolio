@@ -1,0 +1,61 @@
+@use '../../../../public/assets/styles';
+
+:host {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 60px clamp(20px, calc(-31.429px + 16.071vw), 200px);
+}
+
+.content {
+    flex: 1;
+}
+
+h2 {
+    @include styles.line('right', styles.$secondary);
+    margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    line-height: 1.2;
+
+    .title {
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: styles.$primary;
+        padding: 0 25px;
+        background-color: styles.$background;
+        z-index: 2;
+    }
+
+    &::after {
+        left: -130px;
+        transform: translateY(200%);
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: styles.$secondary;
+    margin-bottom: 16px;
+}
+
+h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: styles.$secondary;
+}
+
+span {
+    color: styles.$secondary;
+}
+
+ul {
+    margin-left: 24px;
+}

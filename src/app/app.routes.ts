@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { WrapperMain } from './components/wrapper-main/wrapper-main';
-import { LegalNotice } from './components/legal-notice/legal-notice';
-import { PrivacyPolicy } from './components/privacy-policy/privacy-policy';
+import { LegalNotice } from './pages/legal-notice/legal-notice';
+import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
+import { Main } from './pages/main/main';
 
 export const routes: Routes = [
     {
         path: '',
-        component: WrapperMain,
+        component: Main,
     },
     {
         path: 'legal-notice',

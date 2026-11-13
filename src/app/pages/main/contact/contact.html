@@ -1,0 +1,47 @@
+<h2>{{ 'contact.title' | translate }}</h2>
+
+<div class="content">
+    <div class="content__text">
+        <h3>{{ 'contact.subtitle' | translate }}</h3>
+        <p>{{ 'contact.description' | translate }}</p>
+        <p [innerHTML]="'contact.prompt' | translate"></p>
+    </div>
+
+    <form [formGroup]="msgForm" (ngSubmit)="onSubmit()">
+        <app-input-field fieldId="name" label="Your name" formControlName="name" />
+        <app-input-field fieldId="mail" label="Your email" formControlName="mail" />
+        <app-input-field
+            fieldId="message"
+            label="Your message"
+            type="textarea"
+            formControlName="message"
+            requiredKey="requiredMessage"
+        />
+
+        <div class="privacy-policy">
+            <label class="privacy-policy__checkbox">
+                <input type="checkbox" formControlName="privacy" />
+                <svg class="icon-checked">
+                    <use href="./assets/icons/icons.svg#icon-checked"></use></svg
+            ></label>
+            <p>
+                I've read the
+                <a routerLink="/privacy-policy" class="txt-highlight">privacy policy</a>
+                and agree to the processing of my data as outlined.
+            </p>
+            <span class="error-msg" role="alert" aria-live="polite">{{ showError(privacy) }}</span>
+        </div>
+
+        <button
+            class="btn btn--primary"
+            type="submit"
+            [disabled]="msgForm.invalid || isSubmitting()"
+        >
+            {{ 'contact.button' | translate }} :)
+        </button>
+
+        @if (statusMessage) {
+            <p>{{ statusMessage }}</p>
+        }
+    </form>
+</div>

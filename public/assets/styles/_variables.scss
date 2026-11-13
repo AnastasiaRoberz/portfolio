@@ -1,23 +1,55 @@
 // COLORS
 $background: rgb(20, 29, 47);
-$primary1: rgb(112, 230, 28);
-$primary2: rgb(151, 71, 255);
+$primary-green: rgb(112, 230, 28);
+$primary: rgb(151, 71, 255);
+$primary-purple-light: rgba(151, 71, 255, 0.3);
 $secondary: rgb(28, 218, 230);
+$secondary-light: rgba(28, 218, 230, 0.4);
 $white: rgb(255, 250, 250);
 $error: rgb(230, 28, 64);
-$disabled: rgb(182, 182, 182);
+$color-grey: rgb(182, 182, 182);
+$color-anthrazit: rgb(71, 71, 71);
 
 // LAYOUT & DIMENSIONS
 $header-height: 110px;
-$paddings: (
-    main: 50px clamp(24px, calc(2.286px + 6.786vw), 100px),
-    hero: 50px clamp(16px, calc(-8px + 7.5vw), 100px),
-);
+
 $max-width: 1440px;
 
 // Z-INDICES
 $z-header: 10;
 
+$text-light: #ffffff;
+$text-dark: #000000;
+$text-hover: $primary-green;
+
 // TRANSITIONS
 $transition-base: all 250ms ease-in-out;
 $transition-fast: all 150ms ease-in-out;
+
+// BUTTONS
+$btn-primary: (
+    default: $primary,
+    hover: $secondary,
+    click: $white,
+);
+
+$btn-secondary: (
+    default: $primary,
+    hover: $primary,
+    click: $white,
+);
+
+$btn-lang: (
+    default: $primary,
+    hover: $primary,
+    click: $white,
+    active: $primary,
+);
+
+$btn-disabled-bg: $color-grey;
+$btn-disabled-txt: $color-anthrazit;
+
+$bp-mobile: 768;
+$bp-tablet: 1024;
+$bp-desktop: 1025;
+$bp-short-height: 500;

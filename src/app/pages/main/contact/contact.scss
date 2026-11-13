@@ -1,0 +1,119 @@
+@use '../../../../../public/assets/styles/' as *;
+
+:host {
+    @include content-boundary;
+    align-items: center;
+    padding-bottom: 0;
+    gap: 40px;
+}
+
+h2 {
+    @include line('right', $primary, clamp(16px, calc(11.429px + 1.429vw), 32px));
+    z-index: 5;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calcClamp(32, 116);
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 40%;
+    }
+
+    h3 {
+        @include line('left', $secondary);
+    }
+
+    @include responsive(992) {
+        flex-direction: column;
+
+        &__text {
+            width: 100%;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 32px;
+    width: 100%;
+}
+
+.privacy-policy {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    color: white;
+
+    &__checkbox {
+        @include flex-center;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border-radius: 50%;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: $transition-fast;
+
+        &:hover {
+            background-color: $secondary;
+        }
+
+        &:has(input:checked) .icon-checked {
+            display: block;
+        }
+    }
+
+    input[type='checkbox'] {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $primary;
+        accent-color: $primary;
+        cursor: pointer;
+    }
+
+    .icon-checked {
+        display: none;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .error-msg {
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        transform: translateY(100%);
+        color: $error;
+    }
+
+    .txt-highlight {
+        color: $secondary;
+    }
+}
+
+.icon-arrow-up {
+    width: 39px;
+    height: 39px;
+    align-self: flex-end;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        color: $primary;
+    }
+}
